@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Formulario básico -->
+    <form action="./procesa.php" method=" post">
+        <!-- 
+            La etiqueta <form> define un formulario HTML. 
+                
+                action="./procesa.php": Indica la URL o el archivo al que se enviarán los datos del 
+                    formulario una vez que el usuario haga clic en el botón de enviar. En este caso, 
+                    los datos se envían al archivo procesa.php.
+
+                method="post": Especifica el método HTTP utilizado para enviar los datos del formulario. 
+                    En este caso, es el método POST, lo que significa que los datos se enviarán de manera 
+                    oculta en el cuerpo de la solicitud HTTP, no en la URL (como haría el método GET).
+        -->
+
+        <label for="nombre">Nombre</label>
+        <!--
+            El elemento <label> se utiliza para mostrar una etiqueta para el campo de entrada que le sigue.
+
+            for="nombre": El atributo for conecta la etiqueta con el campo de entrada cuyo id es "nombre". 
+                Esto mejora la accesibilidad del formulario y hace que al hacer clic en la etiqueta también 
+                se establezca el foco en el campo correspondiente.
+        -->
+        <input id="nombre" type="text" name="input_nombre">
+        <!--
+            El elemento <input> crea un campo de entrada en el formulario.
+
+            id="nombre": Define un identificador único para este campo de entrada. Este id es necesario para 
+            conectar el campo con la etiqueta <label> mediante el atributo for.
+
+            type="text": Define el tipo de campo de entrada. En este caso, es un campo de texto donde el usuario 
+            puede escribir su nombre.
+
+            name="input_nombre": El atributo name es importante porque será la clave asociada con el valor que 
+            ingrese el usuario. Cuando el formulario se envíe, el archivo procesa.php recibirá la entrada de este 
+            campo bajo el nombre "input_nombre".
+        -->
+
+        <input type="submit" value="Enviar">
+        <!--
+            Este <input> es un botón de envío.
+            
+            type="submit": Indica que este botón enviará el formulario cuando el usuario haga clic en él.
+
+            value="Enviar": El texto que aparece en el botón será "Enviar". Al hacer clic en este botón, los datos 
+            del formulario se envían al archivo procesa.php utilizando el método POST.
+        -->
+    </form>
+</body>
+</html>

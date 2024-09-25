@@ -12,7 +12,7 @@
         <img src="./img/imagen.jpg" alt="Mi imagen de prueba" width="200" height="200">
         <figcaption>Nebulosa planetaria</figcaption>    <!-- Es la leyenda -->
     </figure>     
-     <!--
+    <!--
         <img>: Es un elemento autocerrado que no requiere una etiqueta de cierre. Se usa para insertar imágenes 
                en una página web.
 
@@ -24,6 +24,47 @@
 
         width y height: Establecen el tamaño de la imagen en píxeles. Especificar dimensiones ayuda a reservar espacio 
         para la imagen mientras se carga, mejorando el rendimiento visual.
-     -->
+    -->
+
+    <!-- Videos -->
+    <div>
+        <video src=".\videos\video.mp4" autoplay controls loop></video>
+    </div>
+    
+    <!-- Audios -->
+    <div>
+        <audio src=".\audios\Marcha_imperial.mp3" autoplay controls loop muted></audio>
+    </div>
+    
+    <!--
+    Controles comunes en videos y audios. Para mostrarlos incluimos el atributo 'controls' en la etiqueta.
+    
+        Play/Pause (Reproducir/Pausar):  Un botón que alterna entre reproducir y pausar el video o audio.
+            Al hacer clic en el botón cuando está detenido, el archivo multimedia comienza a reproducirse. 
+            Si ya está reproduciéndose, el botón lo pausa. El atributo autoplay hace que la reproducción del
+            elemento se inicie una vez que se cargue la página.
+    
+        Barra de progreso (Seek bar): Muestra el progreso actual de la reproducción y permite que el usuario 
+            avance o retroceda dentro del archivo multimedia. El usuario puede hacer clic o arrastrar el control 
+            a lo largo de la barra para cambiar el punto de reproducción.
+
+        Duración y tiempo transcurrido: Muestra el tiempo transcurrido y el tiempo total del archivo multimedia.
+            Por ejemplo, puede mostrarse como 1:23 / 3:45, donde 1:23 es el tiempo transcurrido y 3:45 es la 
+            duración total.
+
+        Control de volumen: Permite al usuario ajustar el volumen del audio o del video. Generalmente se presenta 
+            como un icono de altavoz y una barra deslizante que regula el nivel de sonido. Puede incluir un botón 
+            para silenciar o restaurar el audio.
+
+        Botón de silencio (Mute): Este botón alterna entre habilitar o silenciar el sonido del archivo multimedia.
+            Cuando está silenciado, el volumen se pone en cero, y al hacer clic nuevamente, se restaura el volumen 
+            previo. Podemos usar el atributo muted para iniciarlo sin volumen.
+
+        Botón de pantalla completa (Fullscreen) [Solo en videos]: Permite expandir el video a pantalla completa. 
+            Al hacer clic nuevamente, vuelve al tamaño original. Este control no está presente en audios
+
+        Reinicio o repetir (Loop): Este control no siempre se muestra explícitamente, pero si el atributo 
+            loop está presente en el HTML, el archivo multimedia se reiniciará automáticamente una vez que termine.
+    -->
 </body>
 </html>
