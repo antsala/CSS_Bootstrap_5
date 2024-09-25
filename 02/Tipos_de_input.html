@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <form action="">
+          <h1>Tipos de input</h1>
+
+
+          <!-- Input de texto -->
+          <input type="text" id="texto" name="input_texto" placeholder="Escribe aquí">
+          <!--
+               type="text": Especifica que el input será un campo de entrada de texto. Este es 
+                    el tipo de entrada por defecto si no se especifica un tipo.
+
+               id="texto": El atributo id proporciona un identificador único para este campo, 
+                    que debe coincidir con el valor del atributo for de la etiqueta para que se 
+                    vinculen correctamente.
+
+               name="input_texto": El atributo name es el nombre con el cual este valor será enviado 
+                    al servidor si el formulario es enviado. Este es el nombre bajo el cual el servidor 
+                    podrá acceder al valor ingresado.
+
+               placeholder="Escribe aquí": El atributo placeholder proporciona un texto de ejemplo dentro 
+                    del campo antes de que el usuario comience a escribir. Este texto desaparece cuando el
+                    usuario escribe algo en el campo.
+
+               OTROS ATRIBUTOS:
+
+               autocomplete: Indica si el navegador debe sugerir automáticamente valores basados en entradas 
+                    anteriores. Valores posibles: "on" o "off". Ejemplo: <input type="text" autocomplete="on">
+
+               autofocus: Si se establece, el campo de texto recibirá el foco automáticamente cuando se carga 
+                    la página. Ejemplo: <input type="text" autofocus>
+
+               pattern: Permite definir una expresión regular que el valor del campo debe coincidir para que 
+                    sea considerado válido. Ejemplo: <input type="text" pattern="[A-Za-z]+"  placeholder="Solo letras">
+
+               title: Proporciona información adicional sobre el campo, que se muestra como un tooltip cuando el 
+                    usuario pasa el ratón sobre el campo. Ejemplo: <input type="text" title="Ingresa tu nombre completo">
+
+               class: Permite agregar clases CSS al campo de entrada para aplicar estilos específicos. Ejemplo:
+                    <input type="text" class="mi-clase">
+
+               value: Establece el valor por defecto que se mostrará en el campo. Ejemplo: 
+                    <input type="text" value="Texto por defecto">
+
+               maxlength: Limita la cantidad de caracteres que se pueden ingresar. Ejemplo: 
+                    <input type="text" maxlength="10" placeholder="Máx. 10 caracteres">
+
+               minlength:  Define la longitud mínima requerida para el campo de texto. Ejemplo:
+                    <input type="text" minlength="3" placeholder="Mín. 3 caracteres">
+
+               size: Establece el ancho visible del campo de texto en número de caracteres. Ejemplo:
+                    <input type="text" size="30" placeholder="Tamaño del campo">
+
+               readonly: Hace que el campo sea solo lectura, lo que impide que el usuario lo modifique. Ejemplo:
+                    <input type="text" value="Solo lectura" readonly>
+
+               disabled: Desactiva el campo, impidiendo que el usuario interactúe con él. Ejemplo:
+                    <input type="text" value="Deshabilitado" disabled>
+
+               required: Indica que el campo es obligatorio y debe ser completado antes de enviar el formulario. Ejemplo:
+                    <input type="text" required placeholder="Este campo es obligatorio">
+          -->
+          <br>
+          <br>
+     
+          <label for="busqueda">Búsqueda</label>
+          <input type="search" id="busqueda" name="input_busqueda" placeholder="Buscar...">
+          <!--
+               type="search": Indica que este campo es un campo de búsqueda. Algunos navegadores pueden aplicar estilos diferentes
+                    a este tipo de input, como mostrar un botón de borrar (una "X") al lado del campo cuando hay texto ingresado.
+
+               id="busqueda": El id proporciona un identificador único para el campo de búsqueda, permitiendo que se vincule 
+                    correctamente con la etiqueta <label>.
+
+               name="input_busqueda": El name define el nombre que se enviará al servidor cuando el formulario sea enviado. Este nombre 
+                    se puede utilizar en el servidor para acceder al valor ingresado.
+
+               placeholder="Buscar...": El atributo placeholder muestra un texto de ejemplo dentro del campo, que desaparece cuando el 
+                    usuario comienza a escribir. En este caso, dice "Buscar...", indicando que el usuario debe ingresar su término de búsqueda.
+
+               También admite los atributos comunes autocomplete, autofocus, pattern, title, required, size y value.
+          -->          
+          <br>
+          <br>
+     
+          <label for="url">URL</label>
+          <input type="url" id="url" name="input_url" placeholder="https://ejemplo.com">
+          <!-- 
+               type="url": Indica que este campo está destinado a la entrada de URLs. Los navegadores aplican ciertas validaciones 
+                    a la entrada, lo que ayuda a garantizar que el formato ingresado sea correcto.
+
+               id="url": El id proporciona un identificador único para el campo de URL, permitiendo que se vincule correctamente 
+               con la etiqueta <label>.
+
+               name="input_url": El name define el nombre que se enviará al servidor cuando el formulario sea enviado. Este nombre 
+                    se puede utilizar en el servidor para acceder al valor ingresado.
+
+               placeholder="https://ejemplo.com": El atributo placeholder muestra un texto de ejemplo dentro del campo, que desaparece 
+                    cuando el usuario comienza a escribir. En este caso, dice "https://ejemplo.com", indicando el formato esperado para una URL.
+
+               También admite los atributos comunes autocomplete, autofocus, pattern, title, required, size y value.     
+          -->
+          <br>
+          <br>
+     
+          <label for="email">Email</label>
+          <input type="email" id="email" name="input_email" placeholder="tu.email@ejemplo.com">
+          <!--
+               type="email": Indica que este campo está destinado a la entrada de direcciones de correo electrónico. Los navegadores 
+                    aplican validaciones para verificar que el texto ingresado tenga un formato adecuado (por ejemplo, que contenga 
+                    una "@" y un dominio).
+
+               placeholder="tu.email@ejemplo.com": El atributo placeholder muestra un texto de ejemplo dentro del campo, que desaparece 
+                    cuando el usuario comienza a escribir. En este caso, dice "tu.email@ejemplo.com", indicando el formato esperado 
+                    para una dirección de correo electrónico.     
+
+               También admite los atributos comunes autocomplete, autofocus, pattern, title, required, size y value.     
+          -->
+          <br>
+          <br>
+     
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="input_password" placeholder="Introduce tu contraseña">
+          <!--
+               type="password": Indica que este campo está destinado a la entrada de contraseñas. Los caracteres ingresados se ocultan 
+               automáticamente para proteger la información.
+              
+               También admite los atributos comunes autocomplete, autofocus, minlength, maxlength, pattern, title y required.     
+
+          --> 
+          <br>
+          <br>
+     
+          <label for="comments">Campo de texto</label>
+          <textarea id="comments" name="input_comments" rows="4" cols="50"  wrap="hard" placeholder="Escribe aquí tu comentario..."></textarea>
+          <!--
+               rows="4": Este atributo especifica cuántas líneas visibles de texto debería tener el área de texto al ser mostrada. 
+                    En este caso, el área de texto mostrará 4 líneas.
+
+               cols="50": Este atributo establece cuántos caracteres de ancho deberían ser visibles en el área de texto. Aquí, el 
+                    ancho es de 50 caracteres.
+
+               wrap="hard": Controla cómo se envían los datos cuando el formulario se envía. Puede tener valores como "soft" 
+                    (separa líneas visualmente pero no inserta saltos de línea en los datos enviados) o "hard" (inserta saltos 
+                    de línea en los datos enviados).
+                   
+               style: Permite aplicar estilos en línea al área de texto.
+
+               También admite los atributos comunes autocomplete, autofocus, required, maxlength y title.     
+          -->
+          <br>
+          <br>
+          
+
+          <!-- Input de tipo numerico -->
+          <label for="numero">Tipo Numérico</label>
+          <input type="number" id="numero" name="input_numero" placeholder="Ingresa un número" min="0" max="100" step="1">
+          <!--
+              type="number": Indica que este campo está destinado a la entrada de números. Los navegadores aplican validaciones para 
+              asegurarse de que el texto ingresado sea un número.
+
+               min="0": Establece el valor mínimo que el usuario puede ingresar. En este caso, no se permiten números negativos.
+
+               max="100": Establece el valor máximo que el usuario puede ingresar. Aquí, el valor máximo permitido es 100.
+
+               step="1": Define el incremento de los valores que se pueden seleccionar. En este caso, el usuario puede aumentar o 
+               disminuir el número en pasos de 1.
+               
+               También admite los atributos comunes autocomplete, autofocus, required, y title.     
+          -->
+          <br>
+          <br>
+
+          <input type="range" id="rango" name="rango_valor" min="0" max="100" step="1" value="50">
+          <!--
+               type="range": Especifica que el input será un control deslizante.
+
+               id="rango": El id asocia el input con la etiqueta <label> que tiene for="rango", lo que los vincula.
+
+               name="rango_valor": El nombre del campo que se enviará al servidor cuando el formulario sea enviado. 
+                    El valor seleccionado por el usuario será accesible bajo este nombre en el servidor.
+
+               min="0": Establece el valor mínimo del rango que el usuario puede seleccionar. En este caso, es 0.
+     
+               max="100": Establece el valor máximo del rango que el usuario puede seleccionar. En este caso, es 100.
+     
+               step="1": Define los incrementos o pasos en los que el valor puede cambiar. Aquí, el valor cambia de uno en uno.
+
+               value="50": Define el valor inicial del control deslizante cuando se carga la página. En este caso, comienza en 50.
+          -->
+          <br>
+          <br>
+
+     
+          <!-- Input de Fecha y Hora -->   
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="input_fecha" required>
+          <!--
+               type="date": Indica que este campo está destinado a la entrada de fechas. Los navegadores aplican un formato específico 
+                    y pueden ofrecer un selector de fecha.
+
+               required: Este atributo indica que el campo de fecha es obligatorio y debe ser completado antes de enviar el formulario.
+
+               min: Establece la fecha mínima que se puede seleccionar. Si el usuario intenta seleccionar una fecha anterior 
+                    a esta, no será posible. Ejemplo: <input type="date" min="2024-01-01">
+
+               max: Establece la fecha máxima que se puede seleccionar. Si el usuario intenta seleccionar una fecha posterior a esta, 
+                    no será posible. Ejemplo: <input type="date" max="2024-12-31">
+
+               value: Establece un valor predeterminado para el campo de fecha. Este valor debe estar en formato YYYY-MM-DD. Ejemplo:
+                    <input type="date" value="2024-09-25">
+
+               step: Permite definir el incremento de las fechas que se pueden seleccionar. No es tan común como con los números, 
+                    pero puede ser utilizado para establecer intervalos de fechas (en días). Ejemplo: 
+                    <input type="date" step="7"> (Permite seleccionar fechas cada 7 dias)
+
+               También admite el atributo común title.  
+          -->   
+          <br>
+          <br>
+
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" name="input_hora" required>
+          <!--
+               type="time": Indica que este campo está destinado a la entrada de tiempo. Los navegadores aplican un formato específico 
+                    y pueden ofrecer un selector de tiempo.
+               
+               min: Establece la hora mínima que se puede seleccionar. Si el usuario intenta seleccionar una hora anterior a esta, 
+                    no será posible. Ejemplo: <input type="time" min="08:00">
+
+               max: Establece la hora máxima que se puede seleccionar. Si el usuario intenta seleccionar una hora posterior a esta, 
+                    no será posible. Ejemplo: <input type="time" max="17:00">
+
+               value: Establece un valor predeterminado para el campo de tiempo. Este valor debe estar en formato HH:MM (horas y minutos).
+                    Ejemplo: <input type="time" value="12:30">
+
+               step: Permite definir el incremento de los minutos que se pueden seleccionar. Por defecto, los incrementos son de 1 minuto, 
+                    pero puedes establecer un valor mayor. Ejemplo: <input type="time" step="600">  (Permite seleccionar cada 10 minutos)
+
+               También admite el atributo común title.  
+          -->
+          <br>
+          <br>
+
+          <label for="fecha_hora">Fecha y Hora</label>
+          <input type="datetime-local" id="fecha_hora" name="input_fecha_hora" required>
+          <!--
+               type="datetime-local": Indica que este campo está destinado a la entrada de una fecha y hora local. Los navegadores 
+                    aplican un formato específico y pueden ofrecer un selector que permite seleccionar tanto la fecha como la hora.
+
+               min: Establece la fecha y hora mínima que se puede seleccionar. Si el usuario intenta seleccionar una fecha y hora 
+                    anterior a esta, no será posible. Ejemplo: <input type="datetime-local" min="2024-09-25T08:00">
+
+               max: Establece la fecha y hora máxima que se puede seleccionar. Si el usuario intenta seleccionar una fecha y hora 
+                    posterior a esta, no será posible. Ejemplo: <input type="datetime-local" max="2024-12-31T17:00">
+
+               value: Establece un valor predeterminado para el campo de fecha y hora. Este valor debe estar en formato 
+                    YYYY-MM-DDTHH:MM (fecha y hora). Ejemplo: <input type="datetime-local" value="2024-09-25T12:30">
+                  
+               También admite el atributo común title.       
+          -->
+          <br>
+          <br>
+
+          <label for="mes">Mes</label>
+          <input type="month" id="mes" name="input_mes" required>
+          <!--
+               type="month": Indica que este campo está destinado a la entrada de un mes y año. Los navegadores aplican un formato 
+                    específico que permite seleccionar un mes en un formato legible.
+
+               min: Establece el mes y año mínimos que se pueden seleccionar. Si el usuario intenta seleccionar un mes 
+                    anterior a este, no será posible. Ejemplo: <input type="month" min="2024-01">
+
+               max: Establece el mes y año máximos que se pueden seleccionar. Si el usuario intenta seleccionar un mes 
+                    posterior a este, no será posible. Ejemplo: <input type="month" max="2024-12">
+
+               value: Establece un valor predeterminado para el campo de mes. Este valor debe estar en formato
+                    YYYY-MM (año y mes). Ejemplo: <input type="month" value="2024-09">
+
+               También admite el atributo común title.       
+          -->
+          <br>
+          <br>
+          
+          <label for="semana">Semana</label>
+          <input type="week" id="semana" name="input_semana" required>
+          <!--
+               type="week": Indica que este campo está destinado a la entrada de una semana y su año correspondiente. 
+                    Los navegadores aplican un formato específico que permite seleccionar una semana.
+
+               min: Establece la semana mínima que se puede seleccionar. Este valor debe estar en formato YYYY-Www, 
+                    donde YYYY es el año y Www es el número de la semana. Ejemplo: <input type="week" min="2024-W01">
+
+               max: Establece la semana máxima que se puede seleccionar. Este valor debe estar en el mismo formato que min.
+                    Ejemplo: <input type="week" max="2024-W52">
+
+               value: Establece un valor predeterminado para el campo de semana. Este valor debe estar en formato YYYY-Www.
+                    Ejemplo: <input type="week" value="2024-W39">  
+                    
+               También admite el atributo común title.       
+          -->
+          <br>
+          <br>
+
+          <hr>
+          <br>
+
+
+          <!-- Input de Seleccion -->
+          <label for="">Radio Button</label>
+          <input type="radio">
+          <br>
+          <br>
+
+          <label for="">Checkbox</label>
+          <input type="checkbox">
+          <br>
+          <br>
+
+
+          <label for="">Select - Option</label>
+          <select name="" id="">
+               <option value="1">Opcion1</option>
+               <option value="2">Opcion2</option>
+               <option value="3">Opcion3</option>
+          </select>
+          <br><br>
+
+
+          <label for="">Datalist</label>
+          <input type="text" list="items">
+          <datalist id="items">
+               <option value="1">Opción 1</option>
+               <option value="2">Opción 2</option>
+               <option value="3">Opción 3</option>
+          </datalist>
+          <br><br>
+
+
+          <label for="">Colores</label>
+          <input type="color">
+          <br><br>
+
+          <hr>
+          <br>
+
+
+          <!-- Carga de Archivo -->
+          <label for="">Seleccion de archivo</label>
+          <input type="file">
+          <br><br>
+
+          <hr>
+          <br>
+
+
+     
+          <!-- Botones -->
+          <label for="">Submit</label>
+          <input type="submit">
+          <br><br>
+
+          <label for="">Imagen</label>
+          <input type="image" src="img/botón_enviar.webp">
+          <br><br>
+
+          <label for="">Borrar Formulario</label>
+          <input type="reset">
+          <br><br>
+
+          <label for="">Boton sin funcionalidad</label>
+          <input type="button" value="Input Boton">
+          <button>Boton simple</button>
+          <br><br>
+
+
+          <hr>
+          <br>
+
+
+          <!-- Barra de progreso  -->
+          <progress max="100" value="25">
+     </form>
+</body>
+</html>
