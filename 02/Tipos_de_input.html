@@ -314,79 +314,329 @@
 
 
           <!-- Input de Seleccion -->
-          <label for="">Radio Button</label>
-          <input type="radio">
+          <label for="opcion1">Opción 1</label>
+          <input type="radio" id="opcion1" name="grupo_opciones" value="opcion1">
+
+          <label for="opcion2">Opción 2</label>
+          <input type="radio" id="opcion2" name="grupo_opciones" value="opcion2">
+
+          <!--
+               El elemento <input type="radio"> en HTML se utiliza para crear un botón de opción (radio button), que permite 
+               a los usuarios seleccionar una opción de un grupo de opciones mutuamente excluyentes. Solo se puede seleccionar 
+               una opción a la vez dentro del mismo grupo de botones de opción.
+
+               type="radio": Indica que este campo es un botón de opción.
+
+               name="grupo_opciones": El atributo name define el grupo al que pertenece el botón de opción. Todos los botones 
+                    de opción que comparten el mismo nombre pertenecen al mismo grupo, lo que significa que solo se puede 
+                    seleccionar uno a la vez.
+
+               value="opcion1": Este atributo define el valor que se enviará al servidor si se selecciona esta opción.
+          -->
           <br>
           <br>
 
-          <label for="">Checkbox</label>
-          <input type="checkbox">
+          <label for="opcion1">Opción 1</label>
+          <input type="checkbox" id="opcion1" name="opciones[]" value="opcion1">
+          
+          <label for="opcion2">Opción 2</label>
+          <input type="checkbox" id="opcion2" name="opciones[]" value="opcion2">
+          <!--
+               El elemento <input type="checkbox"> en HTML se utiliza para crear una casilla de verificación (checkbox), que permite 
+               a los usuarios seleccionar o deseleccionar una o más opciones de manera independiente. A diferencia de los botones 
+               de opción (radio buttons), los checkboxes permiten seleccionar múltiples opciones al mismo tiempo.
+
+               type="checkbox": Indica que este campo es una casilla de verificación.
+
+               name="opciones[]": El name define el nombre que se enviará al servidor cuando el formulario sea enviado. Se utiliza opciones[] 
+                    (con corchetes) para indicar que se pueden seleccionar varias casillas de verificación y que se enviarán como un array 
+                    de valores.
+
+               value="opcion1": Este atributo define el valor que se enviará al servidor si esta casilla está seleccionada.
+          -->
           <br>
           <br>
 
 
-          <label for="">Select - Option</label>
-          <select name="" id="">
-               <option value="1">Opcion1</option>
-               <option value="2">Opcion2</option>
-               <option value="3">Opcion3</option>
+          <label for="opciones">Select - Option</label>
+          <select name="opciones" id="opciones">
+              <option value="1">Opción 1</option>
+              <option value="2">Opción 2</option>
+              <option value="3">Opción 3</option>
           </select>
-          <br><br>
+          <!--
+               El elemento <select> en HTML se utiliza para crear un menú desplegable (dropdown) donde los usuarios pueden seleccionar 
+               una opción de una lista. Los elementos <option> dentro de <select> definen las opciones disponibles en el menú.
+
+               <select name="opciones" id="opciones">: Este elemento crea el menú desplegable.
+
+               name="opciones": El atributo name define el nombre con el que se enviará la opción seleccionada al servidor cuando el 
+                    formulario sea enviado.
+
+               Cada elemento <option> dentro de <select> define una opción que puede ser seleccionada en el menú desplegable.
+
+               value="1": Este atributo define el valor que se enviará al servidor cuando se seleccione esta opción. El valor es diferente
+                    del texto que el usuario ve en el menú desplegable.
+
+               Opción 1: El texto visible que aparece en el menú desplegable.
+
+               Otros atributos de select.
+               
+               multiple: Permite seleccionar varias opciones a la vez. Si se usa este atributo, el menú cambia de un desplegable a una 
+                    lista con múltiples selecciones posibles.
+
+               size: Controla cuántas opciones se muestran en la lista al mismo tiempo. Si no se usa multiple, solo se puede seleccionar
+                    una opción a la vez.
+
+               Otros atributos de option.
+
+               selected: Preselecciona una opción en el menú desplegable al cargar la página. Ejemplo: 
+                    <option value="1" selected>Opción 1</option>
+
+               disabled: Desactiva una opción específica, impidiendo que el usuario la seleccione. Ejemplo:
+                    <option value="2" disabled>Opción 2</option>
+
+               label: Proporciona una etiqueta accesible para la opción. Este atributo es útil si la etiqueta mostrada y el 
+                    valor son diferentes. Ejemplo: <option value="3" label="Tercera Opción">Opción 3</option>
+          -->
+          <br>
+          <br>          
+          
 
 
-          <label for="">Datalist</label>
-          <input type="text" list="items">
+          <label for="items-input">Datalist</label>
+          <input type="text" id="items-input" list="items">
+
           <datalist id="items">
                <option value="1">Opción 1</option>
                <option value="2">Opción 2</option>
                <option value="3">Opción 3</option>
           </datalist>
-          <br><br>
+          <!--
+               El elemento <datalist> en HTML se utiliza para proporcionar una lista de opciones sugeridas que los usuarios pueden seleccionar 
+               mientras escriben en un campo de entrada de texto (<input>). A diferencia de un menú desplegable <select>, el <datalist> permite 
+               escribir valores que no estén en la lista, pero también ofrece sugerencias de autocompletar.
+
+               type="text": El tipo de input es un campo de texto estándar.
+
+               list="items": Este atributo asocia el campo de texto con el elemento <datalist>, que tiene un id="items". Esto permite que el 
+                    campo de texto muestre las opciones sugeridas mientras el usuario escribe.
+
+               id="items": El identificador id es obligatorio para asociar el <datalist> con el campo de texto mediante el atributo list del input.
+                    Dentro del <datalist>, los elementos <option> representan las opciones que se ofrecen como sugerencias cuando el usuario 
+                    comienza a escribir en el campo de texto.
+
+               value="1": El valor que el usuario puede seleccionar. En este caso, solo el atributo value es necesario porque este es el texto 
+                    que el usuario verá como sugerencia y podrá seleccionar.
+                    
+               Opción 1: El valor dentro del atributo value es la sugerencia que se muestra al usuario. En este caso, el valor es el mismo que 
+                    se muestra, pero pueden diferir si se utiliza el atributo label en lugar de value.   
+
+               Otros atributos de input asociado a datalist.
+
+               placeholder: Proporciona un texto informativo dentro del campo de texto antes de que el usuario comience a escribir. Ejemplo:
+                    <input type="text" list="items" placeholder="Escribe algo...">
+
+               required: Obliga a que el usuario seleccione o escriba un valor antes de enviar el formulario. Ejemplo: 
+                    <input type="text" list="items" required>
+
+               pattern: Define una expresión regular que el valor del campo debe cumplir. Esto puede ser útil si quieres restringir los valores 
+                    que el usuario puede ingresar. Ejemplo: <input type="text" list="items" pattern="[0-9]+">
+
+               value: Puedes establecer un valor predeterminado para el campo de texto. Ejemplo: <input type="text" list="items" value="2">
+
+               Otros atributos de option dentro del datalist.
+
+               label: Si se usa, el atributo label muestra un texto diferente en la lista sugerida, aunque el valor enviado sigue siendo el 
+                    valor del atributo value. Ejemplo: <option value="1" label="Primera Opción">
+
+               disabled: Deshabilita una opción específica para que no pueda ser seleccionada. Ejemplo: 
+                    <option value="2" disabled>Opción deshabilitada</option>
+          -->
+          <br>
+          <br>
 
 
-          <label for="">Colores</label>
-          <input type="color">
-          <br><br>
+          <label for="color-picker">Colores</label>
+          <input type="color" id="color-picker" name="color" value="#ff0000">
+          <!--
+               El elemento <input type="color"> en HTML permite a los usuarios seleccionar un color desde un selector gráfico de colores. Al hacer 
+               clic en el campo, se abre una paleta de colores donde los usuarios pueden elegir un color, que se devuelve en formato hexadecimal 
+               (por ejemplo, #ff0000 para rojo).
 
-          <hr>
+               type="color": Define que este es un campo de selección de color.
+
+               name="color": El name define el nombre con el que se enviará el color seleccionado al servidor cuando el formulario sea enviado.
+
+               value="#ff0000": Este atributo define el valor por defecto, que es un código hexadecimal que representa un color (en este caso, rojo).
+                     Si no se proporciona el valor, el input puede mostrar un color predeterminado (generalmente negro o blanco).
+
+               Otros atributos de color.
+
+               required: Obliga a que el usuario seleccione un color antes de enviar el formulario. Ejemplo: <input type="color" required>
+
+               title: Proporciona información adicional que se muestra como un tooltip cuando el usuario pasa el ratón sobre el campo de selección de 
+                    color. Ejemplo: <input type="color" title="Selecciona un color">
+          -->
+          <br>
           <br>
 
 
           <!-- Carga de Archivo -->
-          <label for="">Seleccion de archivo</label>
-          <input type="file">
-          <br><br>
+          <label for="archivo">Selección de archivo</label>
+          <input type="file" id="archivo" name="archivo">          
+          <!--
+               El elemento <input type="file"> en HTML permite a los usuarios seleccionar archivos de su dispositivo para cargarlos a un servidor. 
+               Cuando un formulario que contiene este tipo de campo se envía, el archivo seleccionado se envía como parte de los datos del formulario.
 
-          <hr>
+               type="file": Define que este campo permite la selección de archivos desde el sistema del usuario.
+               
+               name="archivo": El atributo name define el nombre con el que el archivo será enviado al servidor cuando se envíe el formulario.
+
+               Otros atributos para file.
+
+               multiple: Permite seleccionar múltiples archivos a la vez. Si no se usa, solo se podrá seleccionar un archivo. Ejemplo: 
+                    <input type="file" id="archivo" name="archivo" multiple>
+
+               accept: Especifica qué tipos de archivos se pueden seleccionar, filtrando los archivos visibles según sus extensiones o tipos MIME. 
+                    Esto mejora la experiencia de usuario al limitar las opciones a los tipos de archivos aceptables. Ejemplos: Solo imágenes:
+                    <input type="file" id="archivo" name="archivo" accept="image/*">. Solo archivos PDF: 
+                    <input type="file" id="archivo" name="archivo" accept=".pdf">. Para tipos MIME específicos: 
+                    <input type="file" id="archivo" name="archivo" accept="image/png, image/jpeg">
+
+               required: Obliga a que el usuario seleccione al menos un archivo antes de enviar el formulario. Ejemplo:
+                    <input type="file" id="archivo" name="archivo" required>
+
+               capture: Este atributo, cuando se usa en dispositivos móviles, activa la cámara o el micrófono para capturar un archivo multimedia 
+                    en lugar de seleccionar uno existente. Este atributo es útil para cargar archivos desde el dispositivo directamente. Ejemplo 
+                    (para imágenes): <input type="file" id="archivo" name="archivo" accept="image/*" capt
+          -->
+          <br>
           <br>
 
 
      
           <!-- Botones -->
-          <label for="">Submit</label>
-          <input type="submit">
-          <br><br>
+          <label for="submit-btn">Submit</label>
+          <input type="submit" id="submit-btn" value="Enviar">
+          <!--
+               El elemento <input type="submit"> en HTML se utiliza para crear un botón que envía los datos de un formulario cuando se hace clic en él. 
+               Este botón es esencial para formularios, ya que permite al usuario enviar los datos ingresados al servidor para su proceso.          
 
-          <label for="">Imagen</label>
-          <input type="image" src="img/botón_enviar.webp">
-          <br><br>
+               type="submit": Define que este es un botón de envío. Al hacer clic en este botón, se envía el formulario que lo contiene.
 
-          <label for="">Borrar Formulario</label>
-          <input type="reset">
-          <br><br>
+               id="submit-btn": El id permite asociar el botón con su etiqueta y puede usarse para hacer referencia al botón en CSS o JavaScript.
 
-          <label for="">Boton sin funcionalidad</label>
-          <input type="button" value="Input Boton">
-          <button>Boton simple</button>
-          <br><br>
+               value="Enviar": El atributo value especifica el texto que aparecerá en el botón. En este caso, el texto del botón será "Enviar". Si no se 
+                    especifica, el texto predeterminado suele ser "Submit".
 
+               Otros atributos para submit.
+               
+               value: El texto que aparecerá en el botón. Si no se proporciona, el texto por defecto será "Submit" o equivalente según el idioma 
+                    del navegador. Ejemplo: <input type="submit" value="Enviar Formulario">
 
-          <hr>
+               formaction: Define una URL específica a la que se enviará el formulario cuando se haga clic en el botón de envío. Este atributo 
+                    sobrescribe el valor del atributo action en la etiqueta <form>. Ejemplo: <input type="submit" formaction="./otra_pagina.php">
+
+               formenctype: Especifica cómo se deben codificar los datos del formulario antes de enviarse al servidor. Sobrescribe el atributo 
+                    enctype del formulario. Valores comunes: 
+                         application/x-www-form-urlencoded: Codificación predeterminada. 
+                         multipart/form-data: Usada cuando el formulario contiene archivos.
+                         text/plain: Envía los datos sin codificación.
+                    Ejemplo: <input type="submit" formenctype="multipart/form-data">
+
+               formmethod: Especifica el método HTTP que se utilizará para enviar los datos. Sobrescribe el atributo method del formulario.
+                    Valores comunes:
+                         get: Envía los datos como parte de la URL (visible en la barra de direcciones).
+                         post: Envía los datos en el cuerpo de la solicitud HTTP (más seguro).
+                    Ejemplo: <input type="submit" formmethod="post">
+
+               formnovalidate: Si se usa, deshabilita la validación del formulario cuando se hace clic en el botón de envío. Ejemplo: 
+                    <input type="submit" formnovalidate>
+
+               formtarget: Especifica dónde abrirá el formulario enviado. Sobrescribe el atributo target del formulario. 
+                    Valores comunes:
+                         _self: Abre la respuesta en la misma pestaña (predeterminado).
+                         _blank: Abre la respuesta en una nueva pestaña o ventana.
+                         _parent: Abre la respuesta en el marco padre si existe.
+                         _top: Abre la respuesta en toda la ventana.
+                    Ejemplo: <input type="submit" formtarget="_blank">
+          -->
+          <br>
           <br>
 
+          <label for="img-submit">Imagen</label>
+          <input type="image" src="img/botón_enviar.webp" id="img-submit" alt="Botón de envío">
+          <!--
+               El elemento <input type="image"> en HTML crea un botón de envío que utiliza una imagen en lugar del botón estándar de texto. 
+               Cuando el usuario hace clic en la imagen, el formulario se envía de manera similar a un botón de envío regular. Adicionalmente, 
+               el navegador envía las coordenadas del punto en la imagen donde se hizo clic.
 
-          <!-- Barra de progreso  -->
-          <progress max="100" value="25">
+               type="image": Define que este input es un botón de envío con una imagen.
+
+               src="img/botón_enviar.webp": Especifica la URL de la imagen que se usará como botón. En este ejemplo, la imagen es 
+                    "botón_enviar.webp" ubicada en la carpeta "img".
+                    
+               id="img-submit": El id permite asociar el campo con la etiqueta <label> y puede usarse en CSS o JavaScript.
+
+               alt="Botón de envío": El atributo alt proporciona un texto alternativo para la imagen en caso de que no pueda cargarse o 
+                    para mejorar la accesibilidad para usuarios con discapacidades visuales. 
+
+               Otros atributos para image.
+               
+               width y height: Especifica el ancho y la altura de la imagen en píxeles. Ejemplo:
+                    <input type="image" src="img/enviar.png" alt="Enviar Formulario" width="100" height="50">
+
+               También puede usar formaction, formmethod formnovalidate y formtarget.
+          -->
+          <br>
+          <br>
+
+          <label for="reset-btn">Borrar Formulario</label>
+          <input type="reset" id="reset-btn" value="Restablecer">
+          <!--
+               El elemento <input type="reset"> en HTML se utiliza para crear un botón que restablece o borra todos los campos del formulario 
+               a sus valores predeterminados. Al hacer clic en este botón, los campos del formulario vuelven a su estado original, eliminando 
+               cualquier cambio o información ingresada por el usuario.
+
+               type="reset": Define que este es un botón de restablecimiento. Al hacer clic en este botón, todos los campos del formulario se 
+               restablecen a sus valores predeterminados.
+
+               value="Restablecer": El atributo value define el texto que aparecerá en el botón. En este caso, el texto será "Restablecer". 
+                    Si no se especifica, el valor predeterminado del texto es "Reset". 
+          -->
+          <br>
+          <br>
+
+          <label for="btn1">Botón genérico</label>
+          <input type="button" id="btn1" value="Haz clic" onclick="mostrarMensajeInput()">
+          <!--
+               onclick: Es un evento que se dispara cuando se hace clic en un elemento. En este caso, llama a una función que muestra un mensaje.      
+          -->
+          <br>
+          <br>
+
+          <label for="progreso">Barra de progreso:</label>
+          <progress id="progreso" max="100" value="25">25%</progress>
+          <!--
+               El elemento <progress> en HTML se utiliza para mostrar una barra de progreso que representa el progreso de una tarea en curso, como 
+               la descarga de un archivo o el proceso de una carga. La barra puede ser visualmente actualizada a medida que avanza la tarea, 
+               mostrando el valor actual en relación con un valor máximo.
+
+               id="progreso": El id permite identificar el elemento para estilos CSS o manipulación a través de JavaScript.
+
+               max="100": Establece el valor máximo de la barra de progreso. En este caso, el valor máximo es 100.
+
+               value="25": Indica el valor actual de progreso. En este caso, representa que el progreso es del 25% en relación con el valor máximo.
+          -->
+
      </form>
+
+     <script>
+          // Función para mostrar mensaje.
+          function mostrarMensajeInput() {
+              alert('Hiciste clic en el botón.');
+          }
+      </script>
 </body>
 </html>
