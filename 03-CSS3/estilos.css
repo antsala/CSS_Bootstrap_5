@@ -1,0 +1,16 @@
+/*
+    Los comentarios se definen de esta forma.
+*/
+
+/*
+    Son útiles para comentar los estilos y para anularlos, ya que si
+    un estilo se comenta, no se aplicará.
+*/
+
+/*
+    El siguient estilo aplica color verde a todos los párrafos.
+*/
+p {
+    color: green
+}
+
