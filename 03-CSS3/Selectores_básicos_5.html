@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Selector por clases */
+
+        .fuente-negrita {
+            font-weight: 600;
+        }
+
+        .color-fondo {
+            background-color: red;
+        }
+
+        .texto-blanco {
+            color: white;
+        }
+
+        /* Clases agrupadas */
+
+        /* Los elementos html que tengan aplicadas estas dos clases, reciben también este estilo */
+        .color-fondo.texto-blanco {
+            font-size: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        También se le aplica el tamaño de letra a 60px.
+    -->
+    <h1 class="fuente-negrita color-fondo texto-blanco">Título de la página web</h1>
+    <h3>Subtítulo de la página web</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, tempore necessitatibus perspiciatis obcaecati 
+        facere rem quo similique ab exercitationem repellendus cum quisquam mollitia quas assumenda corrupti! Soluta, 
+        odit! Voluptas, ea!
+    </p>
+</body>
+</html>
