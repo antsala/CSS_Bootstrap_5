@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Selector hijo. Aplica a los h1 que que son hijos directos, y no a sus descendientes
+            No aplica al h1 "Subtítulo" porque no es hijo directo de la div que es hija directa
+            de la clase "contenedor". */
+
+        .contenedor > div > h1 {
+            color: green
+        }
+    </style>
+
+</head>
+<body>
+    <div class="contenedor">
+        <div>
+            <h1>Título</h1> <!-- El selector se aplica a este elemento -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, tempore necessitatibus perspiciatis obcaecati 
+                facere rem quo similique ab exercitationem repellendus cum quisquam mollitia quas assumenda corrupti! Soluta, 
+                odit! Voluptas, ea!
+            </p>    
+            <div>
+                <h1>Subtítulo</h1>  <!-- El selector NO se aplica a este elemento porque no es hijo directo. -->
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

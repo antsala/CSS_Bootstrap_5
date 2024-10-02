@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Selector general. Aplica el estilo a TODOS los elementos de la página.  */
+        * {
+            color: blue
+        }
+
+         /*  Además de la utilidad obvia, se puede usar para lo siguiente: Como sabrás,
+            los navegadores difieren en gran medida en la aplicación de atributos por 
+            defecto, por ejemplo, los márgenes por defecto adquieren distinto valor en
+            función del navegador que usemos.
+            
+            Usando el selector general, podemos establecer valores por defecto para 
+            ciertas propiedades de todos los elementos, por ejemplo el margen, y así
+            garantizar que se renderiza correctamente en todos los navegadores.
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="contenedor1">   <!-- Este es un contenedor -->
+        <h1>Hola mundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, tempore necessitatibus perspiciatis obcaecati 
+            facere rem quo similique ab exercitationem repellendus cum quisquam mollitia quas assumenda corrupti! Soluta, 
+            odit! Voluptas, ea!
+        </p>    
+    </div>
+
+    <div class="contenedor2">   <!-- Este es otro contenedor -->
+        <h1>Hola mundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, tempore necessitatibus perspiciatis obcaecati 
+            facere rem quo similique ab exercitationem repellendus cum quisquam mollitia quas assumenda corrupti! Soluta, 
+            odit! Voluptas, ea!
+        </p>    
+    </div>
+</body>
+</html>

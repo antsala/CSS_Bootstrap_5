@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Selector descendiente. Permite aplicar estilos a un elemento que
+            se encuentre dentro de un contenedor. Observa el uso del espacio
+            en blanco entre el contenedor y el elemento. */
+
+        #miContenedor p {   /* Establece estilo a los párrafos dentro de miContenedor */
+            color:orange
+        }
+
+        #miContenedor a {   /* Establece estilo a los links dentro de miContenedor */
+            color: pink
+        }
+
+        #miLista ul li a {   /* Establece estilo los enlaces dentro de los elementos de la lista  */
+            color: green
+        }
+    </style>
+
+</head>
+<body>
+    <div id="miContenedor">
+        <h3>Título</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, tempore necessitatibus perspiciatis obcaecati 
+            facere rem quo similique ab exercitationem repellendus cum quisquam mollitia quas assumenda corrupti! Soluta, 
+            odit! Voluptas, ea!
+        </p>    
+        <a href="https://www.google.es">Ir a Google</a>
+    </div>
+
+    <div id="miLista">
+        <ul>
+            <li><a href="">Primer enlace</a></li>
+            <li><a href="">Segundo enlace</a></li>
+            <li><a href="">Tercer enlace</a></li>
+        </ul>
+        <a href="">Este enlace no recibe CSS del selector descendiente</a>
+    </div>
+</body>
+</html>

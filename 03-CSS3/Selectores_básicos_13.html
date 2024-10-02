@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       /*  Hermano "adyacente": Aplica la CSS a la clase "articulo" y dentro de ella a primer
+            span que sea hermano (esté en el mismo nivel de la jerarquía) del h1 y al lado
+            de este. En el ejemplo afectaría a "span2" */
+        
+        .articulo h1 + span {
+            color: blueviolet
+       }
+    </style>
+
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenido">
+            <div class="articulo">
+                <h1>Hola Mundo 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, distinctio? Labore quas quod nesciunt consequatur at, 
+                    officia tempore, et velit sed pariatur accusantium. Molestias, nihil! Eius cum sed minus similique.
+                </p>
+                <span id="span1">Hola de nuevo</span>
+            </div>
+
+            <div class="articulo">
+                <h1>Hola Mundo 2</h1>
+                <span id="span2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, distinctio? Labore quas quod nesciunt consequatur at, 
+                    officia tempore, et velit sed pariatur accusantium. Molestias, nihil! Eius cum sed minus similique.
+                </span>
+                <div>
+                    <span id="span3">Hola de nuevo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
