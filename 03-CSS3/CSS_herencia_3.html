@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Herencia en CSS */
+
+        body {  /* El "body" tiene borde. */
+            color: red;
+            border: 1px solid blue;
+        }
+
+        /* 
+            inherit: Hereda el valor que tiene la misma propiedad CSS en su elemento padre.
+            initial: Establece el valor inicial que tenía la propiedad CSS inicialmente.
+        */ 
+
+        div {
+            color: initial; /* Establece la CSS a su valor por defecto o inicial (se quita el color) */
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Este párrafo está dentro del body -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorum, expedita aspernatur adipisci placeat nobis 
+        earum quam ex facere accusantium qui eius totam distinctio quo assumenda dignissimos animi atque reprehenderit.
+    </p>
+
+    <!-- Esta div está dentro del body -->
+    <div> 
+        <!-- Este párrafo está dentro de la div -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorum, expedita aspernatur adipisci placeat nobis 
+            earum quam ex facere accusantium qui eius totam distinctio quo assumenda dignissimos animi atque reprehenderit.
+        </p>
+    </div>
+</body>
+</html>

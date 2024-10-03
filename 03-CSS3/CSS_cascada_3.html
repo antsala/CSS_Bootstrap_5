@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Cascada en CSS */
+
+        p { /* Esta CSS es más "importante" que la siguiente, por lo tanto tiene prioridad y es la que se aplica. */
+            color: orange !important;
+        }
+
+        p { /* Esta no se aplica. */
+            color: red;
+        }
+
+        /*  El estilo que se aplica (gana) es el que está  más abajo de los dos en el
+            archivo html, en este ejemplo el rojo. */
+    </style>
+
+</head>
+<body>
+    <p class="miParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorum, expedita aspernatur adipisci placeat nobis 
+        earum quam ex facere accusantium qui eius totam distinctio quo assumenda dignissimos animi atque reprehenderit.
+    </p>
+</body>
+</html>

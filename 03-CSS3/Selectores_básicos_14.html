@@ -6,36 +6,21 @@
     <title>Document</title>
 
     <style>
-        /* Enlaces no visitados. */
-        a:link {
-            color: orange;
-        }
-
-        /* Enlaces visitados. */
-        a:visited {
-            color: violet;
-        }
-
-        /* Input, cuando toma el foco cambiamos el fondo. */
-        input:focus {
+        /*  Selector por atributo */
+        
+        input[type="text"] {
             background: red;
+        }
+
+        a[href="www.google.es"] {
+            color: blueviolet;
+            font-size: 40px;
         }
     </style>
 
 </head>
 <body>
-    <a href="#">Este es un enlace</a>
     <input type="text">
-    <br>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempore pariatur totam ullam porro, 
-        recusandae cupiditate dolore nostrum incidunt in natus nesciunt neque illum exercitationem, 
-        autem numquam, sit nihil omnis!
-    </p>
-    <p class="miParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempore pariatur totam ullam porro, 
-        recusandae cupiditate dolore nostrum incidunt in natus nesciunt neque illum exercitationem, 
-        autem numquam, sit nihil omnis!
-    </p>
-
+    <a href="www.google.es">Ir a Google</a>
 </body>
 </html>

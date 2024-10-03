@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Pseudoelementos.*/
+
+        /* Se aplica la CSS antes de cada "span" */
+        span::before {
+            content: "-";
+            font-size: 30px;
+            color: brown;
+        }
+
+        /* Se aplica la CSS después de cada "span" */
+        span::after {
+            content: "Contenido insertado con pseudoelemento";
+            font-size: 30px;
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <span></span> <!-- Observa que la etiqueta está vacía -->
+</body>
+</html>
