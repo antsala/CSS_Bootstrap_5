@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            La propiedad 'Transform', aunque en la actualidad está soportada por TODOS los navegadores, hubo
+            un momento en que eso no era así, siendo soportada solamente por algunos.
+        */
+        div {
+            transform: rotate(25);          /* Navegadores que soportan la especificación oficial de la propiedad */      
+            -webkit-transform: rotate(25);  /* Versiones antiguas de Chrome (Motor Webkit) */
+            -moz-transform: rotate(25);     /* Versiones antiguas de Firefox (Motor Gecko) */
+            -ms-transform: rotate(25);      /* Versiones antiguas de IE (Motor Trident), también para Edge */
+            -o-transform: rotate(25);       /* Versiones antiguas de Opera (Motor Presto) */
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

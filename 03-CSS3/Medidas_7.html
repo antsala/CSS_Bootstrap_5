@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* Unidades de medida relativas al "viewport", que es el tamaño disponible en la pantalla del dispositivo */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background: blue;
+
+            width: 50vw; /* El ancho es el 50% del "viewport width (vw)", es decir, la mitad del ancho de la pantalla del dispositivo. */
+            height: 50vh; /* El ancho es el 50% del "viewport height (vw)", es decir, la mitad de la altura de la pantalla del dispositivo. */
+        }
+
+        h1 {
+            font-size: 4vmin;  
+            /* La unidad 'vmin' en CSS significa "viewport minimum" y es una medida relativa que toma el menor valor entre el ancho (vw, viewport width) 
+               y el alto (vh, viewport height) de la ventana gráfica.
+
+               '1vmin' equivale al 1% del tamaño del lado más pequeño de la ventana gráfica. Si el ancho es de 1200px y el alto es de 800px, entonces:
+                    1vmin = 8px (porque el lado más corto es el alto: 800px). Si el ancho es de 800px y el alto es de 1000px, entonces: 1vmin = 8px 
+                    (porque el lado más corto es el ancho: 800px).*/
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quasi autem ipsam incidunt necessitatibus natus, 
+            ratione, neque aperiam id eligendi harum nostrum dicta rem nemo repudiandae vel illo tenetur dolorum.
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga fugit consectetur inventore repudiandae aliquam rerum 
+            quod veritatis, consequatur libero, perspiciatis ea assumenda quibusdam totam unde animi nostrum consequuntur amet voluptates!
+        </h1>
+    </div>
+</body>
+</html>

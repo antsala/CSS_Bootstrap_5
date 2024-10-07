@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* Unidades de medida relativa "em". 'em' es la pronunciación de la letra "M", que se 
+         usaba en tipografía para medidas (1 em = al ancho de la letra M para el tamaño de letra elegido)
+         Es relativa al padre directo y no al root del documento. */
+
+        :root {
+            font-size: 30px;    /* Definimos tamaño de fuente por defecto para el documento */
+        }
+
+        body {
+            font-size: 60px;
+        }
+         
+        h1 {
+            /* El tamaño de letra es igual a dos veces el definido en su contenedor padre, que ahora es el body.
+               "rem" siempre hace referencia al tamaño existente en el "root". */
+            font-size: 2em; /* El tamaño final es 2x20px */
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur temporibus commodi sequi numquam non, 
+        provident praesentium, dolorem voluptas, explicabo iure magnam nam sapiente debitis fugiat exercitationem! Sapiente hic omnis unde.
+    </h1>
+</body>
+</html>

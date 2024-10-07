@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* Unidades de medida relativas al "viewport", que es el tamaño disponible en la pantalla del dispositivo */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.container {
+            background: blue;
+            width: 100%;    /* Es equivalente a 100vw */
+            height: 100vh;  /* 100% del viewport height */
+        }
+
+        /* Observa que el navegador no presenta barras de desplazamiento */
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
