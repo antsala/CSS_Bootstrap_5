@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+
+            width: 600px;
+            height: 600px;
+            margin: auto; /* se utiliza para centrar un elemento horizontalmente dentro de su contenedor */
+            border: 1px solid black;
+
+            background-image: url("img/paisaje.png"), url("img/pajaro_volando.png");
+            background-size: cover;
+            background-position: center;
+
+            /* Usamos el modo Blend para todas las imagenes asignadas al fondo */
+            background-blend-mode: multiply;
+
+            /* se utiliza para especificar cómo se combinan las imágenes de fondo de un elemento con el color de fondo 
+               o con otras imágenes de fondo. Cuando se aplica un modo de mezcla, se utilizan fórmulas matemáticas para 
+               determinar el color resultante de cada píxel en el área de fondo. 
+               
+               Además de multiply, hay otros modos de mezcla que puedes usar, como:
+
+               "screen": Hace que las imágenes resultantes sean más claras.
+               "overlay": Combina multiply y screen, dependiendo de la base.
+               "darken": Mantiene el color más oscuro entre las capas. 
+               "lighten": Mantiene el color más claro entre las capas. 
+               "difference": Calcula la diferencia entre los colores.
+               
+            */
+        }  
+    </style>
+</head>
+<body>  
+    <div></div>  
+</body>
+</html>

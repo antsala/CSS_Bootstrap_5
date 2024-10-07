@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: brown;
+        }
+
+        div {
+
+            width: 200px;
+            height: 200px;
+        }  
+    </style>
+</head>
+<body>
+    <div style="background-color: transparent;"></div>  <!-- Hacemos el color transparente -->
+    <div style="background-color: #aabbcc66;"></div>  <!-- El ultimo byte establece la transparencia -->
+    <!-- 
+        El entorno de desarrollo puede ofrecer herramientas para seleccionar la transparencia.
+    -->
+    <div style="background-color: rgba(0, 0, 0, 0.5);"></div> <!-- Usando la función "rgba()" -->
+    <div style="background-color: hsla(125, 80%, 50%, 20%);"></div> <!-- Usando la función "hsla()" (color, brillo, saturación y transparencia) -->
+    
+    <!-- Tenemos también la propiedad "opacity" que es la inversa de la transparencia -->
+</body>
+</html>
