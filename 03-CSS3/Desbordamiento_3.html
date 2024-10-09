@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            width: 300px;
+
+            white-space: nowrap; /* El texto se coloca en una única línea. No hay wrap */
+        }
+
+        h2 {
+            width: 300px;
+            white-space: nowrap; /* El texto se coloca en una única línea. No hay wrap */
+            overflow: hidden;   /* En principio se va a recortar (clip) porque no entra */
+            text-overflow: ellipsis;  /* Muestra "..." */
+
+            /* Para aprender mucho más sobre esto, lee --> https://developer.mozilla.org/es/docs/Web/CSS/text-overflow */
+            /* Para usar columnas --> https://developer.mozilla.org/es/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts */
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, aut iure atque dolorem, cupiditate ducimus 
+        nesciunt magnam qui dignissimos enim cum? Ipsa cum, totam optio quae quidem tenetur corrupti soluta.
+    </h1>
+
+    <h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, aut iure atque dolorem, cupiditate ducimus 
+        nesciunt magnam qui dignissimos enim cum? Ipsa cum, totam optio quae quidem tenetur corrupti soluta.
+    </h2>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: gray;
+            margin: 50px 0;
+
+            /* Paso 1. Crear propiedades de la animación */
+            animation-name: cambiarColor;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+         
+        /* Paso 2. Crear los pasos de la animación */
+        @keyframes cambiarColor {
+            0% {
+                background: blue;
+            }
+
+            50% {
+                background: orange;
+            }
+
+            100% {
+                background: black
+            }
+        }
+          
+
+       /* Todo sobre las animaciones --> https://developer.mozilla.org/es/docs/Web/CSS/animation */
+
+    </style>
+</head>
+<body>
+   <div></div>
+</body>
+</html>
+

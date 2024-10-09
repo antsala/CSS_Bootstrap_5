@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 80%; /* Las imágenes van al 80% del tamaño original */
+            filter: grayscale();  /* Aplicamos la propiedad filter */
+
+            /* 
+                Entre las posibilidades disponibles, tenemos:
+                
+                blur(radius): Aplica un desenfoque gaussiano. El valor radius define la cantidad de 
+                    desenfoque (en píxeles). Ejemplo: blur(5px).
+
+                brightness(percentage): Ajusta el brillo. El valor es un porcentaje, donde 100% es el 
+                    brillo original. Ejemplo: brightness(150%).
+
+                contrast(percentage): Ajusta el contraste. Un valor del 100% es el contraste normal. 
+                    Ejemplo: contrast(200%) duplica el contraste.
+
+                grayscale(percentage): Convierte la imagen a escala de grises. El valor es un porcentaje 
+                    entre 0% (sin efecto) y 100% (totalmente en blanco y negro). Ejemplo: grayscale(100%).
+
+                hue-rotate(angle): Rota los colores de la imagen en torno al círculo de matices (hue). El 
+                    valor se da en grados (deg). Ejemplo: hue-rotate(90deg).
+
+                invert(percentage): Invierte los colores de la imagen. El valor es un porcentaje, donde 100% 
+                    invierte completamente los colores y 0% no hace ningún cambio. Ejemplo: invert(100%).
+
+                opacity(percentage): Ajusta la opacidad del elemento. El valor es un porcentaje, donde 100% es 
+                    totalmente opaco y 0% es completamente transparente. Ejemplo: opacity(50%).
+
+                saturate(percentage): Ajusta la saturación de la imagen. El valor 100% mantiene la saturación original, 
+                    0% hace que la imagen sea completamente desaturada. Ejemplo: saturate(200%).
+
+                sepia(percentage): Aplica un efecto sepia a la imagen. El valor es un porcentaje donde 100% es 
+                    completamente sepia. Ejemplo: sepia(100%).
+
+                drop-shadow(offset-x, offset-y, blur-radius, color): Aplica una sombra proyectada al elemento. Los parámetros
+                    son el desplazamiento horizontal (offset-x), el desplazamiento vertical (offset-y), el radio de desenfoque 
+                    (blur-radius) y el color de la sombra. Ejemplo: drop-shadow(5px 5px 10px black).
+            */
+        }
+    </style>
+</head>
+<body>  
+    <img src="img/fondo.png" alt=""></ing>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Fuentes básicas */
+        h1 {
+            font-family: 'Times New Roman', sans-serif, Arial, Helvetica;
+            /* Primero intenta usar la fuente 'Times New Roman', una fuente serif clásica; si esta no está disponible, 
+                usa la fuente genérica sans-serif, que es cualquier fuente sin serifas (como Arial o Helvetica). Si ni 
+                'Times New Roman' ni sans-serif están disponibles, utiliza Arial, y si tampoco está presente, usará 
+                Helvetica.
+            */
+        }
+        /* Fuentes descargadas */
+
+        /* En https://fonts.google.com ,disponemos de una cantidad ingente de fuentes de letras. Busca la fuente
+            "Train one" y descárgala (Ya la tienes descargada en el repositorio del curso, en la carpeta "fonts")
+            Lee el documento de Copyright. */
+        
+        /* Declaramos el uso de la fuente */
+        @font-face {
+            font-family: "Train One";
+            src: url("fonts/TrainOne-Regular.ttf");
+        }
+
+        h2 {    /* Los h2 usarán la fuente descargada */
+            font-family: "Train One";
+        }
+
+        /* Fuentes externas */
+    </style>
+</head>
+<body>  
+    <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error soluta quia facere, consequuntur doloribus, fugit 
+        voluptatibus quisquam vero rerum voluptas qui ab, nesciunt in! Impedit temporibus culpa odit alias veniam?
+    </h1>
+
+    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error soluta quia facere, consequuntur doloribus</h2>
+</body>
+</html>
