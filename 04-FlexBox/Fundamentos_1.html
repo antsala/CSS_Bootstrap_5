@@ -6,30 +6,39 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="estilos.css">
+     <link rel="stylesheet" href="css/Fundamentos1_estilos.css">
 
      <style>
-          .flex-container{
-               /* APLICAR FLEXBOX */
-               display: flex;
+            /* Para probar, cambia el tamaño de la ventana del navegador */
+            .flex-container{  
+                /* Juega con los comentarios para ver el comportamiento */
+                display: flex;  /*  Estilo que de aplica al contenedor padre y que indica que sus hijos también serán flexibles */
+                /* display: inline-flex; */ /* Se respeta el tamaño de los elementos hijos */
+                
+                /* display: flex; */ /* Volcemos a poner comportamiento por defecto */
 
-               /* DIRECCIONES */
-               flex-direction: row; /*Valor por defecto*/
-               /* flex-direction: row-reverse;
-               flex-direction: column;
-               flex-direction: column-reverse; */
+                
+
+                /* DIRECCIONES */
+                /*flex-direction: row;*/ /* Disposición en filas. Valor por defecto */
+
+                /* flex-direction: row-reverse; */ /* Los pone en orden inverso */
+                /* flex-direction: column; */ /* El flujo se dispone en columnas */
+                /* flex-direction: column-reverse; */ 
 
 
-               /* DESBORDE */
-               flex-wrap: nowrap; /*Por defecto*/
-               /* flex-wrap: wrap;
-               flex-wrap: wrap-reverse; */
+                /* DESBORDE */
+                /* Se utiliza para controlar el flujo en los contenedores hijos cuando estos son muy
+                   pequeños y no tienen espacio suficiente. */
+                /* flex-wrap: nowrap; */ /*Por defecto*/
+                /* flex-wrap: wrap; */ /* Se produce el desborde */
+                /* flex-wrap: wrap-reverse; */
 
 
-               /* FLOW */
-               flex-flow: row wrap;
+                /* FLOW */
+                /* flex-flow: row wrap; */ /* Forma compacta de especificar el estilo */
 
-          }
+            }
      </style>
 </head>
 <body>
