@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Card Overlay</title>
+
+     <style>
+          /* Estilo global */
+          *{
+               margin: 0; /* Elimina márgenes por defecto */
+               padding: 0; /* Elimina rellenos por defecto */
+               box-sizing: border-box; /* Incluye bordes y rellenos en el cálculo del ancho y alto */
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define la fuente */
+          }
+
+          /* Estilo del cuerpo */
+          body{
+               display: flex; /* Utiliza Flexbox para el diseño */
+               justify-content: center; /* Centra el contenido horizontalmente */
+               align-items: center; /* Centra el contenido verticalmente */
+               background: #222; /* Color de fondo oscuro */
+               height: 100vh; /* Altura del cuerpo igual a la altura de la ventana del navegador */
+          }
+
+          /* Contenedor de las tarjetas */
+          .container{
+               display: flex; /* Utiliza Flexbox para el diseño */
+               justify-content: center; /* Centra el contenido horizontalmente */
+               align-items: center; /* Centra el contenido verticalmente */
+               flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+          }
+
+          /* Estilo de cada tarjeta */
+          .card{
+               position: relative; /* Permite posicionar elementos hijos de forma absoluta */
+               width: 320px; /* Ancho de la tarjeta */
+               height: 280px; /* Alto de la tarjeta */
+               margin: 15px; /* Espaciado entre tarjetas */
+               overflow: hidden; /* Oculta el contenido que se desborda fuera de la tarjeta */
+               box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5); /* Sombra alrededor de la tarjeta */
+          }
+
+          /* Posicionamiento de la imagen y contenido */
+          .img, .content{
+               position: absolute; /* Permite posicionar las imágenes y el contenido en relación a la tarjeta */
+               top: 0; /* Alinea al borde superior */
+               left: 0; /* Alinea al borde izquierdo */
+               width: 100%; /* Ancho completo de la tarjeta */
+               height: 100%; /* Alto completo de la tarjeta */
+          }
+
+          /* Estilo de la imagen */
+          .img img{
+               width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+               height: 100%; /* La imagen ocupa todo el alto de la tarjeta */
+               object-fit: cover; /* La imagen cubre el área sin distorsionarse */
+               object-position: center; /* Centra la imagen en el área */
+          }
+
+          /* Estilo del contenido */
+          .content{
+               display: flex; /* Utiliza Flexbox para el diseño */
+               justify-content: center; /* Centra el contenido horizontalmente */
+               align-items: center; /* Centra el contenido verticalmente */
+          }
+
+          /* Pseudo-elemento para la superposición blanca */
+          .content::before{
+               content: ''; /* Genera un pseudo-elemento vacío */
+               position: absolute; /* Posiciona el pseudo-elemento en relación al contenido */
+               left: 0; /* Alinea al borde izquierdo */
+               top: 0; /* Alinea al borde superior */
+               width: 100%; /* Ancho completo del contenido */
+               height: 100%; /* Alto completo del contenido */
+               background: #FFF; /* Color de fondo blanco */
+               transform: scaleX(0); /* Inicialmente no se muestra (escala en X es 0) */
+               transition: transform .5s; /* Suaviza la transición cuando cambia la escala */
+               transform-origin: right; /* La transformación se origina desde la derecha */
+               transition-delay: 0.5s; /* Retraso antes de que comience la transición */
+          }
+
+          /* Estilo al pasar el ratón sobre la tarjeta */
+          .card:hover .content::before{
+               transform: scaleX(1); /* Escala a 1 al pasar el ratón, mostrando el pseudo-elemento */
+               transform-origin: left; /* Cambia el origen de la transformación a la izquierda */
+          }
+
+          /* Estilo del texto */
+          .text{
+               z-index: 1; /* Asegura que el texto esté por encima de la superposición */
+               padding: 30px; /* Espaciado interno del texto */
+               transform: translateX(-300px); /* Inicialmente mueve el texto fuera de la vista a la izquierda */
+               transition: all .5s; /* Suaviza la transición de todas las propiedades */
+          }
+
+          /* Estilo del texto al pasar el ratón sobre la tarjeta */
+          .card:hover .text{
+              transform: translateX(0);  /* Mueve el texto a su posición original */
+              transition-delay: .8s; /* Retraso antes de que comience la transición */
+          }
+
+          /* Estilo del título */
+          .text h3{
+               font-size: 1.8em; /* Tamaño de la fuente del título */
+               text-transform: uppercase; /* Convierte el texto a mayúsculas */
+               letter-spacing: 1px; /* Espaciado entre letras */
+          }
+     </style>
+</head>
+<body>
+     <div class="container"> <!-- Contenedor para las tarjetas -->     
+          <!-- Tarjeta 1 -->
+          <div class="card">
+               <div class="img"> <!-- Sección de imagen -->
+                    <img src="img/image4.jpg" alt=""> <!-- Imagen de la tarjeta -->
+               </div>
+
+               <div class="content"> <!-- Sección de contenido -->
+                    <div class="text"> <!-- Sección de texto -->
+                         <h3>Titulo de post</h3> <!-- Título de la tarjeta -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p> <!-- Texto de la tarjeta -->
+                    </div>
+               </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="card">
+               <div class="img">
+                    <img src="img/image5.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="card">
+               <div class="img">
+                    <img src="img/image6.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="card">
+               <div class="img">
+                    <img src="img/image7.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Tarjeta 5 -->
+          <div class="card">
+               <div class="img">
+                    <img src="img/image8.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Tarjeta 6 -->
+          <div class="card">
+               <div class="img">
+                    <img src="img/image9.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+     </div>
+</body>
+</html>

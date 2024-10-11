@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> <!-- Establece la codificación de caracteres en UTF-8 -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura la compatibilidad con IE -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea responsivo -->
+     <title>Menú sociales simple</title> <!-- Título de la página -->
+     <link rel="stylesheet" href="../fontawesome/css/all.css"> <!-- Enlaza la hoja de estilo de Font Awesome para iconos -->
+
+     <style>
+          * {
+               margin: 0; /* Elimina el margen por defecto */
+               padding: 0; /* Elimina el relleno por defecto */
+               box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+          }
+
+          nav {
+               width: 100%; /* Ancho completo del menú */
+               height: 45px; /* Altura fija para el menú */
+               background: #0DCAF0; /* Color de fondo del menú */
+               display: flex; /* Usa flexbox para alinear los elementos */
+               justify-content: center; /* Centra los enlaces horizontalmente */
+               align-items: center; /* Centra los enlaces verticalmente */
+          }
+
+          nav a {
+               width: 30px; /* Ancho de los enlaces */
+               height: 30px; /* Altura de los enlaces */
+               color: rgba(255, 255, 255, 0.5); /* Color del texto (transparente) */
+               text-decoration: none; /* Elimina el subrayado de los enlaces */
+               font-size: 20px; /* Tamaño de fuente para los iconos */
+               margin: 0 50px; /* Margen a los lados de los enlaces */
+               border-radius: 50%; /* Hace que los enlaces sean circulares */
+               display: flex; /* Usa flexbox para centrar el contenido de los enlaces */
+               justify-content: center; /* Centra horizontalmente el contenido de los enlaces */
+               align-items: center; /* Centra verticalmente el contenido de los enlaces */
+               transition: all .5s; /* Transición suave para todos los cambios */
+          }
+
+          nav a:hover {
+               background: rgba(0, 0, 0, 0.1); /* Cambia el fondo al pasar el mouse */
+               box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+               color: #FFF; /* Cambia el color del texto al pasar el mouse */
+          }
+     </style>
+</head>
+<body>
+     <nav>
+          <!-- Enlaces a redes sociales con iconos -->
+          <a href=""><span class="fab fa-facebook-f"></span></a> <!-- Enlace a Facebook -->
+          <a href=""><span class="fab fa-instagram"></span></a> <!-- Enlace a Instagram -->
+          <a href=""><span class="fab fa-twitter"></span></a> <!-- Enlace a Twitter -->
+          <a href=""><span class="fab fa-youtube"></span></a> <!-- Enlace a YouTube -->
+          <a href=""><span class="fab fa-linkedin"></span></a> <!-- Enlace a LinkedIn -->
+          <a href=""><span class="fab fa-twitch"></span></a> <!-- Enlace a Twitch -->
+     </nav>
+</body>
+</html>

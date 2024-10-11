@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario</title> 
+     <link rel="stylesheet" href="fontawesome/css/all.css"> <!-- Enlaza la hoja de estilo de Font Awesome para iconos -->
+
+     <style>
+          * {
+               margin: 0; /* Elimina el margen por defecto */
+               padding: 0; /* Elimina el relleno por defecto */
+               box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Establece la fuente */
+          }
+
+          section {
+               display: flex; /* Usa flexbox para centrar el contenido */
+               justify-content: center; /* Centra horizontalmente el contenido */
+               align-items: center; /* Centra verticalmente el contenido */
+               height: 100vh; /* Altura completa de la ventana */
+               background: #112D42; /* Color de fondo */
+          }
+
+          section::before {
+               content: ''; /* Se usa para crear un fondo adicional */
+               position: absolute; /* Posiciona el fondo de manera absoluta */
+               left: 0; /* Alinea a la izquierda */
+               top: 0; /* Alinea en la parte superior */
+               width: 50%; /* Ancho del 50% */
+               height: 100%; /* Altura completa */
+               background: #03A9F4; /* Color de fondo */
+          }
+
+          .container {
+               position: relative; /* Posicionamiento relativo para los elementos hijos */
+               width: 1100px; /* Ancho fijo del contenedor */
+               height: 550px; /* Altura fija del contenedor */
+               z-index: 1; /* Z-index para asegurarse de que esté por encima del fondo */
+               display: flex; /* Usar flexbox para el contenido interno */
+          }
+
+          h2 {
+               font-size: 24px; /* Tamaño de fuente para los encabezados */
+               font-weight: 600; /* Peso de la fuente */
+          }
+
+          /* INFO */
+          .info {
+               position: absolute; /* Posicionamiento absoluto para la sección de información */
+               top: 40px; /* Distancia desde la parte superior */
+               width: 350px; /* Ancho fijo */
+               height: calc(100% - 80px); /* Altura calculada */
+               background: #0F3959; /* Color de fondo */
+               z-index: 1; /* Z-index para asegurarse de que esté por encima */
+               padding: 40px; /* Relleno interior */
+               display: flex; /* Usar flexbox para el contenido */
+               justify-content: space-between; /* Espacio entre los elementos */
+               flex-direction: column; /* Colocar los elementos en columna */
+               box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+          }
+
+          .info h2 {
+               color: #FFF; /* Color del texto en la sección de información */
+          }
+
+          .info-text {
+               margin: 20px 0; /* Margen superior e inferior */
+               height: 100%; /* Altura completa */
+               display: flex; /* Usar flexbox para el contenido */
+               flex-direction: column; /* Colocar los elementos en columna */
+               justify-content: space-between; /* Espacio entre los elementos */
+          }
+
+          .item {
+               display: flex; /* Usar flexbox para los elementos individuales */
+               cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+          }
+
+          .item span {
+               color: rgba(255, 255, 255, 0.5); /* Color del texto (transparente) */
+          }
+
+          .item:hover span {
+               color: rgba(255, 255, 255, 1); /* Color del texto al pasar el mouse */
+          }
+
+          .item span:nth-child(1) {
+               width: 25px; /* Ancho del icono */
+               font-size: 30px; /* Tamaño del icono */
+               margin-right: 30px; /* Espaciado a la derecha del icono */
+          }
+
+          .sociales {
+               width: 80%; /* Ancho del contenedor de redes sociales */
+               display: flex; /* Usar flexbox para el contenido */
+               justify-content: space-between; /* Espacio entre los elementos */
+          }
+
+          .sociales a {
+               text-decoration: none; /* Eliminar subrayado de los enlaces */
+               font-size: 25px; /* Tamaño de fuente de los iconos */
+               color: rgba(255, 255, 255, 0.5); /* Color del texto (transparente) */
+          }
+
+          .sociales a:hover {
+               color: rgba(255, 255, 255, 1); /* Color del texto al pasar el mouse */
+          }
+
+          /* FORM */
+          .form {
+               position: absolute; /* Posicionamiento absoluto para la sección de formulario */
+               width: calc(100% - 200px); /* Ancho calculado */
+               height: 100%; /* Altura completa */
+               background: #FFF; /* Color de fondo */
+               margin-left: 150px; /* Margen a la izquierda */
+               padding: 70px 50px 70px 250px; /* Relleno interior */
+               box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+          }
+
+          .form h2 {
+               color: #0F3959; /* Color del texto del encabezado del formulario */
+          }
+
+          .form-box {
+               display: flex; /* Usar flexbox para el contenido del formulario */
+               flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+               justify-content: space-between; /* Espacio entre los elementos */
+               padding-top: 30px; /* Relleno superior */
+          }
+
+          .input-box {
+               position: relative; /* Posicionamiento relativo para los elementos de entrada */
+               margin-bottom: 35px; /* Margen inferior */
+          }
+
+          .input-box.w50 {
+               width: 48%; /* Ancho del 50% para los elementos de entrada */
+          }
+
+          .input-box.w100 {
+               width: 100%; /* Ancho completo para los elementos de entrada */
+          }
+
+          .input-box input,
+          .input-box textarea {
+               width: 100%; /* Ancho completo */
+               padding: 5px 0; /* Relleno vertical */
+               font-size: 18px; /* Tamaño de fuente */
+               color: #333; /* Color del texto */
+               border: none; /* Sin borde */
+               border-bottom: 1px solid #777; /* Borde inferior */
+               outline: none; /* Sin contorno al enfocar */
+               resize: none; /* Sin opción de redimensionar */
+          }
+
+          .input-box textarea {
+               min-height: 120px; /* Altura mínima para el área de texto */
+          }
+
+          .input-box span {
+               position: absolute; /* Posicionamiento absoluto para la etiqueta */
+               left: 0; /* Alinea a la izquierda */
+               padding: 5px 0; /* Relleno vertical */
+               font-size: 16px; /* Tamaño de fuente de la etiqueta */
+               letter-spacing: 1px; /* Espaciado entre letras */
+               color: #888; /* Color del texto de la etiqueta */
+               pointer-events: none; /* No permitir interacciones con la etiqueta */
+               transition: all .5s; /* Transición suave */
+          }
+
+          .input-box input:focus ~ span,
+          .input-box input:valid ~ span,
+          .input-box textarea:focus ~ span,
+          .input-box textarea:valid ~ span {
+               transform: translateY(-20px); /* Mueve la etiqueta hacia arriba al enfocar */
+               font-size: 14px; /* Cambia el tamaño de la fuente de la etiqueta */
+               font-weight: 400; /* Cambia el peso de la fuente */
+               letter-spacing: 1px; /* Espaciado entre letras */
+               color: #03A9F4; /* Cambia el color de la etiqueta */
+          }
+
+          .input-box.btn {
+               display: flex; /* Usar flexbox para el botón de envío */
+               justify-content: flex-end; /* Alinear a la derecha */
+          }
+
+          .input-box input[type="submit"] {
+               cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+               background: #0F3959; /* Color de fondo del botón */
+               text-transform: uppercase; /* Texto en mayúsculas */
+               font-size: 14px; /* Tamaño de fuente */
+               font-weight: 600; /* Peso de la fuente */
+               letter-spacing: 2px; /* Espaciado entre letras */
+               color: #FFF; /* Color del texto */
+               border: none; /* Sin borde */
+               width: 30%; /* Ancho del botón */
+               padding: 12px; /* Relleno interior */
+               transition: all .5s; /* Transición suave */
+          }
+
+          .input-box input[type="submit"]:hover {
+               background: #03A9F4; /* Cambiar el color de fondo al pasar el mouse */
+          }
+     </style>
+</head>
+<body>
+     <section>
+          <div class="container">
+               
+               <!-- Info -->
+               <div class="info">
+                    <div class="content">
+                         <h2>Información de contacto</h2>
+                         
+                         <div class="info-text">
+                              <div class="item">
+                                   <span class="fas fa-map-marker-alt"></span> <!-- Icono de ubicación -->
+                                   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque neque.</span> <!-- Descripción de ubicación -->
+                              </div>
+
+                              <div class="item">
+                                   <span class="fas fa-envelope"></span> <!-- Icono de correo -->
+                                   <span>loremimpsum@gmail.com</span> <!-- Correo electrónico -->
+                              </div>
+
+                              <div class="item">
+                                   <span class="fas fa-phone"></span> <!-- Icono de teléfono -->
+                                   <span>+00 123 456</span> <!-- Número de teléfono -->
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="sociales">
+                         <a href=""><span class="fab fa-facebook-f"></span></a> <!-- Icono de Facebook -->
+                         <a href=""><span class="fab fa-twitter"></span></a> <!-- Icono de Twitter -->
+                         <a href=""><span class="fab fa-instagram"></span></a> <!-- Icono de Instagram -->
+                         <a href=""><span class="fab fa-youtube"></span></a> <!-- Icono de YouTube -->
+                         <a href=""><span class="fab fa-google"></span></a> <!-- Icono de Google -->
+                    </div>
+               </div>
+               
+               
+               <!-- Form -->
+               <div class="form">
+                    <h2>Comunicate con nosotros</h2> <!-- Título del formulario -->
+
+                    <div class="form-box">
+                         <div class="input-box w50">
+                              <input type="text" required> <!-- Campo de entrada para el nombre -->
+                              <span>Nombre</span> <!-- Etiqueta para el campo de nombre -->
+                         </div>
+
+                         <div class="input-box w50">
+                              <input type="text" required> <!-- Campo de entrada para el apellido -->
+                              <span>Apellido</span> <!-- Etiqueta para el campo de apellido -->
+                         </div>
+
+                         <div class="input-box w50">
+                              <input type="text" required> <!-- Campo de entrada para el correo electrónico -->
+                              <span>Email</span> <!-- Etiqueta para el campo de correo electrónico -->
+                         </div>
+
+                         <div class="input-box w50">
+                              <input type="text" required> <!-- Campo de entrada para el teléfono -->
+                              <span>Telefono</span> <!-- Etiqueta para el campo de teléfono -->
+                         </div>
+
+                         <div class="input-box w100">
+                              <textarea required></textarea> <!-- Área de texto para el mensaje -->
+                              <span>Escribe tu mensaje...</span> <!-- Etiqueta para el área de texto -->
+                         </div>
+
+                         <div class="input-box w100 btn">
+                              <input type="submit" value="Enviar"> <!-- Botón de envío -->
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+</body>
+</html>

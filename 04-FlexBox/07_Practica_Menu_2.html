@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> <!-- Establece la codificación de caracteres en UTF-8 -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura la compatibilidad con IE -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea responsivo -->
+     <title>Menú Horizontal simple</title> <!-- Título de la página -->
+     <link rel="stylesheet" href="fontawesome/css/all.css"> <!-- Enlaza la hoja de estilo de Font Awesome para iconos -->
+
+     <style>
+          * {
+               margin: 0; /* Elimina el margen por defecto */
+               padding: 0; /* Elimina el relleno por defecto */
+               box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Establece la fuente de la página */
+          }
+
+          a, button {
+               text-decoration: none; /* Elimina el subrayado de los enlaces */
+               color: #EDF0F1; /* Color del texto para enlaces y botones */
+               font-size: 0.9em; /* Tamaño de fuente */
+               font-weight: 600; /* Peso de fuente */
+               text-transform: uppercase; /* Convierte el texto a mayúsculas */
+          }
+
+          body {
+               background: #24252A; /* Color de fondo del cuerpo */
+          }
+
+          nav {
+               display: flex; /* Usa flexbox para alinear elementos en el menú */
+               justify-content: space-between; /* Espacia los elementos horizontalmente */
+               align-items: center; /* Centra los elementos verticalmente */
+               padding: 30px 5%; /* Añade espacio interno al menú */
+          }
+
+          nav img {
+               width: 150px; /* Ancho de la imagen del logo */
+          }
+
+          nav .enlaces a {
+               position: relative; /* Posición relativa para permitir el uso de pseudo-elementos */
+               padding: 0 20px; /* Espaciado horizontal entre los enlaces */
+               transition: all .5s; /* Transición suave para todos los cambios */
+          }
+
+          nav .enlaces a:hover {
+               color: #FAAF38; /* Cambia el color del texto al pasar el mouse */
+          }
+
+          nav .enlaces a::before {
+               content: ''; /* Crea un pseudo-elemento vacío */
+               width: 0; /* Ancho inicial en cero */
+               height: 2px; /* Altura de la línea */
+               background: #FAAF38; /* Color de la línea */
+               position: absolute; /* Posición absoluta para colocarlo en relación con el enlace */
+               bottom: -5px; /* Coloca la línea justo debajo del texto */
+               transition: all .5s; /* Transición suave para el ancho */
+          }
+
+          nav .enlaces a:hover::before {
+               width: 40%; /* Ancho de la línea al pasar el mouse */
+          }
+
+          nav button {
+               padding: 10px 25px; /* Espaciado interno del botón */
+               background: #FAAF38; /* Color de fondo del botón */
+               border: none; /* Sin borde */
+               border-radius: 50px; /* Bordes redondeados */
+               cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+               transition: all .5s; /* Transición suave para cambios */
+          }
+
+          nav button:hover {
+               background: #C98520; /* Cambia el color de fondo del botón al pasar el mouse */
+          }
+
+     </style>
+</head>
+<body>
+     <nav>
+          <img src="img/logo1.png" alt=""> <!-- Logo de la página -->
+
+          <div class="enlaces"> <!-- Contenedor de enlaces -->
+               <a href="">Inicio</a> <!-- Enlace a la página de inicio -->
+               <a href="">Nosotros</a> <!-- Enlace a la página de nosotros -->
+               <a href="">Blog</a> <!-- Enlace al blog -->
+               <a href="">Multimedia</a> <!-- Enlace a multimedia -->
+               <a href="">Contacto</a> <!-- Enlace a la página de contacto -->
+          </div>
+
+          <button>Ingresar</button> <!-- Botón para ingresar -->
+     </nav>
+</body>
+</html>
