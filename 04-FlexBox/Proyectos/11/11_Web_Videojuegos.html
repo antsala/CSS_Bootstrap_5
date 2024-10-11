@@ -1,0 +1,206 @@
+<!DOCTYPE html> <!-- Define el tipo de documento HTML -->
+<html lang="en"> <!-- Establece el idioma de la página como inglés -->
+<head>
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Establece compatibilidad con IE -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+     <title>Blog Videojuegos</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a la hoja de estilos CSS -->
+     <link rel="stylesheet" href="../../fontawesome/css/all.min.css"> <!-- Enlace a Font Awesome para iconos -->
+     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon"> <!-- Icono de la pestaña -->
+</head>
+<body>
+     <!-- Botón para volver a la parte superior de la página -->
+     <a href="#home" class="btn-top"><span class="fas fa-angle-up"></span></a>
+
+     <!-- Menú de redes sociales -->
+     <div id="home" class="nav-sociales">
+          <a href="" class="fab fa-facebook-f"></a> <!-- Enlace a Facebook -->
+          <a href="" class="fab fa-twitter"></a> <!-- Enlace a Twitter -->
+          <a href="" class="fab fa-instagram"></a> <!-- Enlace a Instagram -->
+          <a href="" class="fab fa-youtube"></a> <!-- Enlace a YouTube -->
+          <a href="" class="fab fa-twitch"></a> <!-- Enlace a Twitch -->
+          <a href="" class="fab fa-discord"></a> <!-- Enlace a Discord -->
+     </div>
+
+     <!-- Menú principal de navegación -->
+     <nav class="nav-principal">
+          <img src="img/logo.png" alt=""> <!-- Logo del blog -->
+          <div class="input-search"> <!-- Contenedor para la barra de búsqueda -->
+               <input type="text" name="" id="" placeholder="¿Qué deseas buscar?"> <!-- Campo de entrada de búsqueda -->
+               <i class="fas fa-search"></i> <!-- Icono de búsqueda -->
+          </div>
+          <div class="enlaces"> <!-- Contenedor de enlaces de navegación -->
+               <a href="#destacados">Destacados</a> <!-- Enlace a la sección de destacados -->
+               <a href="#articulos">Artículos</a> <!-- Enlace a la sección de artículos -->
+               <a href="#gallery">Multimedia</a> <!-- Enlace a la sección de galería multimedia -->
+          </div>
+     </nav>
+
+     <!-- Header de la página -->
+     <header>
+          <div class="content-header"> <!-- Contenedor del contenido del encabezado -->
+               <span class="badge">Nuevo</span> <!-- Insignia para indicar contenido nuevo -->
+               <h3>Resident Evil Village el más descargado</h3> <!-- Título de la noticia -->
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil in et quae eveniet optio officiis explicabo maiores, cum ipsa voluptatem, sed vitae porro!</p> <!-- Resumen del contenido -->
+               <button class="btn">Leer más</button> <!-- Botón para leer más sobre la noticia -->
+          </div>
+
+          <div class="imagen-header"></div> <!-- Sección para una imagen de encabezado (puede contener una imagen de fondo) -->
+     </header>
+
+     <!-- Sección de destacados -->
+     <section id="destacados" class="destacados">
+          <!-- Contenedor para cada juego destacado -->
+          <div class="game">
+               <div class="content"> <!-- Contenedor del contenido del juego -->
+                    <h2>Crash Bandicoot 4</h2> <!-- Título del juego -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero mollitia officia expedita ipsam itaque consequuntur adipisci.</p> <!-- Descripción del juego -->
+                    <a href="#">Leer más</a> <!-- Enlace para leer más sobre el juego -->
+               </div>
+               <img src="img/game2.png" alt=""> <!-- Imagen del juego -->
+          </div>
+
+          <div class="game"> <!-- Repite la estructura para otros juegos destacados -->
+               <div class="content">
+                    <h2>Uncharted 4</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero mollitia officia expedita ipsam itaque consequuntur adipisci.</p>
+                    <a href="#">Leer más</a>
+               </div>
+               <img src="img/game3.png" alt="">
+          </div>
+
+          <div class="game">
+               <div class="content">
+                    <h2>God of war</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero mollitia officia expedita ipsam itaque consequuntur adipisci.</p>
+                    <a href="#">Leer más</a>
+               </div>
+               <img src="img/game4.png" alt="">
+          </div>
+
+          <div class="game">
+               <div class="content">
+                    <h2>Assassins creed Valhalla</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero mollitia officia expedita ipsam itaque consequuntur adipisci.</p>
+                    <a href="#">Leer más</a>
+               </div>
+               <img src="img/game5.png" alt="">
+          </div>
+     </section>
+
+     <!-- Título de artículos -->
+     <div id="articulos" class="title">
+          <h1>Blog</h1> <!-- Título de la sección de artículos -->
+          <div class="badget-container"> <!-- Contenedor para las insignias -->
+               <span class="badge">Tendencias</span> <!-- Insignia de tendencias -->
+               <span class="badge">Videojuegos</span> <!-- Insignia de videojuegos -->
+               <span class="badge">Consolas</span> <!-- Insignia de consolas -->
+               <span class="badge">Noticias</span> <!-- Insignia de noticias -->
+          </div>      
+     </div>
+
+     <!-- Artículos -->
+     <section class="articulos">
+          <div class="container-articulos"> <!-- Contenedor de los artículos -->
+               <div id="godofwar" class="card"> <!-- Tarjeta para un artículo específico -->
+                    <div class="imgBox">
+                         <img src="img/card1.jpg" alt=""> <!-- Imagen del artículo -->
+                    </div>
+                    <div class="content"> <!-- Contenedor del contenido del artículo -->
+                         <h3>Imagenes God of war Ragnarok</h3> <!-- Título del artículo -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p> <!-- Descripción del artículo -->
+                         <a href="#" class="btn">Leer más</a> <!-- Botón para leer más sobre el artículo -->
+                    </div>
+               </div>
+
+               <!-- Repite la estructura para otros artículos -->
+               <div id="exitoventas" class="card">
+                    <div class="imgBox">
+                         <img src="img/game1.png" alt="">
+                    </div>
+                    <div class="content">
+                         <h3>Éxito en ventas</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
+                         <a href="#" class="btn">Leer más</a>
+                    </div>
+               </div>
+
+               <div id="gratismes" class="card">
+                    <div class="imgBox">
+                         <img src="img/card2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                         <h3>Juego gratuito del mes</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
+                         <a href="#" class="btn">Leer más</a>
+                    </div>
+               </div>
+
+               <div id="acvalhalla" class="card">
+                    <div class="imgBox">
+                         <img src="img/card3.jpeg" alt="">
+                    </div>
+                    <div class="content">
+                         <h3>Nuevo contenido descargable</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
+                         <a href="#" class="btn">Leer más</a>
+                    </div>
+               </div>
+
+               <div id="fifa21" class="card">
+                    <div class="imgBox">
+                         <img src="img/card4.jpg" alt="">
+                    </div>
+                    <div class="content">
+                         <h3>Próxima actualización FIFA21</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
+                         <a href="#" class="btn">Leer más</a>
+                    </div>
+               </div>
+
+               <div id="valhalla" class="card">
+                    <div class="imgBox">
+                         <img src="img/card5.jpg" alt="">
+                    </div>
+                    <div class="content">
+                         <h3>Mejores DLC de Assassins creed</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
+                         <a href="#" class="btn">Leer más</a>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Título de la galería -->
+     <div id="gallery" class="title">
+          <h1>Galería</h1> <!-- Título de la sección de galería -->
+          <div class="badget-container">
+               <span class="badge">Multimedia</span> <!-- Insignia de multimedia -->
+               <span class="badge">Imágenes</span> <!-- Insignia de imágenes -->
+               <span class="badge">Juegos</span> <!-- Insignia de juegos -->
+          </div>
+     </div>
+
+     <!-- Sección de galería -->
+     <section class="galeria">
+          <div class="gallery"> <!-- Contenedor de la galería -->
+               <img src="img/gal1.jpg" alt=""> <!-- Imagen de la galería -->
+               <img src="img/gal2.jpg" alt=""> <!-- Imagen de la galería -->
+               <img src="img/gal3.jpg" alt=""> <!-- Imagen de la galería -->
+               <img src="img/gal4.jpg" alt=""> <!-- Imagen de la galería -->
+               <img src="img/gal5.jpg" alt=""> <!-- Imagen de la galería -->
+               <img src="img/gal6.jpg" alt=""> <!-- Imagen de la galería -->
+               <img src="img/gal7.jpg" alt=""> <!-- Imagen de la galería -->
+               <img src="img/gal8.jpg" alt=""> <!-- Imagen de la galería -->
+          </div>
+     </section>
+
+     <!-- Footer de la página -->
+     <footer>
+          <p>&copy; 2023 - Blog Videojuegos</p> <!-- Información de derechos de autor -->
+     </footer>
+
+     <script src="script.js"></script> <!-- Enlace al archivo de script JavaScript -->
+</body>
+</html>
