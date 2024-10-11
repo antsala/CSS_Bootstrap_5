@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+ 
+    <style>
+        .flex-container {
+            display: flex; /* Convierte el contenedor en un flexbox */
+            justify-content: center; /* Centra los elementos horizontalmente dentro del contenedor */
+            align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+        }
+
+        .items:nth-child(1) {
+            background: #21aef0;  /* Aplica un color de fondo azul al primer elemento */
+            flex-grow: 0;  /* Este elemento no crece más allá de su tamaño inicial */
+            flex-shrink: 0; /* Este elemento no se reduce más allá de su tamaño inicial */
+        }
+
+        .items:nth-child(2) {
+            background: #21f032;  /* Aplica un color de fondo verde al segundo elemento */
+            flex-grow: 5; /* Este elemento puede crecer 5 veces más que su tamaño inicial si hay espacio disponible */
+            flex-shrink: 10; /* Este elemento puede reducirse hasta 10 veces más en comparación con otros si el espacio es limitado */
+        }
+
+        .items:nth-child(3) {
+            background: #f08521; /* Aplica un color de fondo naranja al tercer elemento */
+            flex-grow: 2; /* Este elemento puede crecer 2 veces más que su tamaño inicial si hay espacio disponible */
+            flex-shrink: 5; /* Este elemento puede reducirse 5 veces más en comparación con otros si el espacio es limitado */
+            flex-basis: 200px; /* El tamaño base del tercer elemento es de 200px antes de considerar el crecimiento o la reducción */
+
+            /* ATAJO */
+            /* flex: 10 20 auto; */
+            /* Este es un atajo que define flex-grow, flex-shrink y flex-basis en un solo valor:
+               - flex-grow: 10
+               - flex-shrink: 20
+               - flex-basis: auto 
+            */
+        }
+
+        .items:nth-child(4) {
+            background: #f02182;  /* Aplica un color de fondo rosa al cuarto elemento */
+            flex-grow: 0;  /* No crece más allá de su tamaño inicial */
+            flex-shrink: 0;  /* No se reduce más allá de su tamaño inicial */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container flex-h">  <!-- Contenedor principal que es un flexbox y organiza los hijos -->
+        <div class="items">1</div>  <!-- Primer elemento dentro del flex-container, no crece ni se reduce -->
+        <div class="items">2</div>  <!-- Segundo elemento, puede crecer 5 veces más y reducirse 10 veces más según el espacio disponible -->
+        <div class="items">3</div>  <!-- Tercer elemento, tiene un tamaño base de 200px y puede crecer o reducirse. También usa un atajo para flex -->
+        <div class="items">4</div> <!-- Cuarto elemento, no crece ni se reduce -->
+    </div>
+</body>
+</html>

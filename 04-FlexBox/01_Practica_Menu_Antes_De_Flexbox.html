@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* Aplicar a todos los elementos márgenes y padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;  /* Asegura que el padding y el border no aumenten el tamaño total del elemento */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* Define una serie de fuentes comunes para mejorar la compatibilidad entre navegadores */
+        }
+
+        nav {
+            background: #111;  /* Fondo negro para la barra de navegación */
+            height: auto; /* La altura de la barra de navegación se ajusta automáticamente según su contenido */
+            padding: 0 50px; /* Añade un padding horizontal de 50px a los lados de la barra de navegación */
+            display: flex;  /* Convierte la barra de navegación en un contenedor flex */
+            justify-content: space-between;  /* Distribuye el contenido (logo, enlaces y botón) equitativamente a lo largo del eje horizontal */
+            align-items: center;  /* Alinea verticalmente el contenido al centro */
+            flex-wrap: wrap;  /* Permite que los elementos dentro del contenedor flex se reorganicen en múltiples líneas si es necesario */
+        }
+
+        .img {
+            width: 100px;  /* Define un ancho fijo de 100px para el contenedor de la imagen */
+            height: 100%;  /* La altura será el 100% del contenedor padre (en este caso, `nav`) */
+        }
+
+        .img img {
+            width: 100%;  /* La imagen dentro del contenedor ocupará el 100% del ancho disponible del contenedor */
+        }
+
+        .enlaces a {
+            color: #fff;  /* Los enlaces tendrán un color blanco */
+            text-decoration: none;  /* Elimina el subrayado de los enlaces */
+            text-transform: uppercase;  /* Transforma el texto de los enlaces a mayúsculas */
+            font-size: 12px;  /* Establece el tamaño de fuente en 12px */
+            font-weight: 600;  /* Define el grosor de la fuente en 600 (semi-negrita) */
+            margin: 0 10px;  /* Añade un margen horizontal de 10px entre los enlaces */
+        }
+
+        .btn {
+            margin: 0 0 0 50px;  /* Añade un margen izquierdo de 50px al contenedor del botón */
+        }
+
+        .btn button {
+            background: #FFBD00;
+            width: 100px;
+            height: 30px;
+            color: #FFF;
+            font-weight: 600; /* define el grosor de la fuente (semi-negrita) */
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">  <!-- Contenedor de la barra de navegación, donde se agrupan el logo, los enlaces y el botón -->
+        <div class="img">   <!-- Contenedor para la imagen del logo -->
+            <img src="img/logo.png" alt="">
+        </div>
+
+        <div class="enlaces">  <!-- Contenedor de los enlaces de navegación -->
+            <a href="">Inicio</a>
+            <a href="">Nosotros</a>
+            <a href="">Servicios</a>
+            <a href="">Blog</a>
+            <a href="">Contacto</a>
+        </div>
+
+        <div class="btn">  <!-- Contenedor del botón -->
+            <button>Click aqui</button>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .flex-container {
+            display: flex;  /* Convierte el contenedor en un flexbox, para que sus hijos se alineen según este modelo */
+        }
+
+        /* NOTA: Para que la ordenación funcione, TODOS los elementos deben tener asignada la propiedad "order" */
+        
+        .items:nth-child(1) {
+            background: #21aef0;  /* Aplica un color de fondo azul al primer hijo */
+            order: 3;  /* Cambia el orden de este elemento al tercero dentro del flexbox */
+        }
+
+        .items:nth-child(2) {
+            background: #21f032; /* Aplica un color de fondo verde al segundo hijo */
+            order: 4; /* Cambia el orden de este elemento al cuarto dentro del flexbox */
+        }
+
+        .items:nth-child(3) {
+            background: #f08521; /* Aplica un color de fondo naranja al tercer hijo */
+            order: 2; /* Cambia el orden de este elemento al segundo dentro del flexbox */
+        }
+
+        .items:nth-child(4) {
+            background: #f02182; /* Aplica un color de fondo rosa al cuarto hijo */
+            order: 1; /* Cambia el orden de este elemento al primero dentro del flexbox */
+        }
+    </style>
+
+</head>
+
+<body>    
+    <div class="flex-container">  <!-- Contenedor principal que se convierte en un flexbox -->
+          <div class="items">1</div>  <!-- Primer elemento dentro del flex-container -->
+          <div class="items">2</div>  <!-- Segundo elemento -->
+          <div class="items">3</div>  <!-- Tercer elemento -->
+          <div class="items">4</div>  <!-- Cuarto elemento -->
+      </div>
+</body>
+</html>
+
+       
