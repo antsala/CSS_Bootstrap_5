@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, soporta la mayoría de los caracteres y símbolos -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista para dispositivos móviles, establece el ancho y la escala inicial -->
+     <title>Document</title> 
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a una hoja de estilos externa para estilos CSS adicionales -->
+
+     <style>
+          .grid { /* Clase CSS para definir un contenedor de cuadrícula */
+               display: grid; /* Activa el layout de cuadrícula para este contenedor */
+               gap: 20px; /* Espacio de 20 píxeles entre las filas y columnas de la cuadrícula */
+               grid-template-columns: repeat(3, 1fr); /* Define 3 columnas de igual tamaño usando la función repeat */
+               grid-template-rows: repeat(5, 1fr); /* Define 5 filas de igual tamaño usando la función repeat */
+               
+               /* Define las áreas de la cuadrícula utilizando nombres */
+               grid-template-areas:     
+                    "header       header         header"   /* Área del encabezado que ocupa las 3 columnas en la primera fila */
+                    "contenido    contenido      aside"     /* Área de contenido y un área lateral en la segunda fila */
+                    "contenido    contenido      aside"     /* Igual que la fila anterior, repitiendo contenido en la tercera fila */
+                    "widget1      widget2        aside"     /* Dos widgets y el área lateral en la cuarta fila */
+                    "footer       footer         footer";    /* Área del pie de página que ocupa las 3 columnas en la última fila */
+          }
+
+          .grid .header { /* Estilo específico para el elemento de la cuadrícula con clase "header" */
+               background-color: gray; /* Define un color de fondo gris para el encabezado */
+               grid-area: header; /* Asigna este elemento a la área de cuadrícula "header" */
+          }
+
+          .grid .aside { /* Estilo específico para el elemento de la cuadrícula con clase "aside" */
+               background-color: orange; /* Define un color de fondo naranja para el área lateral */
+               grid-area: aside; /* Asigna este elemento a la área de cuadrícula "aside" */
+          }
+
+          .grid .contenido { /* Estilo específico para el elemento de la cuadrícula con clase "contenido" */
+               background-color: #FFF; /* Define un color de fondo blanco para el contenido */
+               color: #000; /* Define el color del texto como negro */
+               border: none; /* Elimina cualquier borde del contenido */
+               grid-area: contenido; /* Asigna este elemento a la área de cuadrícula "contenido" */
+          }
+
+          .grid .widget1 { /* Estilo específico para el primer widget en la cuadrícula */
+               background-color: greenyellow; /* Define un color de fondo verde amarillento para el widget */
+               grid-area: widget1; /* Asigna este elemento a la área de cuadrícula "widget1" */
+          }
+
+          .grid .widget2 { /* Estilo específico para el segundo widget en la cuadrícula */
+               background-color: greenyellow; /* Define un color de fondo verde amarillento para el widget */
+               grid-area: widget2; /* Asigna este elemento a la área de cuadrícula "widget2" */
+          }
+
+          .grid .footer { /* Estilo específico para el elemento de la cuadrícula con clase "footer" */
+               background-color: #3a3a3a; /* Define un color de fondo gris oscuro para el pie de página */
+               grid-area: footer; /* Asigna este elemento a la área de cuadrícula "footer" */
+          }
+     </style>
+</head>
+<body>
+     <div class="grid"> <!-- Contenedor de cuadrícula que albergará los elementos hijos -->
+          <div class="header">1</div> <!-- Elemento de cuadrícula para el encabezado, asignado al área "header" -->
+          <div class="aside">2</div> <!-- Elemento de cuadrícula para el área lateral, asignado al área "aside" -->
+          <div class="contenido">3</div> <!-- Elemento de cuadrícula para el contenido, asignado al área "contenido" -->
+          <div class="widget1">4</div> <!-- Elemento de cuadrícula para el primer widget, asignado al área "widget1" -->
+          <div class="widget2">5</div> <!-- Elemento de cuadrícula para el segundo widget, asignado al área "widget2" -->
+          <div class="footer">6</div> <!-- Elemento de cuadrícula para el pie de página, asignado al área "footer" -->
+     </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSS GRID - Subgrid</title> 
+	<meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+	<link rel="stylesheet" href="../fontawesome/css/all.css"> 
+	
+	<style>
+		/* GENERALES */
+		* {
+			margin: 0; /* Elimina los márgenes por defecto de todos los elementos */
+			padding: 0; /* Elimina el padding por defecto de todos los elementos */
+			box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total del elemento */
+			font-family: sans-serif; /* Establece la fuente por defecto como sans-serif */
+		}
+
+		body {
+			background: #cccccc; /* Color de fondo gris claro para todo el cuerpo */
+			padding: 40px 0; /* Añade padding vertical de 40px al cuerpo */
+		}
+
+		.contenedor {
+			width: 90%; /* Establece el ancho del contenedor al 90% del ancho de la pantalla */
+			margin: auto; /* Centra el contenedor horizontalmente */
+		}
+
+		.title {
+			color: #007ac0; /* Color del texto para el título */
+			font-size: 25px; /* Tamaño de fuente para el título */
+			padding: 20px; /* Padding alrededor del título */
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Línea inferior sutil para el título */
+			grid-column: span 3; /* El título ocupa 3 columnas en la cuadrícula */
+		}
+
+		.text {
+			line-height: 20px; /* Espaciado entre líneas del texto */
+			padding: 20px; /* Padding alrededor del texto */
+			color: #111; /* Color del texto */
+			grid-column: span 3; /* El texto ocupa 3 columnas en la cuadrícula */
+		}
+
+		button {
+			border: none; /* Sin borde por defecto para los botones */
+			padding: 10px; /* Padding alrededor del botón */
+			cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+			color: #FFF; /* Color del texto del botón */
+			text-transform: uppercase; /* Convierte el texto del botón a mayúsculas */
+			font-size: 12px; /* Tamaño de fuente para el texto del botón */
+			font-weight: 600; /* Peso de fuente para el texto del botón */
+		}
+
+		button.more {
+			background: #007ac0; /* Color de fondo para el botón "Ver más" */
+		}
+
+		button.web {
+			background: #00c070; /* Color de fondo para el botón "Ir a la web" */
+		}
+
+		button.follow {
+			background: #8a00c0; /* Color de fondo para el botón "Seguir en Instagram" */
+		}
+
+		/* CONTENEDOR GRID */
+		.grid-container {
+			display: grid; /* Activa el modelo de diseño de cuadrícula para el contenedor */
+			grid-template-columns: 1fr 1fr; /* Crea 2 columnas de igual tamaño */
+			gap: 20px; /* Espacio de 20 píxeles entre las celdas de la cuadrícula */
+			grid-template-rows: repeat(1, auto 1fr auto); /* Define las filas con una combinación de tamaños automáticos y fracciones */
+			grid-template-columns: repeat(6, 1fr); /* Crea 6 columnas de igual tamaño */
+		}
+
+		/* PUBLICACIONES */
+		.post {
+			background: #fff; /* Color de fondo blanco para cada publicación */
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad a las publicaciones */
+
+			display: grid; /* Activa el modelo de cuadrícula para la publicación */
+			grid-row: span 3; /* La publicación ocupa 3 filas en la cuadrícula */
+			grid-template-rows: repeat(1, 100px 1fr auto); /* Define las filas de la publicación */
+			grid-template-rows: subgrid; /* Utiliza subgrid para heredar filas del contenedor padre */
+
+			grid-column: span 3; /* La publicación ocupa 3 columnas en la cuadrícula */
+			grid-template-columns: subgrid; /* Utiliza subgrid para heredar columnas del contenedor padre */
+		}
+
+		/* BOTONES */
+		.post .btn {
+			border-top: 1px solid rgba(0, 0, 0, 0.2); /* Línea superior sutil para separar los botones del contenido */
+			padding: 20px; /* Padding alrededor del contenedor de botones */
+			display: grid; /* Activa el modelo de cuadrícula para los botones */
+			grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño para los botones */
+			grid-template-columns: subgrid; /* Utiliza subgrid para heredar columnas del contenedor padre */
+			grid-column: span 3; /* Los botones ocupan 3 columnas en la cuadrícula */
+		}
+	</style>
+
+</head>
+<body>
+	<div class="contenedor">
+		<div class="grid-container">
+			<div class="post">
+				<h2 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero.</h2>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio.</p>
+				<div class="btn">
+					<button class="more">Ver más <span class="fas fa-search-plus"></span></button> <!-- Botón "Ver más" con un icono -->
+					<button class="web">Ir a la web <span class="fas fa-globe"></span></button> <!-- Botón "Ir a la web" con un icono -->
+				</div>
+			</div>
+
+			<div class="post">
+				<h2 class="title">Lorem ipsum dolor sit amet</h2>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio.</p>
+				<div class="btn">
+					<button class="more">Ver más <span class="fas fa-search-plus"></span></button> <!-- Botón "Ver más" con un icono -->
+					<button class="web">Ir a la web <span class="fas fa-globe"></span></button> <!-- Botón "Ir a la web" con un icono -->
+					<button class="follow">Seguir en instagram <span class="fab fa-instagram"></span></button> <!-- Botón "Seguir en Instagram" con un icono -->
+				</div>
+			</div>
+
+			<div class="post">
+				<h2 class="title">Lorem ipsum dolor sit amet.</h2>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero.</p>
+				<div class="btn">
+					<button class="follow">Seguir en instagram <span class="fab fa-instagram"></span></button> <!-- Botón "Seguir en Instagram" con un icono -->
+					<button class="web">Ir a la web <span class="fas fa-globe"></span></button> <!-- Botón "Ir a la web" con un icono -->
+				</div>
+			</div>
+
+			<div class="post">
+				<h2 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus</h2>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio.</p>
+				<div class="btn">
+					<button class="more">Ver más <span class="fas fa-search-plus"></span></button> <!-- Botón "Ver más" con un icono -->
+					<button class="follow">Seguir en instagram <span class="fab fa-instagram"></span></button> <!-- Botón "Seguir en Instagram" con un icono -->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

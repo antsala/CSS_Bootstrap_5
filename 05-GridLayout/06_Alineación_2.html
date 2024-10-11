@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, que soporta la mayoría de los caracteres y símbolos -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles, establece el ancho y la escala inicial -->
+     <title>Document</title> 
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a una hoja de estilos externa para estilos CSS adicionales -->
+
+     <style>
+          .grid { /* Clase CSS para definir un contenedor de cuadrícula */
+               display: grid; /* Activa el layout de cuadrícula para este contenedor */
+               gap: 20px; /* Espacio de 20 píxeles entre las filas y columnas de la cuadrícula */
+               height: 1000px; /* Altura fija del contenedor de cuadrícula de 1000 píxeles */
+               grid-template-columns: repeat(3, 200px); /* Define 3 columnas de 200 píxeles de ancho usando la función repeat */
+               grid-template-rows: repeat(3, 200px); /* Define 3 filas de 200 píxeles de alto usando la función repeat */
+
+               /* Alinear de forma horizontal los elementos dentro de la cuadrícula */
+               justify-content: center; /* Alinea todos los elementos al centro del contenedor */
+               /* justify-content: start; */ /* Alinea todos los elementos al inicio del contenedor (valor inicial) */
+               /* justify-content: end; */ /* Alinea todos los elementos al final del contenedor (valor final) */
+               /* justify-content: space-around; */ /* Distribuye el espacio alrededor de cada elemento */
+               /* justify-content: space-between; */ /* Distribuye el espacio entre los elementos, dejando el espacio al inicio y al final */
+               /* justify-content: space-evenly; */ /* Distribuye el espacio de manera uniforme entre todos los elementos */
+
+               /* Alinear de forma vertical los elementos dentro de la cuadrícula */
+               /* align-content: center; */ /* Alinea los elementos al centro del contenedor verticalmente */
+               /* align-content: end; */ /* Alinea los elementos al final del contenedor verticalmente */
+               /* align-content: start; */ /* Alinea los elementos al inicio del contenedor verticalmente (valor inicial) */
+               /* align-content: space-around; */ /* Distribuye el espacio vertical alrededor de cada fila */
+               /* align-content: space-between; */ /* Distribuye el espacio vertical entre las filas, dejando espacio al inicio y al final */
+               /* align-content: space-evenly; */ /* Distribuye el espacio vertical de manera uniforme entre todas las filas */
+          }
+     </style>
+</head>
+<body>
+     <div class="grid"> <!-- Contenedor de cuadrícula que albergará los elementos hijos -->
+          <div>1</div> 
+          <div>2</div> 
+          <div>3</div> 
+          <div>4</div> 
+          <div>5</div> 
+          <div>6</div> 
+          <div>7</div> 
+          <div>8</div> 
+          <div>9</div> 
+     </div>
+</body>
+</html>

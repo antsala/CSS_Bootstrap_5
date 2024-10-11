@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, soporta la mayoría de los caracteres y símbolos -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista para dispositivos móviles, establece el ancho y la escala inicial -->
+     <title>Document</title> 
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a una hoja de estilos externa para estilos CSS adicionales -->
+
+     <style>
+          .grid { /* Clase CSS para definir un contenedor de cuadrícula */
+               display: grid; /* Activa el layout de cuadrícula para este contenedor */
+               gap: 20px; /* Espacio de 20 píxeles entre las filas y columnas de la cuadrícula */
+               grid-template-columns: repeat(3, 1fr); /* Define 3 columnas de igual tamaño usando la función repeat */
+               grid-template-rows: repeat(3, 200px); /* Define 3 filas de 200 píxeles de altura usando la función repeat */
+
+               /* Alineación horizontal de los elementos dentro de la cuadrícula */
+               justify-items: start; /* Alinea los elementos al inicio de cada celda (valor inicial) */
+               /* justify-items: end; */ /* Alinea los elementos al final de cada celda (valor final) */
+               /* justify-items: center; */ /* Alinea los elementos en el centro de cada celda */
+               /* justify-items: auto; */ /* Se usa el valor por defecto para la alineación horizontal */
+               /* justify-items: stretch; */ /* Estira los elementos para ocupar todo el ancho de la celda */
+
+               /* Alineación vertical de los elementos dentro de la cuadrícula */
+               align-items: start; /* Alinea los elementos al inicio de cada celda (valor inicial) */
+               /* align-items: end; */ /* Alinea los elementos al final de cada celda (valor final) */
+               /* align-items: center; */ /* Alinea los elementos en el centro de cada celda */
+               /* align-items: stretch; */ /* Estira los elementos para ocupar toda la altura de la celda */
+          }
+
+          .grid .item { /* Estilo específico para los elementos de la cuadrícula con clase "item" */
+               background: violet; /* Define un color de fondo violeta para el elemento */
+               justify-self: center; /* Alinea este elemento en el centro de su celda horizontalmente */
+               align-self: center; /* Alinea este elemento en el centro de su celda verticalmente */
+          }
+     </style>
+</head>
+<body>
+     <div class="grid"> <!-- Contenedor de cuadrícula que albergará los elementos hijos -->
+          <div>1</div> 
+          <div>2</div> 
+          <div>3</div> 
+          <div>4</div> 
+          <div>5</div> 
+          <div class="item">6</div> <!-- Elemento de cuadrícula con contenido "6" y clase "item" que le aplica estilos especiales -->
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+     <title>Document</title> 
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Vincula una hoja de estilo externa -->
+
+     <style>
+          .auto-fit div {
+               background-color: violet; /* Establece el color de fondo de los elementos dentro de la cuadrícula con clase auto-fit */
+          }
+     
+          .grid {
+               display: grid; /* Activa el modelo de diseño de cuadrícula para el contenedor */
+               grid-gap: 20px; /* Establece un espacio de 20 píxeles entre las celdas de la cuadrícula */
+          }
+
+          /* Autofill: Se usa para llenar el espacio disponible en la cuadrícula */
+          .auto-fill {
+              /* Crea tantas columnas como sea posible, cada una con un ancho mínimo de 100px y un ancho flexible */ 
+              grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+          }
+
+          /* AutoFit: Se adapta a la cantidad de columnas en el espacio disponible */
+          .auto-fit {
+              /* Crea columnas que se ajustan automáticamente, manteniendo un ancho mínimo de 100px y expandiéndose para llenar el espacio */ 
+              grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+          }
+     </style>
+
+</head>
+<body>
+     <div class="grid auto-fill"> <!-- Contenedor de cuadrícula que utiliza auto-fill -->
+		<div>1</div> <!-- Primer elemento de la cuadrícula -->
+		<div>2</div> <!-- Segundo elemento de la cuadrícula -->
+		<div>3</div> <!-- Tercer elemento de la cuadrícula -->
+		<div>4</div> <!-- Cuarto elemento de la cuadrícula -->
+          <div>5</div> <!-- Quinto elemento de la cuadrícula -->
+	</div>
+
+     <div class="grid auto-fit"> <!-- Contenedor de cuadrícula que utiliza auto-fit -->
+		<div>1</div> <!-- Primer elemento de la cuadrícula -->
+		<div>2</div> <!-- Segundo elemento de la cuadrícula -->
+		<div>3</div> <!-- Tercer elemento de la cuadrícula -->
+		<div>4</div> <!-- Cuarto elemento de la cuadrícula -->
+	</div>
+</body>
+</html>

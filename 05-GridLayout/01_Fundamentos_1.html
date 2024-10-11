@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+     <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura que Internet Explorer use la versión más reciente del motor de renderizado -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+     <title>Document</title> <!-- Título que aparece en la pestaña del navegador -->
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a una hoja de estilos CSS externa -->
+
+     <style>
+          .grid { 
+               /* Clase que aplica estilos de cuadrícula al contenedor */
+               
+               /* PASO 1: DISPLAY GRID */
+               display: grid; /* Activa el modelo de diseño de cuadrícula CSS */
+
+               
+               /* PASO 2: DEFINIR FILAS Y COLUMNAS */
+
+               /* La unidad "fr" en CSS representa "fracción" y se utiliza en el contexto de CSS Grid Layout 
+               para definir proporciones en las dimensiones de las columnas y filas */
+
+               grid-template-columns: 1fr 3fr 1fr; /* Define tres columnas, donde la segunda es tres veces más ancha que las otras dos */
+               grid-template-rows: 1fr 3fr 1fr; /* Define tres filas, donde la segunda es tres veces más alta que las otras dos */
+
+               
+               /* PASO 3: FILAS Y COLUMNAS EN UNA ÚNICA LÍNEA DE CÓDIGO (OPCIONAL) */
+               
+               /* grid-template: 1fr 3fr 1fr / 1fr 1fr; */ /* Define filas y columnas en una sola línea; aquí se redefine la segunda columna */
+               
+
+               /* PASO 4: ESTABLECER SEPARACIÓN (OPCIONAL) */
+               
+               /* gap: 50px; */ /* Define un espacio de 50px entre filas y columnas de la cuadrícula */
+          }
+     </style>
+
+</head>
+<body>
+     <div class="grid"> <!-- Contenedor que utiliza la clase 'grid' para aplicar estilos de cuadrícula -->
+          <div>1</div> <!-- Elemento 1 en la cuadrícula -->
+          <div>2</div> <!-- Elemento 2 en la cuadrícula -->
+          <div>3</div> <!-- Elemento 3 en la cuadrícula -->
+          <div>4</div> <!-- Elemento 4 en la cuadrícula -->
+          <div>5</div> <!-- Elemento 5 en la cuadrícula -->
+          <div>6</div> <!-- Elemento 6 en la cuadrícula -->
+          <div>7</div> <!-- Elemento 7 en la cuadrícula -->
+          <div>8</div> <!-- Elemento 8 en la cuadrícula -->
+          <div>9</div> <!-- Elemento 9 en la cuadrícula -->
+          <div>10</div> <!-- Elemento 10 en la cuadrícula -->
+          <div>11</div> <!-- Elemento 11 en la cuadrícula -->
+          <div>12</div> <!-- Elemento 12 en la cuadrícula -->
+     </div>
+</body>
+</html>

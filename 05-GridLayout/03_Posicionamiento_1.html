@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, soporta la mayoría de los caracteres y símbolos -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista para dispositivos móviles, establece el ancho y la escala inicial -->
+     <title>Document</title> 
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a una hoja de estilos externa para estilos CSS adicionales -->
+
+     <style>
+          .grid { /* Clase CSS para definir un contenedor de cuadrícula */
+               display: grid; /* Activa el layout de cuadrícula para este contenedor */
+               grid-template-columns: repeat(4, 1fr); /* Define 4 columnas de igual tamaño usando la función repeat */
+               grid-template-rows: repeat(3, 1fr); /* Define 3 filas de igual tamaño usando la función repeat */
+               gap: 20px; /* Espacio de 20 píxeles entre las filas y columnas de la cuadrícula */
+          }
+
+          .grid .item { /* Estilo específico para los elementos de la cuadrícula con la clase "item" */
+              background-color: violet; /* Define un color de fondo violeta para el elemento */
+
+              /* POSICIONAR ELEMENTOS */
+              /* grid-column-start: 1; */ /* Establece el inicio de la columna para este elemento en la primera columna */
+              /* grid-column-end: -1; */ /* Establece el final de la columna para este elemento en la última columna */
+              /* grid-row-start: 2; */ /* Establece el inicio de la fila para este elemento en la segunda fila */
+              /* grid-row-end: 3; */ /* Establece el final de la fila para este elemento en la tercera fila */
+
+              /* ATAJO 1: Valores de start y end */
+              /* grid-column: 1 / -1; */ /* Atajo que combina el inicio y final de columna en una sola línea */
+              /* grid-row: 3 / 4; */ /* Atajo que combina el inicio y final de fila en una sola línea */
+
+              /* ATAJO 2 
+               - Primer parámetro: row start
+               - Segundo parámetro: column start
+               - Tercer parámetro: row end
+               - Cuarto parámetro: column end
+              */
+              /* grid-area: 3 / 2 / 5 / -1; */ /* Define el área del grid ocupada por el elemento usando la sintaxis de grid-area */
+
+              /* ATAJO 3: EXPANDIR COLUMNAS Y FILAS */
+              /* grid-column: span 3; */ /* Este elemento se expandirá a lo largo de 3 columnas */
+              /* grid-row: span 3; */ /* Este elemento se expandirá a lo largo de 3 filas */
+          }
+     </style>
+</head>
+<body>
+	<div class="grid"> <!-- Contenedor de cuadrícula que albergará los elementos hijos -->
+		<div class="item">1</div> <!-- Elemento de cuadrícula con clase "item", que ocupa un área definida -->
+		<div>2</div> 
+		<div>3</div> 
+		<div>4</div> 
+		<div>5</div> 
+		<div>6</div> 
+		<div>7</div> 
+		<div>8</div> 
+		<div>9</div> 
+		<div>10</div> 
+		<div>11</div> 
+		<div>12</div> 
+	</div>
+</body>
+</html>

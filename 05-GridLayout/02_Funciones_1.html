@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, soporta la mayoría de los caracteres y símbolos -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Permite que Internet Explorer use la última versión del motor de renderizado -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista para dispositivos móviles, establece el ancho y la escala inicial -->
+     <title>Document</title> <!-- Título que aparecerá en la pestaña del navegador -->
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a una hoja de estilos externa para estilos CSS adicionales -->
+
+     <style>
+          .grid { /*  Clase CSS para definir un contenedor de cuadrícula */
+               display: grid; /* Activa el layout de cuadrícula para este contenedor */
+               grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Define 5 columnas de igual tamaño utilizando fracciones */
+               grid-template-rows: 200px 200px 200px 200px; /* Define 4 filas con una altura fija de 200 píxeles */
+               gap: 20px; /* Espacio de 20 píxeles entre las filas y columnas de la cuadrícula */
+
+               /* FUNCION REPEAT */
+               /* grid-template-columns: repeat(3, 1fr);  */ /* Alternativa para definir columnas, crea 3 columnas de igual tamaño usando la función repeat */
+               /* grid-template-rows: repeat(4, 200px);  */ /* Alternativa para definir filas, crea 4 filas de 200 píxeles usando la función repeat */
+
+               /* FUNCION MINMAX */
+               /* grid-template-columns: minmax(300px, 800px) 1fr 1fr; */ 
+               /* Define la primera columna con un ancho mínimo de 300px y un máximo de 800px; las siguientes columnas ocupan el espacio restante*/
+          }
+     </style>
+</head>
+<body>
+	<div class="grid"> <!-- Contenedor de cuadrícula que albergará los elementos hijos -->
+		<div>1</div> <!-- Elemento de cuadrícula que ocupará una celda en la cuadrícula -->
+		<div>2</div> <!-- Elemento de cuadrícula -->
+		<div>3</div> <!-- Elemento de cuadrícula -->
+		<div>4</div> <!-- Elemento de cuadrícula -->
+		<div>5</div> <!-- Elemento de cuadrícula -->
+		<div>6</div> <!-- Elemento de cuadrícula -->
+		<div>7</div> <!-- Elemento de cuadrícula -->
+		<div>8</div> <!-- Elemento de cuadrícula -->
+		<div>9</div> <!-- Elemento de cuadrícula -->
+		<div>10</div> <!-- Elemento de cuadrícula -->
+		<div>11</div> <!-- Elemento de cuadrícula -->
+		<div>12</div> <!-- Elemento de cuadrícula -->	
+	</div>
+</body>
+</html>

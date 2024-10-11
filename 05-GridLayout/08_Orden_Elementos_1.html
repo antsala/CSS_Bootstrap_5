@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+     <title>Document</title> 
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Vincula una hoja de estilo externa -->
+
+     <style>
+          .grid {
+               display: grid; /* Activa el modelo de diseño de cuadrícula */
+               grid-template-columns: repeat(3, 1fr); /* Define 3 columnas de tamaño flexible (1 fracción cada una) */
+               grid-gap: 20px; /* Establece un espacio de 20 píxeles entre las celdas de la cuadrícula */
+          }
+
+          .grid div {
+               order: 0; /* Establece el orden predeterminado de los elementos en la cuadrícula */
+          }
+
+          .grid .item {
+               background: violet; /* Establece el color de fondo del elemento con clase 'item' como violeta */
+               order: -1; /* Coloca este elemento antes que los demás en el flujo del documento */
+          }
+
+          .grid .item2 {
+               background: lightseagreen; /* Establece el color de fondo del elemento con clase 'item2' como verde mar claro */
+               order: -1; /* Coloca este elemento antes que los demás en el flujo del documento */
+          }
+     </style>
+
+</head>
+<body>
+	<div class="grid"> <!-- Contenedor principal de la cuadrícula -->
+		<div>1</div> <!-- Primer elemento de la cuadrícula -->
+		<div>2</div> <!-- Segundo elemento de la cuadrícula -->
+		<div class="item">3</div> <!-- Tercer elemento de la cuadrícula con clase 'item' -->
+		<div>4</div> <!-- Cuarto elemento de la cuadrícula -->
+		<div class="item2">5</div> <!-- Quinto elemento de la cuadrícula con clase 'item2' -->
+		<div>6</div> <!-- Sexto elemento de la cuadrícula -->
+		<div>7</div> <!-- Séptimo elemento de la cuadrícula -->
+		<div>8</div> <!-- Octavo elemento de la cuadrícula -->
+		<div>9</div> <!-- Noveno elemento de la cuadrícula -->
+	</div>
+</body>
+</html>

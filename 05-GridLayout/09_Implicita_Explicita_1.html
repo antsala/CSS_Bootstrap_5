@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+     <title>Document</title> 
+     <link rel="stylesheet" href="css/estilos.css"> <!-- Vincula una hoja de estilo externa -->
+
+     <style>
+          .grid {
+               display: grid; /* Activa el modelo de diseño de cuadrícula */
+               gap: 20px; /* Establece un espacio de 20 píxeles entre las celdas de la cuadrícula */
+               grid-template-columns: 100px 1fr 100px; /* Define 3 columnas: dos de 100px y una flexible (1fr) */
+               grid-template-rows: 100px 200px 100px; /* Define 3 filas: dos de 100px y una de 200px */
+
+               /* GRID IMPLICITA */
+               grid-auto-rows: 1fr; /* Define que las filas automáticas (no especificadas) tengan una altura flexible */
+               grid-auto-columns: 1fr; /* Define que las columnas automáticas (no especificadas) tengan un ancho flexible */
+
+               /* Especifico dirección */
+               grid-auto-flow: row dense; /* Llenar las filas de manera densa, ocupando los espacios vacíos en cada fila antes de pasar a la siguiente */
+          }
+
+          .grid .expand2 {
+               grid-column: span 2; /* Este elemento ocupará dos columnas en la cuadrícula */
+               background: lightseagreen; /* Color de fondo del elemento como verde mar claro */
+          }
+
+          .grid .expand3 {
+               grid-column: span 3; /* Este elemento ocupará tres columnas en la cuadrícula */
+               background: violet; /* Color de fondo del elemento como violeta */
+          }
+     </style>
+
+</head>
+<body>
+     <div class="grid"> <!-- Contenedor principal de la cuadrícula -->
+		<div>1</div> <!-- Primer elemento de la cuadrícula -->
+		<div class="expand2">2</div> <!-- Segundo elemento de la cuadrícula que se expande a 2 columnas -->
+		<div>3</div> <!-- Tercer elemento de la cuadrícula -->
+		<div class="expand3">4</div> <!-- Cuarto elemento que ocupa 3 columnas -->
+		<div class="expand2">5</div> <!-- Quinto elemento que se expande a 2 columnas -->
+		<div class="expand2">6</div> <!-- Sexto elemento que se expande a 2 columnas -->
+		<div>7</div> <!-- Séptimo elemento de la cuadrícula -->
+		<div>8</div> <!-- Octavo elemento de la cuadrícula -->
+		<div class="expand2">9</div> <!-- Noveno elemento que se expande a 2 columnas -->
+		<div>10</div> <!-- Décimo elemento de la cuadrícula -->
+		<div>11</div> <!-- Undécimo elemento de la cuadrícula -->
+		<div class="expand3">12</div> <!-- Duodécimo elemento que ocupa 3 columnas -->
+		<div>13</div> <!-- Décimotercer elemento de la cuadrícula -->
+		<div class="expand2">14</div> <!-- Décimo cuarto elemento que se expande a 2 columnas -->
+		<div>15</div> <!-- Décimo quinto elemento de la cuadrícula -->
+          <div>16</div> <!-- Décimo sexto elemento de la cuadrícula -->
+          <div>17</div> <!-- Décimo séptimo elemento de la cuadrícula -->
+          <div class="expand2">18</div> <!-- Décimo octavo elemento que se expande a 2 columnas -->
+          <div>19</div> <!-- Décimo noveno elemento de la cuadrícula -->
+          <div>20</div> <!-- Vigésimo elemento de la cuadrícula -->
+          <div class="expand3">21</div> <!-- Vigésimo primer elemento que ocupa 3 columnas -->
+	</div>
+</body>
+</html>

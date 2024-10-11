@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, que permite la representación de caracteres de múltiples lenguajes -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Controla la forma en que se visualiza la página en dispositivos móviles -->
+     <title>Document</title> 
+
+     <style>
+          .container{
+               width: 500px; /* Ancho del contenedor de 500 píxeles */
+               height: 500px; /* Altura del contenedor de 500 píxeles */
+               background: crimson; /* Color de fondo del contenedor */
+               margin: 50px auto; /* Margen de 50 píxeles arriba y abajo, centrado horizontalmente */
+
+               /* MÉTODO 1: Flexbox  (ya lo vimos en el tema anterior) */
+               display: flex; /* Usar Flexbox para el contenedor */
+               justify-content: center;  /* Centrar los elementos hijos horizontalmente */
+               align-items: center;   /* Centrar los elementos hijos verticalmente */
+
+               /* MÉTODO 2: Grid */
+               /* display: grid; */ /* Usar Grid para el contenedor */
+               /* justify-content: center; */ /* Centrar los elementos en la dirección horizontal */
+               /* align-content: center; */ /* Centrar los elementos en la dirección vertical */
+
+               /* MÉTODO 3: Grid */
+               /* display: grid; */ /* Activar el diseño de cuadrícula para el contenedor */
+               /* place-items: center; */ /* Centrar los elementos tanto horizontal como verticalmente dentro del contenedor */
+          }
+
+          .container div{
+               width: 100px; /* Ancho de los elementos hijos de 100 píxeles */
+               height: 100px; /* Altura de los elementos hijos de 100 píxeles */
+               background: #222; /* Color de fondo de los elementos hijos */
+          }
+     </style>
+</head>
+<body>
+     <div class="container"> <!-- Contenedor principal -->
+          <div></div> <!-- Elemento hijo dentro del contenedor -->
+     </div>
+</body>
+</html>
