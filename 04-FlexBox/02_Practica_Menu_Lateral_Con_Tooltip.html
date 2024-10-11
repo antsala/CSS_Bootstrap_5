@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <!-- Vincula la hoja de estilos de Font Awesome para utilizar los iconos en la navegación -->
+
+    <style>
+        /* Estilo general para eliminar márgenes y padding, y establecer el box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;  /* Asegura que el padding y el borde no aumenten el tamaño total del elemento */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* Establece una serie de fuentes comunes para mejorar la compatibilidad entre navegadores */
+        }
+
+        body {
+            display: flex;  /* Usa flexbox para centrar el contenido en el cuerpo */
+            justify-content: center;  /* Centra horizontalmente el contenido */
+            align-items: center;      /* Centra verticalmente el contenido */
+            height: 100vh;  /* Establece la altura del cuerpo al 100% de la ventana del navegador */
+            background: #FFD107;  /* Establece un fondo amarillo brillante */
+        }
+
+        nav {
+            position: relative;  /* Posicionamiento relativo para permitir el posicionamiento absoluto de sus hijos */
+            width: 60px;  /* Ancho fijo para la barra de navegación */
+            height: 300px;  /* Altura fija para la barra de navegación */
+            background: #FFF;  /* Fondo blanco para la barra de navegación */
+            border-radius: 10px;  /* Bordes redondeados para un aspecto más suave */
+            padding: 5px;  /* Espaciado interno de 5px alrededor del contenido */
+            display: flex;
+            flex-direction: column;  /* Organiza los elementos hijos en una columna */
+            justify-content: space-around;  /* Espacia equitativamente los elementos hijos */
+            align-items: center;  /* Centra los elementos hijos en el eje horizontal */
+        }
+
+        nav a {
+            position: relative;  /* Posicionamiento relativo para permitir el posicionamiento absoluto del tooltip */
+            width: 100%;  /* El ancho del enlace ocupa el 100% del contenedor padre */
+            height: 15%;  /* Altura relativa para cada enlace (15% del contenedor) */
+            border-radius: 5px;  /* Bordes redondeados para los enlaces */
+            display: flex;   /* Usa flexbox para centrar el contenido del enlace */
+            justify-content: center;  /* Centra horizontalmente el contenido dentro del enlace */
+            align-items: center;  /* Centra verticalmente el contenido dentro del enlace */
+            text-decoration: none;  /* Elimina el subrayado predeterminado de los enlaces */
+            color: #0077FF;  /* Establece el color del texto en azul */
+            transition: all .5s;  /* Añade una transición suave a todas las propiedades al cambiar */
+        }
+
+        nav a:hover {
+            background: #0077FF;  /* Cambia el fondo a azul al pasar el mouse sobre el enlace */
+            color: #FFF;  /* Cambia el color del texto a blanco al pasar el mouse */
+        }
+
+        .title {
+            position: absolute;  /* Posicionamiento absoluto para colocar el tooltip respecto al enlace */
+            left: 45px;  /* Desplaza el tooltip 45px a la izquierda del enlace */
+            background: #FFF;  /* Fondo blanco para el tooltip */
+            padding: 10px 20px;  /* Espaciado interno para el tooltip */
+            border-radius: 10px;  /* Bordes redondeados para el tooltip */
+            color: #0077FF;  /* Establece el color del texto del tooltip en azul */
+            font-weight: 600;  /* Establece el peso de la fuente en semi-negrita */
+            opacity: 0;  /* Inicialmente, el tooltip es invisible */
+            transition: all .5s;  /* Añade una transición suave a todas las propiedades al cambiar */
+        }
+
+        .title::before {
+            content: '';  /* Crea un pseudo-elemento vacío para el triángulo en el tooltip */
+            position: absolute;
+            top: 35%;  /* Posiciona el triángulo en el medio verticalmente */
+            left: -5px;  /* Coloca el triángulo a la izquierda del tooltip */
+            width: 12px;   /* Ancho del triángulo */
+            height: 12px;    /* Alto del triángulo */
+            background: #FFF;  /* Fondo blanco para el triángulo */
+            transform: rotate(45deg);  /* Rota el triángulo para darle forma de flecha */
+        }
+
+        nav a:hover .title {
+            left: 65px;  /* Desplaza el tooltip a la derecha al pasar el mouse sobre el enlace */
+            opacity: 1;  /* Hace visible el tooltip al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <nav>  <!-- Contenedor de la barra de navegación -->
+        <a href="">
+            <span class="icon fas fa-home"></span>  <!-- Icono de inicio de Font Awesome -->
+            <span class="title">Inicio</span>  <!-- Tooltip que aparecerá al pasar el mouse -->
+        </a>
+        <a href="">
+            <span class="icon fas fa-user"></span>  <!-- Icono de usuario de Font Awesome -->
+            <span class="title">Usuarios</span>  <!-- Tooltip que aparecerá al pasar el mouse -->
+        </a>
+        <a href="">
+            <span class="icon fas fa-comment"></span>  <!-- Icono de mensajes de Font Awesome -->
+            <span class="title">Mensajes</span>  <!-- Tooltip que aparecerá al pasar el mouse -->
+        </a>
+        <a href="">
+            <span class="icon fas fa-question-circle"></span>  <!-- Icono de ayuda de Font Awesome -->
+            <span class="title">Ayuda</span>  <!-- Tooltip que aparecerá al pasar el mouse -->
+        </a>
+        <a href="">
+            <span class="icon fas fa-cog"></span>  <!-- Icono de configuración de Font Awesome -->
+            <span class="title">Configuración</span>   <!-- Tooltip que aparecerá al pasar el mouse -->
+        </a>
+    </nav>
+</body>
+</html>

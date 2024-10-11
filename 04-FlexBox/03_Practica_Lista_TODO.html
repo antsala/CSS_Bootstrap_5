@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>  /* Estilo general para eliminar márgenes y padding, y establecer el box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Asegura que el padding y el borde no aumenten el tamaño total del elemento */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* Establece una serie de fuentes comunes para mejorar la compatibilidad entre navegadores */
+        }
+
+        body {
+            height: 100vh;  /* Establece la altura del cuerpo al 100% de la ventana del navegador */
+            display: flex;  /* Usa flexbox para centrar el contenido en el cuerpo */
+            justify-content: center;  /* Centra horizontalmente el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+            background: #111;  /* Establece un fondo oscuro */
+        }
+
+        .container {
+            background: #FFF;  /* Fondo blanco para el contenedor de la lista de tareas */
+            width: 350px;  /* Ancho fijo para el contenedor */
+        }
+
+        h2 {
+            background: #03A9F4; /* Fondo azul para el encabezado */
+            color: #FFF; /* Color del texto en blanco */
+            font-weight: 600;  /* Peso de la fuente en semi-negrita */
+            text-transform: uppercase;  /* Convierte el texto a mayúsculas */
+            padding: 20px;  /* Espaciado interno para el encabezado */
+        }
+
+        /* LISTA */
+        .list {
+            height: 500px;  /* Altura fija para la lista de tareas */
+            overflow-y: auto;  /* Permite el desplazamiento vertical si el contenido excede la altura */
+        }
+
+        .list::-webkit-scrollbar {
+            width: 5px;  /* Ancho de la barra de desplazamiento vertical */
+        }
+
+        .list::-webkit-scrollbar-thumb {
+            background: #03A9F4;  /* Color del "pulgar" de la barra de desplazamiento */
+            border-radius: 40px;  /* Bordes redondeados para el "pulgar" */
+        }
+
+        /* ITEMS */
+        .item {
+            padding: 20px;  /* Espaciado interno para cada elemento de la lista */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);  /* Línea de separación entre los elementos */
+            transition: all .5s;  /* Añade una transición suave a todas las propiedades al cambiar */
+        }
+
+        .item:last-child {
+            border-bottom: none;  /* Elimina la línea de separación para el último elemento */
+        }
+
+        .item:hover {
+            background: rgba(0, 0, 0, 0.1);  /* Cambia el fondo al pasar el mouse sobre el elemento */
+        }
+
+        .item label {
+            display: flex;  /* Usa flexbox para alinear los elementos dentro de la etiqueta */
+            justify-content: space-between;  /* Espacia los elementos en los extremos */
+            align-items: center;  /* Centra los elementos verticalmente */
+            cursor: pointer;  /* Cambia el cursor al pasar sobre la etiqueta */
+        }
+
+        .item p {
+            font-size: 18px;  /* Tamaño de fuente para el texto de la tarea */
+            letter-spacing: 1px;  /* Espaciado entre letras */
+            font-weight: 400;  /* Peso de la fuente normal */
+        }
+
+        .item span {
+            position: relative;  /* Posicionamiento relativo para el círculo de selección */
+            width: 30px;  /* Ancho del círculo de selección */
+            height: 30px;  /* Alto del círculo de selección */
+            border: 1px solid #8B8B8B;  /* Color del borde del círculo */
+            border-radius: 50%;  /* Forma circular */
+            display: flex;   /* Usa flexbox para centrar el contenido en el círculo */
+            justify-content: center;  /* Centra horizontalmente el contenido */
+            align-items: center;  /* Centra verticalmente el contenido */
+        }
+
+        .item span::before {
+            content: '';  /* Crea un pseudo-elemento vacío para la marca de selección */
+            position: absolute;
+            width: 10px;  /* Ancho de la marca de selección */
+            height: 5px;  /* Alto de la marca de selección */
+            border-left: 2px solid #8B8B8B;    /* Borde izquierdo de la marca */
+            border-bottom: 2px solid #8B8B8B;  /* Borde inferior de la marca */
+            transform: rotate(-40deg);  /* Rota la marca para que se vea como una "v" */
+        }
+
+        .item input {
+            display: none;  /* Oculta el checkbox visualmente */
+        }
+
+        /* ESTADOS */
+        .item input:checked ~ p {
+            text-decoration: line-through;  /* Aplica una línea a través del texto al marcar la tarea */
+            color: #ccc;  /* Cambia el color del texto a gris */
+            font-weight: 600;  /* Peso de la fuente en semi-negrita al marcar la tarea */
+        }
+
+        .item input:checked ~ span {
+            background: #03A9F4;  /* Cambia el fondo del círculo al marcar la tarea */
+            border: 1px solid #03A9F4;  /* Cambia el color del borde del círculo al marcar la tarea */
+        }
+
+        .item input:checked ~ span::before {
+            border-left: 2px solid #FFF;  /* Cambia el color del borde izquierdo de la marca al marcar la tarea */
+            border-bottom: 2px solid #fff;  /* Cambia el color del borde inferior de la marca al marcar la tarea */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">  <!-- Contenedor principal de la lista de tareas -->
+        <h2>To Do List</h2>    <!-- Título de la lista de tareas -->
+        <div class="list">     <!-- Contenedor para la lista de tareas -->
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">  <!-- Checkbox para marcar la tarea -->
+                    <p>Comer</p>  <!-- Texto de la tarea -->
+                    <span></span> <!-- Círculo de selección -->
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Programar</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Leer</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Compras</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Ejercicio</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Dormir</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Comer</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Comer</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Comer</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Comer</p>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <label>
+                    <input type="checkbox" name="" id="">
+                    <p>Comer</p>
+                    <span></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
