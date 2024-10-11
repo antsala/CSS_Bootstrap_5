@@ -272,7 +272,7 @@ header::before{
      left: 0;
      width: 100%;
      height: 100%;
-     background: url(img/image1.webp);
+     background: url(../img/image1.webp);
      background-repeat: no-repeat;
      background-position: center;
 }
@@ -299,7 +299,7 @@ header .text-content h3{
 
 /** SABORES */
 .sabores div.background{
-     background: url(img/image2.webp);
+     background: url(../img/image2.webp);
 }
 
 
@@ -310,14 +310,14 @@ header .text-content h3{
 }
 
 .especial::before{
-     background: url(img/image3.webp);
+     background: url(../img/image3.webp);
 }
 
 
 
 /** LUGAR  */
 .lugar .background{
-     background: url(img/image4.webp);
+     background: url(../img/image4.webp);
 }
 
 
@@ -328,7 +328,7 @@ header .text-content h3{
 }
 
 .eventos::before{
-     background: url(img/image5.webp);
+     background: url(../img/image5.webp);
 }
 
 .eventos .btn{
@@ -339,7 +339,7 @@ header .text-content h3{
 
 /** POSTRES  */
 .postres .background{
-     background: url(img/image6.webp);
+     background: url(../img/image6.webp);
 }
 
 
@@ -347,12 +347,12 @@ header .text-content h3{
 /** HELADOS  */
 .helado{
      height: 115vh;
-     background: url(img/image7.webp), #B5E8D5;
+     background: url(../img/image7.webp), #B5E8D5;
      background-attachment: fixed;
      display: flex;
 }
 
-.helado img{
+.helado ../img{
      width: 100%;
      object-fit: cover;
 }
