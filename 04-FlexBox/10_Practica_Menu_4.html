@@ -1,0 +1,290 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML5 -->
+<html lang="en"> <!-- Inicio del documento HTML con idioma inglés -->
+<head>
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura que el contenido sea compatible con versiones de Internet Explorer -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Controla el diseño y el escalado en dispositivos móviles -->
+     <title>Menú panel</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+     <link rel="stylesheet" href="../fontawesome/css/all.css"> <!-- Vincula el archivo CSS de Font Awesome para iconos -->
+     
+     <style>
+          /* Estilos globales aplicados a todos los elementos */
+          * {
+               margin: 0; /* Elimina el margen por defecto de todos los elementos */
+               padding: 0; /* Elimina el padding por defecto de todos los elementos */
+               box-sizing: border-box; /* Cambia el modelo de caja para incluir padding y borde en el ancho y alto */
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define la fuente por defecto */
+          }
+
+          /* MENU LATERAL */
+          nav {
+               position: fixed; /* Fija el menú lateral en su posición */
+               top: 0; /* Posiciona el menú en la parte superior */
+               left: 0; /* Posiciona el menú en el lado izquierdo */
+               width: 60px; /* Ancho del menú lateral */
+               height: 100vh; /* Altura del menú para que ocupe toda la altura de la ventana */
+               background: #111; /* Color de fondo del menú lateral */
+          }
+
+          .contenedor-imagen {
+               width: 100%; /* Ancho del contenedor de la imagen */
+               height: 50px; /* Altura del contenedor de la imagen */
+               display: flex; /* Utiliza flexbox para alinear el contenido */
+               justify-content: center; /* Centra horizontalmente el contenido dentro del contenedor */
+               align-items: center; /* Centra verticalmente el contenido dentro del contenedor */
+               margin-bottom: 20px; /* Espacio inferior del contenedor */
+          }
+
+          .logo {
+               width: 100%; /* Ancho de la imagen del logo, ocupa el 100% del contenedor */
+          }
+
+          .enlaces {
+               height: 60%; /* Altura de la sección de enlaces en el menú lateral */
+               display: flex; /* Utiliza flexbox para alinear el contenido */
+               flex-direction: column; /* Organiza los enlaces en una columna */
+               justify-content: space-around; /* Distribuye el espacio uniformemente entre los enlaces */
+               align-items: center; /* Centra los enlaces horizontalmente */
+          }
+
+          a {
+               text-decoration: none; /* Elimina el subrayado de los enlaces */
+               font-size: 18px; /* Tamaño de la fuente de los enlaces */
+               color: rgba(255, 255, 255, 0.4); /* Color de texto de los enlaces con opacidad */
+               width: 100%; /* Establece el ancho de los enlaces al 100% */
+               height: 50px; /* Establece la altura de los enlaces */
+               display: flex; /* Utiliza flexbox para alinear el contenido */
+               justify-content: center; /* Centra horizontalmente el contenido de los enlaces */
+               align-items: center; /* Centra verticalmente el contenido de los enlaces */
+               transition: all .5s; /* Establece una transición suave para todos los cambios de propiedades */
+          }
+
+          a:hover {
+               background: rgba(255, 255, 255, 0.1); /* Color de fondo al pasar el ratón sobre el enlace */
+               color: #0D6EFD; /* Cambia el color del texto al pasar el ratón sobre el enlace */
+          }
+
+          .btn-inferior {
+               position: absolute; /* Permite que el botón se posicione libremente dentro del menú lateral */
+               bottom: 0; /* Posiciona el botón en la parte inferior del menú */
+          }
+
+          .btn-inferior:hover {
+               background: #dc3545; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+               color: #FFF; /* Cambia el color del texto al pasar el ratón sobre el botón */
+          }
+
+          /* MENU SUPERIOR */
+          header {
+               width: 100%; /* Establece el ancho del encabezado al 100% */
+               height: 50px; /* Establece la altura del encabezado */
+               padding: 0 80px; /* Espaciado horizontal dentro del encabezado */
+               display: flex; /* Utiliza flexbox para organizar el contenido */
+               justify-content: space-between; /* Distribuye el espacio entre los elementos del encabezado */
+               align-items: center; /* Centra verticalmente el contenido del encabezado */
+               box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Añade una sombra sutil al encabezado */
+               border-bottom: 1px solid #f5f5f5; /* Establece una línea inferior delgada en el encabezado */
+          }
+
+          header p {
+               font-size: 1.2em; /* Tamaño de fuente del texto del encabezado */
+               font-style: italic; /* Aplica estilo en cursiva al texto */
+               letter-spacing: 1px; /* Espaciado entre letras */
+               font-weight: 600; /* Grosor de la fuente */
+          }
+
+          header .info-user {
+               display: flex; /* Utiliza flexbox para alinear el contenido de información del usuario */
+               align-items: center; /* Centra verticalmente el contenido */
+          }
+
+          header .info-user span {
+               position: relative; /* Permite posicionar elementos secundarios relativos a este elemento */
+               width: 35px; /* Ancho del icono de notificación */
+               height: 35px; /* Altura del icono de notificación */
+               display: flex; /* Utiliza flexbox para alinear el contenido */
+               justify-content: center; /* Centra horizontalmente el contenido */
+               align-items: center; /* Centra verticalmente el contenido */
+               margin: 0 15px; /* Espacio lateral entre el icono y otros elementos */
+               font-size: 1.2em; /* Tamaño de fuente del icono */
+               color: #4B4B4B; /* Color del icono */
+               cursor: pointer; /* Cambia el cursor a puntero cuando pasa sobre el icono */
+          }
+
+          header .info-user span::after {
+               content: ''; /* Crea un elemento pseudo para el indicador de notificaciones */
+               position: absolute; /* Permite posicionar el indicador en relación al icono */
+               top: 4px; /* Posición desde la parte superior */
+               right: 8px; /* Posición desde el lado derecho */
+               width: 7px; /* Ancho del indicador */
+               height: 7px; /* Altura del indicador */
+               background: #DC3545; /* Color de fondo del indicador */
+               border-radius: 50%; /* Hace que el indicador sea circular */
+          }
+
+          header .info-user .container-imagen {
+               position: relative; /* Permite posicionar elementos secundarios relativos a este elemento */
+               cursor: pointer; /* Cambia el cursor a puntero cuando pasa sobre la imagen de perfil */
+          }
+
+          header .info-user .container-imagen img {
+               width: 35px; /* Ancho de la imagen de perfil */
+               height: 35px; /* Altura de la imagen de perfil */
+               object-fit: cover; /* Mantiene la proporción de la imagen */
+               object-position: center; /* Centra la imagen dentro del contenedor */
+               border-radius: 50%; /* Hace que la imagen de perfil sea circular */
+          }
+
+          header .info-user .container-imagen::after {
+               content: ''; /* Crea un elemento pseudo para el indicador de estado */
+               position: absolute; /* Permite posicionar el indicador en relación a la imagen */
+               bottom: 3px; /* Posición desde la parte inferior */
+               right: 0; /* Posición desde el lado derecho */
+               width: 12px; /* Ancho del indicador de estado */
+               height: 12px; /* Altura del indicador de estado */
+               background: #37E920; /* Color de fondo del indicador de estado */
+               border-radius: 50%; /* Hace que el indicador de estado sea circular */
+          }
+
+          /* SOCIALES */
+          .sociales {
+               position: fixed; /* Fija la sección de íconos sociales en la ventana */
+               bottom: 30px; /* Posiciona los íconos desde la parte inferior */
+               right: 30px; /* Posiciona los íconos desde el lado derecho */
+               display: flex; /* Utiliza flexbox para alinear el contenido */
+          }
+
+          .sociales .icon {
+               margin: 0 20px; /* Espacio lateral entre los íconos sociales */
+               display: flex; /* Utiliza flexbox para alinear el contenido */
+               flex-direction: column; /* Organiza los íconos en una columna */
+               justify-content: center; /* Centra verticalmente el contenido */
+               align-items: center; /* Centra horizontalmente el contenido */
+               position: relative; /* Permite posicionar elementos secundarios relativos a este elemento */
+               cursor: pointer; /* Cambia el cursor a puntero cuando pasa sobre el icono */
+          }
+
+          .sociales .icon span {
+               width: 50px; /* Ancho del círculo de ícono social */
+               height: 50px; /* Altura del círculo de ícono social */
+               background: #ccc; /* Color de fondo del círculo */
+               border-radius: 50%; /* Hace que el círculo sea redondo */
+               text-align: center; /* Centra el texto dentro del círculo */
+               line-height: 50px; /* Centra verticalmente el texto dentro del círculo */
+               font-size: 20px; /* Tamaño de fuente del texto */
+          }
+
+          .sociales .icon .tooltip {
+               position: absolute; /* Permite posicionar la herramienta en relación al icono */
+               top: 0; /* Posición desde la parte superior del icono */
+               background: #ccc; /* Color de fondo de la herramienta */
+               padding: 10px 18px; /* Espaciado interior de la herramienta */
+               border-radius: 25px; /* Bordes redondeados de la herramienta */
+               font-weight: 600; /* Grosor de la fuente */
+               opacity: 0; /* Inicialmente oculta la herramienta */
+               transition: all .5s; /* Establece una transición suave para todos los cambios de propiedades */
+          }
+
+          .sociales .icon:hover .tooltip {
+               top: -60px; /* Mueve la herramienta hacia arriba al pasar el ratón sobre el icono */
+               opacity: 1; /* Muestra la herramienta al pasar el ratón */
+               pointer-events: auto; /* Permite la interacción con la herramienta */
+          }
+
+          .sociales .icon .tooltip::before {
+               content: ''; /* Crea un elemento pseudo para la flecha de la herramienta */
+               position: absolute; /* Permite posicionar la flecha en relación a la herramienta */
+               bottom: -8px; /* Posición desde la parte inferior de la herramienta */
+               left: 50%; /* Centra horizontalmente la flecha */
+               width: 15px; /* Ancho de la flecha */
+               height: 15px; /* Altura de la flecha */
+               background: #ccc; /* Color de fondo de la flecha */
+               transform: translateX(-50%) rotate(45deg); /* Centra la flecha y la rota para que parezca una flecha */
+               transition: all .5s; /* Establece una transición suave para todos los cambios de propiedades */
+          }
+
+          /* Estilos para el hover de íconos sociales */
+          .sociales .facebook:hover span,
+          .sociales .facebook:hover .tooltip,
+          .sociales .facebook:hover .tooltip::before {
+               background: #3B5999; /* Color de fondo de Facebook al pasar el ratón */
+               color: #FFF; /* Color del texto de Facebook al pasar el ratón */
+          }
+
+          .sociales .twitter:hover span,
+          .sociales .twitter:hover .tooltip,
+          .sociales .twitter:hover .tooltip::before {
+               background: #46c1f6; /* Color de fondo de Twitter al pasar el ratón */
+               color: #FFF; /* Color del texto de Twitter al pasar el ratón */
+          }
+
+          .sociales .instagram:hover span,
+          .sociales .instagram:hover .tooltip,
+          .sociales .instagram:hover .tooltip::before {
+               background: #E1306C; /* Color de fondo de Instagram al pasar el ratón */
+               color: #FFF; /* Color del texto de Instagram al pasar el ratón */
+          }
+
+          .sociales .youtube:hover span,
+          .sociales .youtube:hover .tooltip,
+          .sociales .youtube:hover .tooltip::before {
+               background: #DC3545; /* Color de fondo de YouTube al pasar el ratón */
+               color: #FFF; /* Color del texto de YouTube al pasar el ratón */
+          }
+     </style>
+</head>
+<body>
+     <!-- Menu lateral -->
+     <nav>
+          <div class="contenedor-imagen">
+               <img src="img/logo3.png" alt="" class="logo"> <!-- Logo de la aplicación -->
+          </div>
+
+          <div class="enlaces"> <!-- Contenedor de enlaces de navegación -->
+               <a href=""><span class="fas fa-users"></span></a> <!-- Enlace de usuarios -->
+               <a href=""><span class="fas fa-shopping-bag"></span></a> <!-- Enlace de compras -->
+               <a href=""><span class="fas fa-file-invoice-dollar"></span></a> <!-- Enlace de facturas -->
+               <a href=""><span class="fas fa-comments"></span></a> <!-- Enlace de comentarios -->
+               <a href=""><span class="fas fa-file-alt"></span></a> <!-- Enlace de documentos -->
+               <a href=""><span class="fas fa-cog"></span></a> <!-- Enlace de configuración -->
+          </div>
+
+          <a href="" class="btn-inferior"><span class="fas fa-power-off"></span></a> <!-- Botón de cierre de sesión -->
+     </nav>
+
+     <!-- Menu superior -->
+     <header>
+          <p>Bienvenido</p> <!-- Mensaje de bienvenida -->
+
+          <div class="info-user"> <!-- Información del usuario -->
+               <span class="fas fa-bell"></span> <!-- Icono de notificación -->
+               <div class="container-imagen"> <!-- Contenedor de la imagen de perfil -->
+                    <img src="img/perfil.jpg" alt=""> <!-- Imagen de perfil del usuario -->
+               </div>
+          </div>
+     </header>
+
+     <!-- Sociales -->
+     <div class="sociales"> <!-- Contenedor de iconos de redes sociales -->
+          <div class="icon facebook"> <!-- Icono de Facebook -->
+               <div class="tooltip">Facebook</div> <!-- Tooltip de Facebook -->
+               <span class="fab fa-facebook-f"></span> <!-- Icono de Facebook -->
+          </div>
+
+          <div class="icon twitter"> <!-- Icono de Twitter -->
+               <div class="tooltip">Twitter</div> <!-- Tooltip de Twitter -->
+               <span class="fab fa-twitter"></span> <!-- Icono de Twitter -->
+          </div>
+
+          <div class="icon instagram"> <!-- Icono de Instagram -->
+               <div class="tooltip">Instagram</div> <!-- Tooltip de Instagram -->
+               <span class="fab fa-instagram"></span> <!-- Icono de Instagram -->
+          </div>
+
+          <div class="icon youtube"> <!-- Icono de YouTube -->
+               <div class="tooltip">Youtube</div> <!-- Tooltip de YouTube -->
+               <span class="fab fa-youtube"></span> <!-- Icono de YouTube -->
+          </div>
+     </div>
+</body>
+</html>
