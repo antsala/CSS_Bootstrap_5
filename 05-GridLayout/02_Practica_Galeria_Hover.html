@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Establece las dimensiones del viewport para un diseño responsivo -->
+     <title>Galeria</title> 
+
+     <style>
+          /* Estilos generales para todos los elementos */
+          * {
+               margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+               padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+               box-sizing: border-box; /* Asegura que el ancho y alto de los elementos incluya bordes y rellenos */
+          }
+
+          /* Estilo del cuerpo de la página */
+          body {
+               display: grid; /* Utiliza grid para organizar el contenido del body */
+               place-items: center; /* Centra el contenido del body tanto vertical como horizontalmente */
+               height: 100vh; /* Establece la altura del body al 100% de la ventana de visualización */
+               background: #000; /* Color de fondo negro para el body */
+          }
+
+          /* Contenedor principal que alberga los elementos de la cuadrícula */
+          .grid-container {
+               width: 100%; /* Ancho del contenedor al 100% del viewport */
+               padding: 5px; /* Relleno interno del contenedor */
+               display: grid; /* Utiliza grid para organizar elementos dentro del contenedor */
+               gap: 5px; /* Espacio entre los elementos de la cuadrícula */
+
+               grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual tamaño en la cuadrícula */
+               grid-template-rows: repeat(3, 210px); /* Crea 3 filas de altura fija (210px) */
+          }
+
+          /* Estilo para cada elemento dentro de la cuadrícula */
+          .item {
+               transition: all .3s; /* Transición suave para todos los cambios en el elemento (0.3 segundos) */
+          }
+
+          /* Efecto de opacidad al pasar el mouse sobre el contenedor */
+          .grid-container:hover .item {
+               opacity: 0.2; /* Reduce la opacidad de todos los elementos al 20% al pasar el mouse sobre el contenedor */
+          }
+
+          /* Efecto para mantener la opacidad del elemento bajo el mouse */
+          .item:hover {
+               opacity: 1 !important; /* Restablece la opacidad del elemento a 100% cuando se pasa el mouse sobre él */
+          }
+
+          /* Estilo para las imágenes dentro de los elementos */
+          .item img {
+               width: 100%; /* Establece el ancho de la imagen al 100% del elemento contenedor */
+               height: 100%; /* Establece la altura de la imagen al 100% del elemento contenedor */
+               object-fit: cover; /* Asegura que la imagen cubra todo el espacio del elemento manteniendo la relación de aspecto */
+          }
+
+          /* Clase para hacer que un elemento ocupe dos filas en la cuadrícula */
+          .r-span2 {
+               grid-row: span 2; /* El elemento ocupará 2 filas en la cuadrícula */
+          }
+
+          /* Clase para hacer que un elemento ocupe dos columnas en la cuadrícula */
+          .c-span2 {
+               grid-column: span 2; /* El elemento ocupará 2 columnas en la cuadrícula */
+          }
+     </style>
+
+</head>
+<body>
+     <!-- Contenedor principal que alberga los elementos de la cuadrícula -->
+     <div class="grid-container">
+          <!-- Cada "item" es una celda en la cuadrícula que contiene una imagen -->
+          <div class="item r-span2"> <!-- Este elemento ocupa 2 filas -->
+               <img src="img/bg1.jpg" alt=""> <!-- Imagen de fondo 1 -->
+          </div>
+
+          <div class="item c-span2"> <!-- Este elemento ocupa 2 columnas -->
+               <img src="img/bg2.jpg" alt=""> <!-- Imagen de fondo 2 -->
+          </div>
+
+          <div class="item r-span2"> <!-- Este elemento ocupa 2 filas -->
+               <img src="img/bg3.jpg" alt=""> <!-- Imagen de fondo 3 -->
+          </div>
+
+          <div class="item"> <!-- Elemento regular que ocupa 1 celda -->
+               <img src="img/bg4.jpg" alt=""> <!-- Imagen de fondo 4 -->
+          </div>
+
+          <div class="item"> <!-- Elemento regular que ocupa 1 celda -->
+               <img src="img/bg5.jpg" alt=""> <!-- Imagen de fondo 5 -->
+          </div>
+
+          <div class="item c-span2"> <!-- Este elemento ocupa 2 columnas -->
+               <img src="img/bg6.jpg" alt=""> <!-- Imagen de fondo 6 -->
+          </div>
+
+          <div class="item c-span2"> <!-- Este elemento ocupa 2 columnas -->
+               <img src="img/bg7.jpg" alt=""> <!-- Imagen de fondo 7 -->
+          </div>
+     </div>
+</body>
+</html>

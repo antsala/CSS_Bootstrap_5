@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+     <meta charset="UTF-8"> <!-- Establece el conjunto de caracteres utilizado en el documento -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Establece las dimensiones del viewport para un diseño responsivo -->
+     <title>Herramientas Google</title> 
+
+     <style>
+          /* Estilos generales para todos los elementos */
+          * {
+               margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+               padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+               box-sizing: border-box; /* Asegura que el ancho y alto de los elementos incluya bordes y rellenos */
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define la familia de fuentes */
+          }
+
+          /* Contenedor principal que alberga los elementos de la cuadrícula */
+          .grid-container {
+               height: 100vh; /* Establece la altura del contenedor al 100% de la ventana de visualización */
+               padding: 10px; /* Relleno interno del contenedor */
+               display: grid; /* Utiliza grid para organizar elementos dentro del contenedor */
+               gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+               grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual tamaño en la cuadrícula */
+               grid-template-rows: auto; /* Las filas se ajustarán automáticamente al contenido */
+               grid-template-areas:     "item1    item1     item2     item3" /* Define áreas específicas para los elementos */
+                                        "item4    item5     item2     item6"
+                                        "item4    titulo    titulo    titulo";
+          }
+
+          /* Estilo para cada elemento dentro de la cuadrícula */
+          .item {
+               opacity: 0.8; /* Opacidad inicial del elemento */
+               color: #FFF; /* Color de texto blanco */
+               text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra de texto para mejorar la legibilidad */
+               text-align: center; /* Centra el texto dentro del elemento */
+               display: flex; /* Utiliza flexbox para centrar contenido */
+               justify-content: center; /* Centra horizontalmente el contenido */
+               align-items: center; /* Centra verticalmente el contenido */
+               flex-direction: column; /* Organiza el contenido en una columna */
+               cursor: default; /* Cambia el cursor a un puntero por defecto */
+               transition: all .2s; /* Transición suave para todos los cambios en el elemento (0.2 segundos) */
+          }
+
+          /* Efecto de opacidad al pasar el mouse sobre el elemento */
+          .item:hover {
+               opacity: 1; /* Restablece la opacidad del elemento a 100% al pasar el mouse sobre él */
+          }
+
+          /* Estilos de fondo y áreas de la cuadrícula para cada elemento */
+          .item:nth-child(1) {
+               background: #E53935; /* Color de fondo para el primer elemento */
+               grid-area: item1; /* Asigna el área de la cuadrícula */
+          }
+
+          .item:nth-child(2) {
+               background: #0D47A1; /* Color de fondo para el segundo elemento */
+               grid-area: item2; /* Asigna el área de la cuadrícula */
+          }
+
+          .item:nth-child(3) {
+               background: #FBC02D; /* Color de fondo para el tercer elemento */
+               grid-area: item3; /* Asigna el área de la cuadrícula */
+          }
+
+          .item:nth-child(4) {
+               background: #1E88E5; /* Color de fondo para el cuarto elemento */
+               grid-area: item4; /* Asigna el área de la cuadrícula */
+          }
+
+          .item:nth-child(5) {
+               background: #43A047; /* Color de fondo para el quinto elemento */
+               grid-area: item5; /* Asigna el área de la cuadrícula */
+          }
+
+          .item:nth-child(6) {
+               background: #E53935; /* Color de fondo para el sexto elemento */
+               grid-area: item6; /* Asigna el área de la cuadrícula */
+          }
+
+          .item:nth-child(7) {
+               background: #555; /* Color de fondo para el elemento del título */
+               grid-area: titulo; /* Asigna el área de la cuadrícula */
+          }
+
+          /* Estilo para las imágenes dentro de los elementos */
+          .item img {
+               width: 100px; /* Ancho fijo para las imágenes */
+               transition: all .5s; /* Transición suave para cambios en las imágenes (0.5 segundos) */
+          }
+
+          /* Efecto de escalado en las imágenes al pasar el mouse sobre el elemento */
+          .item:hover img {
+               transform: scale(1.2); /* Escala la imagen al 120% al pasar el mouse sobre el elemento */
+          }
+
+          /* Estilo para los encabezados de nivel 3 dentro de los elementos */
+          .item h3 {
+               margin: 10px 0; /* Margen superior e inferior para los encabezados */
+               font-size: 24px; /* Tamaño de fuente para los encabezados */
+               text-transform: uppercase; /* Convierte el texto a mayúsculas */
+               letter-spacing: 1px; /* Espaciado entre letras */
+               font-weight: 600; /* Peso de la fuente para los encabezados */
+          }
+
+          /* Estilo para el encabezado de nivel 1 dentro del elemento del título */
+          .item h1 {
+               font-size: 8em; /* Tamaño de fuente grande para el título */
+               font-weight: 600; /* Peso de la fuente para el título */
+               letter-spacing: 1px; /* Espaciado entre letras */
+               text-transform: uppercase; /* Convierte el texto a mayúsculas */
+          }
+     </style>
+
+</head>
+<body>
+     <div class="grid-container"> <!-- Contenedor principal que alberga los elementos de la cuadrícula -->
+          <!-- Cada "item" es una celda en la cuadrícula que contiene una imagen y un encabezado -->
+          <div class="item"> <!-- Primer elemento de la cuadrícula -->
+               <img src="img/image1.png" alt=""> <!-- Imagen de la aplicación Gmail -->
+               <h3>Gmail</h3> <!-- Encabezado para la aplicación Gmail -->
+          </div>
+
+          <div class="item"> <!-- Segundo elemento de la cuadrícula -->
+               <img src="img/image2.png" alt=""> <!-- Imagen del buscador -->
+               <h3>Buscador</h3> <!-- Encabezado para la aplicación Buscador -->
+          </div>
+
+          <div class="item"> <!-- Tercer elemento de la cuadrícula -->
+               <img src="img/image3.png" alt=""> <!-- Imagen de Google Drive -->
+               <h3>Drive</h3> <!-- Encabezado para la aplicación Drive -->
+          </div>
+
+          <div class="item"> <!-- Cuarto elemento de la cuadrícula -->
+               <img src="img/image4.png" alt=""> <!-- Imagen de Google Translate -->
+               <h3>Translate</h3> <!-- Encabezado para la aplicación Translate -->
+          </div>
+
+          <div class="item"> <!-- Quinto elemento de la cuadrícula -->
+               <img src="img/image5.png" alt=""> <!-- Imagen de Google Maps -->
+               <h3>Maps</h3> <!-- Encabezado para la aplicación Maps -->
+          </div>
+
+          <div class="item"> <!-- Sexto elemento de la cuadrícula -->
+               <img src="img/image6.png" alt=""> <!-- Imagen de YouTube -->
+               <h3>Youtube</h3> <!-- Encabezado para la aplicación YouTube -->
+          </div>
+
+          <div class="item"> <!-- Séptimo elemento de la cuadrícula, utilizado como título -->
+               <h1>Google Apps</h1> <!-- Título principal de la cuadrícula -->
+          </div>
+     </div>
+</body>
+</html>

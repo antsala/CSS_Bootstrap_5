@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Configura la vista para dispositivos móviles -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Reseñas</title>
+
+     <style>
+          /* Estilos generales para todos los elementos */
+          * {
+               margin: 0; /* Elimina el margen predeterminado */
+               padding: 0; /* Elimina el padding predeterminado */
+               box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto de los elementos */
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Establece la fuente para el texto */
+          }
+
+          /* Estilo para el fondo del body */
+          body {
+               background: #ccc; /* Color de fondo gris claro */
+          }
+
+          /* Contenedor de la cuadrícula para los elementos */
+          .grid-container {
+               padding: 70px; /* Espacio interno en el contenedor */
+               display: grid; /* Establece el contenedor como un grid */
+               gap: 50px; /* Espacio entre elementos de la cuadrícula */
+               grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+          }
+
+          /* Estilo para cada item de la cuadrícula */
+          .item {
+               position: relative; /* Posiciona el elemento en relación con su posición original */
+               margin: 20px; /* Margen externo para separar los elementos */
+               background: #FFF; /* Fondo blanco para los items */
+               padding: 70px 40px; /* Espacio interno del item */
+               text-align: center; /* Centra el texto dentro del item */
+               transition: all .5s; /* Transición suave para cambios de estilo */
+          }
+
+          /* Estilo al pasar el mouse sobre el item */
+          .item:hover {
+               background: #BB0019; /* Cambia el fondo a rojo oscuro */
+          }
+
+          /* Elemento decorativo antes del item */
+          .item::before {
+               content: ''; /* Crea un pseudo-elemento vacío */
+               position: absolute; /* Posiciona absolutamente en relación con el item */
+               top: 20px; /* Posición desde la parte superior */
+               right: 40px; /* Posición desde la derecha */
+               width: 80px; /* Ancho del pseudo-elemento */
+               height: 80px; /* Alto del pseudo-elemento */
+               background: url(img/quote.png); /* Imagen de fondo de la cita */
+               background-size: cover; /* Asegura que la imagen cubra el área */
+               opacity: 0.1; /* Hace que la imagen sea semitransparente */
+               transition: all .5s; /* Transición suave para cambios de estilo */
+          }
+
+          /* Estilo al pasar el mouse sobre el pseudo-elemento antes */
+          .item:hover::before {
+               transform: translateY(-60px); /* Mueve hacia arriba al pasar el mouse */
+               opacity: 1; /* Hace el pseudo-elemento completamente visible */
+          }
+
+          /* Elemento decorativo después del item */
+          .item::after {
+               content: ''; /* Crea un pseudo-elemento vacío */
+               position: absolute; /* Posiciona absolutamente en relación con el item */
+               bottom: 20px; /* Posición desde la parte inferior */
+               left: 40px; /* Posición desde la izquierda */
+               width: 80px; /* Ancho del pseudo-elemento */
+               height: 80px; /* Alto del pseudo-elemento */
+               background: url(img/quote.png); /* Imagen de fondo de la cita */
+               background-size: cover; /* Asegura que la imagen cubra el área */
+               opacity: 0.1; /* Hace que la imagen sea semitransparente */
+               transform: rotate(180deg); /* Rota el pseudo-elemento */
+               transition: all .5s; /* Transición suave para cambios de estilo */
+          }
+
+          /* Estilo al pasar el mouse sobre el pseudo-elemento después */
+          .item:hover::after {
+               transform: rotate(180deg) translateY(-60px); /* Rota y mueve hacia arriba */
+               opacity: 1; /* Hace el pseudo-elemento completamente visible */
+          }
+
+          /* Estilo para la imagen dentro del item */
+          .item img {
+               position: absolute; /* Posiciona absolutamente en relación con el item */
+               top: -60px; /* Posición desde la parte superior */
+               left: 50%; /* Centra la imagen horizontalmente */
+               transform: translateX(-50%); /* Ajusta la imagen para centrarla correctamente */
+               width: 120px; /* Ancho de la imagen */
+               height: 120px; /* Alto de la imagen */
+               object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+               object-position: center; /* Centra la imagen en su contenedor */
+               border-radius: 50%; /* Hace que la imagen sea circular */
+          }
+
+          /* Estilo para el párrafo dentro del item */
+          .item p {
+               transition: all .5s; /* Transición suave para cambios de estilo */
+          }
+
+          /* Estilo para el encabezado h3 dentro del item */
+          .item h3 {
+               margin: 20px 0 0 0; /* Espaciado alrededor del encabezado */
+               font-size: 18px; /* Tamaño de fuente para el encabezado */
+               font-weight: 600; /* Peso de la fuente */
+               text-transform: uppercase; /* Transforma el texto a mayúsculas */
+               transition: all .5s; /* Transición suave para cambios de estilo */
+          }
+
+          /* Estilo para el encabezado h4 dentro del item */
+          .item h4 {
+               font-size: 14px; /* Tamaño de fuente para el encabezado */
+               font-weight: 600; /* Peso de la fuente */
+               color: #BB0019; /* Color rojo oscuro para el encabezado */
+               transition: all .5s; /* Transición suave para cambios de estilo */
+          }
+
+          /* Estilo al pasar el mouse sobre cualquier elemento dentro del item */
+          .item:hover * {
+               color: #FFF; /* Cambia el color del texto a blanco */
+          }
+     </style>
+
+</head>
+<body>
+     <!-- Contenedor principal para los testimonios -->
+     <div class="grid-container">
+          <!-- Primer item de testimonio -->
+          <div class="item">
+               <img src="img/profile1.jpg" alt=""> <!-- Imagen del perfil -->
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias saepe ad dolores eius, accusantium eligendi nihil, minus nostrum in at repudiandae eos molestiae, doloremque similique. Expedita praesentium laborum incidunt.</p> <!-- Texto del testimonio -->
+               <h3>Lorem ipsum</h3> <!-- Nombre del autor del testimonio -->
+               <h4>Director creativo</h4> <!-- Cargo del autor del testimonio -->
+          </div>
+
+          <!-- Repite el mismo formato para otros testimonios -->
+          <div class="item">
+               <img src="img/profile2.jpg" alt="">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias saepe ad dolores eius, accusantium eligendi nihil, minus nostrum in at repudiandae eos molestiae, doloremque similique. Expedita praesentium laborum incidunt.</p>
+               <h3>Lorem ipsum</h3>
+               <h4>Director creativo</h4>
+          </div>
+
+          <div class="item">
+               <img src="img/profile3.jpg" alt="">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias saepe ad dolores eius, accusantium eligendi nihil, minus nostrum in at repudiandae eos molestiae, doloremque similique. Expedita praesentium laborum incidunt.</p>
+               <h3>Lorem ipsum</h3>
+               <h4>Director creativo</h4>
+          </div>
+
+          <div class="item">
+               <img src="img/profile4.jpg" alt="">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias saepe ad dolores eius, accusantium eligendi nihil, minus nostrum in at repudiandae eos molestiae, doloremque similique. Expedita praesentium laborum incidunt.</p>
+               <h3>Lorem ipsum</h3>
+               <h4>Director creativo</h4>
+          </div>
+
+          <div class="item">
+               <img src="img/profile5.jpg" alt="">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias saepe ad dolores eius, accusantium eligendi nihil, minus nostrum in at repudiandae eos molestiae, doloremque similique. Expedita praesentium laborum incidunt.</p>
+               <h3>Lorem ipsum</h3>
+               <h4>Director creativo</h4>
+          </div>
+
+          <div class="item">
+               <img src="img/profile6.jpg" alt="">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias saepe ad dolores eius, accusantium eligendi nihil, minus nostrum in at repudiandae eos molestiae, doloremque similique. Expedita praesentium laborum incidunt.</p>
+               <h3>Lorem ipsum</h3>
+               <h4>Director creativo</h4>
+          </div>
+
+          <div class="item">
+               <img src="img/profile7.jpg" alt="">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias saepe ad dolores eius, accusantium eligendi nihil, minus nostrum in at repudiandae eos molestiae, doloremque similique. Expedita praesentium laborum incidunt.</p>
+               <h3>Lorem ipsum</h3>
+               <h4>Director creativo</h4>
+          </div>
+
+          <div class="item">
+               <img src="img/profile8.jpg" alt="">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias saepe ad dolores eius, accusantium eligendi nihil, minus nostrum in at repudiandae eos molestiae, doloremque similique. Expedita praesentium laborum incidunt.</p>
+               <h3>Lorem ipsum</h3>
+               <h4>Director creativo</h4>
+          </div>
+     </div>
+</body>
+</html>

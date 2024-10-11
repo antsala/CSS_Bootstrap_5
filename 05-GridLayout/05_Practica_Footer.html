@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Configura la vista para dispositivos móviles -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Footer</title>
+     <!-- Enlace a la hoja de estilos de Font Awesome para usar íconos -->
+     <link rel="stylesheet" href="../fontawesome/css/all.css">
+
+     <style>
+          /* Estilos generales para todos los elementos */
+          * {
+               margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+               padding: 0; /* Elimina el padding predeterminado de todos los elementos */
+               box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto de los elementos */
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Establece la fuente del texto */
+               color: #FFF; /* Establece el color del texto a blanco */
+          }
+
+          /* Estilo del cuerpo de la página */
+          body {
+               display: grid; /* Establece el cuerpo como un contenedor de cuadrícula */
+               justify-content: end; /* Alinea el contenido al final en el eje horizontal */
+               align-content: end; /* Alinea el contenido al final en el eje vertical */
+               min-height: 100vh; /* Establece una altura mínima igual a la altura de la ventana */
+          }
+
+          /* Estilo para los enlaces */
+          a {
+               text-decoration: none; /* Elimina el subrayado de los enlaces */
+               display: inline-block; /* Permite establecer dimensiones en los enlaces */
+          }
+
+          /* Estilo al pasar el mouse sobre los enlaces */
+          a:hover {
+               color: #4DA1FA; /* Cambia el color del texto a un azul claro al pasar el mouse */
+          }
+
+          /* Estilo para el pie de página */
+          footer {
+               background: #222; /* Color de fondo gris oscuro */
+               padding: 50px 100px; /* Espacio interno en el pie de página */
+               display: grid; /* Establece el pie de página como un contenedor de cuadrícula */
+               grid-template-columns: 2fr 1fr 1fr 1fr; /* Define cuatro columnas en la cuadrícula */
+               gap: 20px; /* Espacio entre las columnas */
+          }
+
+          /* Estilo para los encabezados h2 dentro del pie de página */
+          footer h2 {
+               color: #CCC; /* Color gris claro para los encabezados */
+               font-weight: 400; /* Peso de fuente normal */
+               letter-spacing: 1px; /* Espaciado entre letras */
+               margin: 15px 0; /* Margen arriba y abajo del encabezado */
+          }
+
+          /* Estilo para la sección de redes sociales */
+          .sociales {
+               margin: 10px 0; /* Margen arriba y abajo */
+               display: grid; /* Establece la sección como un contenedor de cuadrícula */
+               grid-template-columns: repeat(5, 50px); /* Crea cinco columnas de 50px cada una */
+               gap: 10px; /* Espacio entre los iconos */
+          }
+
+          /* Estilo para los enlaces de redes sociales */
+          .sociales a {
+               width: 50px; /* Ancho del icono */
+               height: 50px; /* Alto del icono */
+               background: #555; /* Color de fondo gris */
+               color: #FFF; /* Color del texto (íconos) en blanco */
+               font-size: 20px; /* Tamaño de fuente para los íconos */
+               border-radius: 5px; /* Bordes redondeados */
+               display: grid; /* Establece el enlace como un contenedor de cuadrícula */
+               place-items: center; /* Centra el contenido dentro del enlace */
+               transition: all .3s; /* Transición suave para cambios de estilo */
+          }
+
+          /* Estilo al pasar el mouse sobre los enlaces de redes sociales */
+          .sociales a:hover {
+               background: #333; /* Cambia el fondo a gris oscuro al pasar el mouse */
+          }
+
+          /* Estilo para los elementos de lista */
+          li {
+               list-style: none; /* Elimina los puntos de la lista */
+               margin: 10px 0; /* Margen arriba y abajo para cada elemento de la lista */
+          }
+
+          /* Estilo para la sección de contacto */
+          .contacto div {
+               display: grid; /* Establece cada div como un contenedor de cuadrícula */
+               grid-template-columns: 30px 1fr; /* Dos columnas: una de 30px y otra que ocupa el espacio restante */
+               margin: 15px 0; /* Margen arriba y abajo */
+          }
+
+          /* Estilo para el aviso de derechos de autor */
+          .copy {
+               background: #111; /* Color de fondo negro */
+               height: 50px; /* Altura del aviso de derechos de autor */
+               display: grid; /* Establece el aviso como un contenedor de cuadrícula */
+               place-items: center; /* Centra el contenido dentro del aviso */
+          }
+     </style>
+</head>
+<body>
+     <!-- Contenedor principal del pie de página -->
+     <footer>
+          <!-- Sección "Nosotros" -->
+          <div class="nosotros">
+               <h2>Nosotros</h2> <!-- Título de la sección -->
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate soluta amet, similique atque nemo aliquid officiis ad eos accusamus ipsa voluptatibus exercitationem, quia sit error esse reiciendis odio recusandae blanditiis.</p> <!-- Descripción de la sección -->
+
+               <div class="sociales"> <!-- Sección para los enlaces de redes sociales -->
+                    <a href=""><span class="fab fa-facebook-f"></span></a> <!-- Icono de Facebook -->
+                    <a href=""><span class="fab fa-twitter"></span></a> <!-- Icono de Twitter -->
+                    <a href=""><span class="fab fa-instagram"></span></a> <!-- Icono de Instagram -->
+                    <a href=""><span class="fab fa-youtube"></span></a> <!-- Icono de YouTube -->
+                    <a href=""><span class="fab fa-linkedin-in"></span></a> <!-- Icono de LinkedIn -->
+               </div>
+          </div>
+
+          <!-- Sección de enlaces sugeridos -->
+          <div class="enlaces">
+               <h2>Enlaces sugeridos</h2> <!-- Título de la sección -->
+               <ul> <!-- Lista de enlaces sugeridos -->
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Politicas</a></li>
+                    <li><a href="">Ayuda</a></li>
+                    <li><a href="">Terminos & Condiciones</a></li>
+                    <li><a href="">Contacto</a></li>
+               </ul>
+          </div>
+
+          <!-- Sección de enlaces a la tienda -->
+          <div class="enlaces">
+               <h2>Tienda</h2> <!-- Título de la sección -->
+               <ul> <!-- Lista de enlaces a la tienda -->
+                    <li><a href="">Telefonia</a></li>
+                    <li><a href="">Videoconsolas</a></li>
+                    <li><a href="">Computadores</a></li>
+                    <li><a href="">Audifonos</a></li>
+                    <li><a href="">Perifericos</a></li>
+                    <li><a href="">Televisores</a></li>
+               </ul>
+          </div>
+
+          <!-- Sección de contacto -->
+          <div class="contacto">
+               <h2>Contáctanos</h2> <!-- Título de la sección -->
+
+               <!-- Dirección -->
+               <div>
+                    <span class="fas fa-map-marked"></span> <!-- Icono de ubicación -->
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. USA</span> <!-- Dirección -->
+               </div>
+               <!-- Teléfonos de contacto -->
+               <div>
+                    <span class="fas fa-phone"></span> <!-- Icono de teléfono -->
+                    <p>  
+                         <a href="">+1 123456789</a> <!-- Primer número de teléfono -->
+                         <a href="">+1 987654321</a> <!-- Segundo número de teléfono -->
+                    </p>
+               </div>
+
+               <!-- Correo electrónico de contacto -->
+               <div>
+                    <span class="fas fa-envelope"></span> <!-- Icono de correo -->
+                    <p><a href="">miemail@gmail.com</a></p> <!-- Correo electrónico -->
+               </div>
+          </div>
+     </footer>
+
+     <!-- Aviso de derechos de autor -->
+     <div class="copy">
+          <p>Copyright © 2021. Todos los derechos reservados</p> <!-- Texto del aviso de derechos de autor -->
+     </div>
+</body>
+</html>
