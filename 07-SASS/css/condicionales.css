@@ -2,7 +2,7 @@ h1 {
   color: red;
 }
 
-.box, .box1, .box2, .box3, .box4, .box5, .box6 {
+.box, .box6, .box5, .box4, .box3, .box2, .box1 {
   width: 200px;
   height: 200px;
   display: inline-block;
@@ -37,3 +37,5 @@ h1 {
   background: indigo;
   border: 5px solid #000;
 }
+
+/*# sourceMappingURL=condicionales.css.map */
