@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Masory Layout</title>
+
+     <style>
+          /*
+               Estilos globales:
+               - Se eliminan márgenes y rellenos por defecto en todos los elementos.
+               - 'box-sizing: border-box' asegura que el padding y los bordes se incluyan en el tamaño total del elemento.
+               - Se define una tipografía general para todo el documento.
+          */
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          /*
+               Contenedor principal tipo grid:
+               - 'grid-template-columns' define un diseño de 4 columnas iguales (1fr).
+               - 'grid-template-rows: auto' para permitir que las filas se ajusten a su contenido.
+               - 'grid-template-areas' permite asignar elementos específicos a zonas del grid con nombres (item1, item2, titulo, etc.).
+               - Se añade un espacio entre los elementos del grid ('gap: 10px') y un padding de 10px alrededor.
+          */
+          .grid-container{
+               height: 100vh;
+               padding: 10px;
+               display: grid;
+               gap: 10px;
+               grid-template-columns: repeat(4, 1fr);
+               grid-template-rows: auto;
+               grid-template-areas:     "item1   item1     item2     item3"
+                                        "item4   item5     item2     item6"
+                                        "item4   titulo    titulo    titulo";
+          }
+
+          /*
+               Clase .item:
+               - Opacidad inicial al 80% y centrado del texto.
+               - Los ítems usan flexbox para alinear su contenido en el centro tanto vertical como horizontalmente.
+               - Se añade un efecto hover para aumentar la opacidad.
+          */
+          .item{
+               opacity: 0.8;
+               color: #FFF;
+               text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+               text-align: center;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               cursor: default;
+               transition: all .2s;
+          }
+
+          .item:hover{
+               opacity: 1;
+          }
+
+          /*
+               Asignación de áreas específicas del grid a los ítems:
+               - Cada elemento se posiciona según el área asignada en 'grid-template-areas'.
+               - Cada ítem tiene un color de fondo diferente.
+          */
+          .item:nth-child(1){
+               grid-area: item1;
+               background: #e53935; /* Rojo */
+          }
+
+          .item:nth-child(2){
+               grid-area: item2;
+               background: #0d47a1; /* Azul oscuro */
+          }
+
+          .item:nth-child(3){
+               grid-area: item3;
+               background: #fbc02d; /* Amarillo */
+          }
+
+          .item:nth-child(4){
+               grid-area: item4;
+               background: #1e88e5; /* Azul claro */
+          }
+
+          .item:nth-child(5){
+               grid-area: item5;
+               background: #43a047; /* Verde */
+          }
+
+          .item:nth-child(6){
+               grid-area: item6;
+               background: #e53935; /* Rojo */
+          }
+
+          .item:nth-child(7){
+               grid-area: titulo;
+               background: #555; /* Gris */
+          }
+
+          /*
+               Imagen dentro de cada ítem:
+               - Se establece un tamaño de imagen inicial de 100px y se aplica un efecto de transformación al pasar el mouse por encima (aumenta el tamaño de la imagen).
+          */
+          .item img{
+               width: 100px;
+               transition: all .5s;
+          }
+          
+          .item:hover img{
+               transform: scale(1.2); /* Aumenta el tamaño al 120% */
+          }
+
+          /*
+               Estilos para los títulos en .item:
+               - 'h3' es el título de cada ítem con un tamaño de 24px, mayúsculas y espaciado entre letras.
+               - 'p' es el texto de cada ítem con un interlineado de 20px.
+          */
+          .item h3{
+               margin: 10px 0;
+               font-size: 24px;
+               text-transform: uppercase;
+               letter-spacing: 1px;
+               font-weight: 600;
+          }
+
+          .item p{
+               line-height: 20px;
+          }
+
+          /*
+               Estilos para el título principal (h1) en el área "titulo":
+               - Gran tamaño de fuente usando unidades relativas (vmin) para ajustar a la pantalla.
+               - Fuente en mayúsculas, con espaciado entre letras y grosor de 600.
+          */
+          .item h1{
+               font-size: 15vmin;
+               font-weight: 600;
+               letter-spacing: 1px;
+               text-transform: uppercase;
+          }
+
+          /*
+               Media Query para pantallas medianas (hasta 750px):
+               - El grid se reorganiza en 2 columnas, con áreas ajustadas para que el título ocupe la fila superior.
+          */
+          @media screen and (max-width: 750px) {
+               .grid-container{
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-areas:     "titulo  titulo"
+                                             "item1   item2"
+                                             "item3   item4"
+                                             "item5   item6";
+               }  
+
+               .item{
+                    padding: 50px; /* Se agrega padding para evitar que los ítems sean muy pequeños en pantallas medianas. */
+               }
+          }
+
+          /*
+               Media Query para pantallas pequeñas (hasta 500px):
+               - El grid se convierte en una sola columna.
+               - Los elementos se apilan verticalmente, con el título en la parte superior.
+          */
+          @media screen and (max-width: 500px) {
+               .grid-container{
+                    grid-template-columns: 1fr;
+                    grid-template-areas:     "titulo "
+                                             "item1"
+                                             "item2"
+                                             "item3"
+                                             "item4"
+                                             "item5"
+                                             "item6";
+               }  
+          }
+
+     </style>
+
+</head>
+<body>
+     <!-- Contenedor principal que usa Grid para organizar los ítems -->
+     <div class="grid-container">
+          <!-- Primer ítem con imagen y título "Gmail" -->
+          <div class="item">
+               <img src="img/image1.png" alt="">
+               <h3>Gmail</h3>
+          </div>
+
+          <!-- Segundo ítem con imagen y título "Buscador" -->
+          <div class="item">
+               <img src="img/image2.png" alt="">
+               <h3>Buscador</h3>
+          </div>
+
+          <!-- Tercer ítem con imagen y título "Drive" -->
+          <div class="item">
+               <img src="img/image3.png" alt="">
+               <h3>Drive</h3>
+          </div>
+
+          <!-- Cuarto ítem con imagen y título "Translate" -->
+          <div class="item">
+               <img src="img/image4.png" alt="">
+               <h3>Translate</h3>
+          </div>
+
+          <!-- Quinto ítem con imagen y título "Maps" -->
+          <div class="item">
+               <img src="img/image5.png" alt="">
+               <h3>Maps</h3>
+          </div>
+
+          <!-- Sexto ítem con imagen y título "Youtube" -->
+          <div class="item">
+               <img src="img/image6.png" alt="">
+               <h3>Youtube</h3>
+          </div>
+
+          <!-- Ítem de título principal "Google Apps" que ocupa toda la fila inferior -->
+          <div class="item">
+               <h1>Google Apps</h1>
+          </div>
+     </div>
+</body>
+</html>

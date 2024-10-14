@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          /*
+               Estilos globales:
+               - Se eliminan márgenes y rellenos por defecto de todos los elementos.
+               - Se usa 'box-sizing: border-box' para incluir padding y bordes en el tamaño de los elementos.
+               - Se define una tipografía general para todo el documento.
+          */
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          /*
+               Estilos del body:
+               - Se define 'display: flex' para centrar el contenido.
+               - 'justify-content: center' y 'align-items: center' centran horizontal y verticalmente el contenido.
+               - 'min-height: 100vh' asegura que el contenido ocupe al menos el 100% de la altura de la ventana.
+               - Fondo oscuro para el cuerpo.
+          */
+          body{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               min-height: 100vh;
+               background: #010615;
+          }
+
+          /*
+               Clase .container:
+               - Contenedor principal de los elementos.
+               - 'display: flex' se usa para organizar los elementos en fila.
+               - 'flex-wrap: wrap' permite que los elementos se ajusten en múltiples líneas si es necesario.
+               - El contenedor tiene un ancho de 1200px.
+          */
+          .container{
+               width: 1200px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-wrap: wrap;
+          }
+
+          /*
+               Clase .item:
+               - Cada ítem dentro del contenedor.
+               - 'position: relative' permite posicionar elementos hijos de manera absoluta dentro de este.
+               - Cada ítem tiene un tamaño de 300x300px y un margen de 40px para separar los ítems.
+          */
+          .item{
+               position: relative;
+               width: 300px;
+               height: 300px;
+               display: flex;
+               margin: 40px;
+          }
+
+          /*
+               Clase .img:
+               - Contiene la imagen dentro de cada ítem.
+               - 'position: absolute' permite posicionar la imagen cubriendo todo el ítem.
+               - Z-index asegura que la imagen esté en el fondo.
+               - Se añade una transición de 0.5s para animar los cambios en transformaciones.
+          */
+          .img{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               z-index: 1;
+               transition: all .5s;
+          }
+
+          /*
+               Estilos para la imagen dentro del .img:
+               - La imagen ocupa el 100% del ancho y alto del contenedor.
+               - 'object-fit: cover' asegura que la imagen se ajuste proporcionalmente al contenedor.
+          */
+          .img img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+          }
+
+          /*
+               Clase .content:
+               - Contiene el texto dentro de cada ítem.
+               - 'position: absolute' la superpone sobre la imagen.
+               - El contenido se organiza en columna ('flex-direction: column') y se alinea en la parte inferior derecha ('justify-content: flex-end').
+               - Se aplica un fondo blanco para destacar el contenido y se agrega una transición para efectos animados.
+          */
+          .content{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: #FFF;
+               display: flex;
+               justify-content: flex-end;
+               align-items: center;
+               flex-direction: column;
+               padding: 15px;
+               transition: all .5s;
+          }
+
+          /*
+               Estilos para el título y párrafo dentro de .content:
+               - 'font-weight' y 'letter-spacing' controlan el peso de la fuente y el espaciado entre letras.
+               - Se asignan diferentes tamaños de fuente y colores para diferenciar el título del párrafo.
+          */
+          .content h2, 
+          .content p{
+               font-weight: 500;
+               line-height: 20px;
+               letter-spacing: 1px;
+          }
+
+          .content h2{
+               font-size: 20px;
+               color:  #111;
+          }
+
+          .content p{
+               font-size: 14px;
+               color:  #555;
+          }
+
+          /*
+               Efectos hover:
+               - Al pasar el ratón sobre .item, la imagen se traslada hacia arriba y a la izquierda.
+               - Simultáneamente, el contenido (texto) se traslada hacia abajo y a la derecha.
+          */
+          .item:hover .img{
+               transform: translate(-35px, -35px);
+          }
+
+          .item:hover .content{
+               transform: translate(35px, 35px);
+          }
+
+          /*
+               Media Queries para ajustar el comportamiento en pantallas pequeñas:
+               - En pantallas de menos de 700px de ancho, se ajusta el efecto hover para mover los elementos solo en dirección vertical.
+          */
+          @media screen and (max-width: 700px) {
+               .item:hover .img{
+                    transform: translate(0, -35px);
+               }
+
+               .item:hover .content{
+                    transform: translate(0, 35px);
+               }
+          }
+     </style>
+</head>
+<body>
+     <!-- Contenedor principal de los ítems -->
+     <div class="container">
+          <!-- Primer ítem con una imagen y contenido textual -->
+          <div class="item">
+               <div class="img">
+                    <img src="img/image1.jpg" alt="">
+               </div>
+               <div class="content">
+                    <h2>Nombre de persona</h2>
+                    <p>Programación</p>
+               </div>
+          </div>
+
+          <!-- Segundo ítem con una imagen y contenido textual -->
+          <div class="item">
+               <div class="img">
+                    <img src="img/image2.jpg" alt="">
+               </div>
+               <div class="content">
+                    <h2>Nombre de persona</h2>
+                    <p>Fotografía</p>
+               </div>
+          </div>
+
+          <!-- Tercer ítem con una imagen y contenido textual -->
+          <div class="item">
+               <div class="img">
+                    <img src="img/image3.jpg" alt="">
+               </div>
+               <div class="content">
+                    <h2>Nombre de persona</h2>
+                    <p>Modelaje</p>
+               </div>
+          </div>
+     </div>
+</body>
+</html>
