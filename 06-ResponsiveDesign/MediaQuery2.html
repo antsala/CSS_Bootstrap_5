@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          /*
+               Definición de variables CSS en :root, que permite crear variables globales accesibles en todo el documento.
+               Se definen los colores 'dark' y 'light', que serán utilizados para los esquemas de color de la página.
+          */
+          :root{
+               --dark: #222; /* Color oscuro */
+               --ligth: #DEDEDE; /* Color claro */
+
+               /* Definición inicial de las variables 'background' y 'font-text' que controlan los colores de fondo y texto */
+               --background: var(--dark); /* Color de fondo por defecto: oscuro */
+               --font-text: var(--ligth); /* Color del texto por defecto: claro */
+          }
+          
+          /* Estilos aplicados al body (cuerpo) de la página */
+          body {
+               background-color: var(--background); /* Fondo usando la variable 'background' */
+               color: var(--font-text); /* Color del texto usando la variable 'font-text' */
+               font-size: 40px; /* Tamaño de fuente */
+          }
+
+          /* Clase container que aplica un relleno de 20px alrededor del contenido */
+          .container {
+               padding: 20px;
+          }
+
+          /* Estilos para el div con clase img que representará una imagen circular de 200x200px */
+          div.img {
+               width: 200px; /* Ancho de 200px */
+               height: 200px; /* Alto de 200px */
+               border-radius: 50%; /* Hace la imagen circular con el borde redondeado al 100% */
+               background: url(img/sun.jpg); /* Establece la imagen de fondo (sol) */
+               background-size: cover !important; /* Asegura que la imagen cubra completamente el área */
+               background-position: center !important; /* Centra la imagen dentro del div */
+          }
+
+          /* MEDIA QUERY SCHEME */
+          
+          /*
+               @media query que detecta si el esquema de color del sistema operativo del usuario es oscuro (dark mode).
+               Si el usuario tiene activado el modo oscuro, se actualizan las variables 'background' y 'font-text'.
+          */
+          @media (prefers-color-scheme: dark) {
+               :root {
+                    --background: var(--dark); /* Cambia el fondo al color oscuro */
+                    --font-text: var(--ligth); /* Cambia el texto al color claro */
+               }
+
+               /* La imagen de fondo cambia a una imagen de la luna en modo oscuro */
+               div.img {
+                    background: url(img/moon.jpg); /* Cambia la imagen de fondo a una imagen de la luna */
+               }
+          }
+
+          /*
+               @media query que detecta si el esquema de color del sistema operativo del usuario es claro (light mode).
+               Si el usuario tiene activado el modo claro, se actualizan las variables 'background' y 'font-text'.
+          */
+          @media (prefers-color-scheme: light) {
+               :root {
+                    --background: var(--light); /* Cambia el fondo al color claro */
+                    --font-text: var(--dark); /* Cambia el texto al color oscuro */
+               }
+          }
+
+     </style>
+
+</head>
+<body>
+     <!-- Contenedor principal de la página -->
+     <div class="container">
+          <!-- Este div representará una imagen circular que cambiará según el esquema de color -->
+          <div class="img"></div>
+          <!-- Título de la página -->
+          <h1>Hola mundo</h1>
+          <!-- Párrafo de texto de ejemplo -->
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, illo quibusdam. Sunt earum sint quaerat harum molestias quis, voluptas modi maxime ipsum dolorum rem neque. Distinctio corporis nisi minima facilis.</p>
+     </div>
+
+</body>
+</html>

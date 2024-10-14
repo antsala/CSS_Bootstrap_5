@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          /*
+               Estilos globales:
+               - Elimina los márgenes y el padding por defecto en todos los elementos (*).
+               - Aplica 'box-sizing: border-box' para incluir el padding y border en el ancho y alto de los elementos.
+               - Define una fuente estándar para todo el documento, compatible con varios sistemas operativos.
+          */
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          /*
+               Clase .contenedor:
+               - Define un ancho máximo de 1200px para el contenedor principal.
+               - Centra el contenedor horizontalmente con 'margin: auto'.
+               - Aplica un fondo gris claro y un padding de 10px.
+               - El contenedor ocupará toda la altura de la ventana (100vh).
+          */
+          .contenedor{
+               max-width: 1200px;
+               margin: auto;
+               background: #ccc;
+               padding: 10px;
+               height: 100vh;
+          }
+
+          /*
+               Estilos para el header y el footer:
+               - Ambos ocupan el 100% del ancho y el 20% de la altura de la página.
+               - Fondo oscuro (#222) y texto blanco.
+               - Fuente de tamaño dinámico (3vmin).
+               - El contenido está centrado tanto vertical como horizontalmente con Flexbox.
+          */
+          header,
+          footer{
+               width: 100%;
+               height: 20%;
+               background: #222;
+               color: #FFF;
+               font-size: 3vmin;
+               text-transform: uppercase;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          /*
+               Estilos para la sección principal:
+               - Ocupa el 100% del ancho y el 60% de la altura.
+               - Padding vertical de 10px.
+               - Se utiliza Flexbox para disponer los elementos hijos en línea, distribuyendo el espacio entre ellos.
+          */
+          section{
+               width: 100%;
+               height: 60%;
+               padding: 10px 0;
+               display: flex;
+               justify-content: space-between;
+          }
+
+          /*
+               Clase .principal:
+               - Ocupa el 69% del ancho total y toda la altura.
+               - Flexbox organiza los elementos de forma vertical, distribuyendo el espacio entre ellos.
+          */
+          .principal{
+               width: 69%;
+               height: 100%;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+          }
+
+          /*
+               Clase .contenido:
+               - Ocupa el 75% de la altura disponible.
+               - Padding de 20px y fondo verde claro (lightseagreen).
+               - Centra su contenido con Flexbox, tanto vertical como horizontalmente.
+               - Los elementos hijos están dispuestos en columna.
+          */
+          .contenido{
+               height: 75%;
+               padding: 20px;
+               background: lightseagreen;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+          }
+
+          /* Estilos para el título dentro de la clase .contenido */
+          .contenido h1{
+               font-size: 9vmin;
+               text-transform: uppercase;
+          }
+
+          /* Estilos para el párrafo dentro de la clase .contenido */
+          .contenido p{
+               font-size: 2.5vmin;
+               text-align: center;
+          }
+
+          /*
+               Clase .widget:
+               - Ocupa el 100% del ancho y el 20% de la altura dentro de .principal.
+               - Flexbox organiza dos divs hijos de manera horizontal, distribuyendo el espacio entre ellos.
+          */
+          .widget{
+               width: 100%;
+               height: 20%;
+               display: flex;
+               justify-content: space-between;
+          }
+
+          /* Estilos para los divs dentro de la clase .widget */
+          .widget div{
+               width: 49%;
+               background: chartreuse; /* Fondo verde neón */
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-size: 5vmin;
+               text-transform: uppercase;
+          }
+
+          /*
+               Clase aside:
+               - Ocupa el 30% del ancho total.
+               - Fondo rojo (crimson) y fuente de gran tamaño.
+               - Flexbox centra el contenido tanto vertical como horizontalmente.
+          */
+          aside{
+               width: 30%;
+               background: crimson;
+               font-size: 5vmin;
+               text-transform: uppercase;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          /* MEDIA QUERY para pantallas con un ancho máximo de 700px */
+          @media screen and (max-width: 700px) {
+               /*
+                    En pantallas pequeñas:
+                    - Los elementos dentro de 'section' pasan de estar en fila (horizontal) a columna (vertical).
+                    - El ancho de .principal y aside se ajustan al 100% para que ocupen toda la pantalla.
+               */
+               section{
+                    flex-direction: column;
+               }
+
+               .principal{
+                    width: 100%;
+               }
+
+               aside{
+                    width: 100%;
+                    margin-top: 15px;
+               }
+          }
+
+          /* MEDIA QUERY para pantallas con un ancho máximo de 500px */
+          @media screen and (max-width: 500px) {
+               /*
+                    En pantallas muy pequeñas:
+                    - El aside desaparece por completo.
+               */
+               aside{
+                    display: none;
+               }
+          }
+
+          /* MEDIA QUERY para pantallas con un ancho máximo de 400px */
+          @media screen and (max-width: 400px) {
+               /*
+                    En pantallas extra pequeñas:
+                    - El div .contenido ocupa el 100% de la altura disponible.
+                    - Los widgets (barras informativas) se ocultan.
+               */
+               .contenido{
+                    height: 100%;
+               }
+
+               .widget{
+                    display: none;
+               }
+          }
+     </style>
+</head>
+<body>
+     <!-- Contenedor principal -->
+     <div class="contenedor">
+          <!-- Encabezado -->
+          <header>
+               <h1>Header</h1>
+          </header>
+     
+          <!-- Sección principal con contenido y barra lateral -->
+          <section>
+               <div class="principal">
+                    <!-- Contenido principal -->
+                    <div class="contenido">
+                         <h1>Titulo del post</h1>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consequatur sint perferendis vitae inventore facilis aspernatur eveniet, accusamus sit neque molestiae illo rem iusto officiis commodi, iste voluptate eaque non.</p>
+                    </div>
+
+                    <!-- Widgets (dos cajas laterales) -->
+                    <div class="widget">
+                         <div>
+                              <p>Widget</p>
+                         </div>
+                         
+                         <div>
+                              <p>Widget</p>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Barra lateral (aside) -->
+               <aside>
+                    <h2>Aside</h2>
+               </aside>
+          </section>
+     
+          <!-- Pie de página -->
+          <footer>
+               <h1>Footer</h1>
+          </footer>
+     </div>
+
+</body>
+</html>

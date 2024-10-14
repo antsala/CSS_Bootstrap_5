@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          /* Estilos iniciales para el div */
+          div {
+               width: 500px; /* El ancho inicial del div es de 500px */
+               height: 500px; /* La altura inicial del div es de 500px */
+               margin: 50px auto; /* Centra el div horizontalmente y le da un margen superior e inferior de 50px */
+               background: crimson; /* El color de fondo inicial es crimson (rojo oscuro) */
+          }
+
+          /* ESTILOS MEDIA QUERY */
+
+          /*
+          Estilos para pantallas de 1000px de ancho o más:
+          - Cambia el fondo del div a negro (#000).
+          */
+          @media screen and (min-width: 1000px) {
+               div {
+                    background: #000;  /* Fondo cambia a negro en pantallas grandes */
+               }
+          }
+
+          /*
+          Estilos para pantallas cuyo ancho esté entre 1000px y 700px:
+          - Cambia el color de fondo del div a naranja.
+          - El ancho del div pasa a ser 100% del ancho de la pantalla disponible.
+          */
+          @media screen and (max-width: 1000px) and (min-width: 700px) {
+               div {
+                    background: orange; /* Fondo cambia a naranja */
+                    width: 100%; /* El ancho del div se ajusta al 100% del ancho de la pantalla */
+               }
+          }
+
+          /*
+          Estilos para pantallas de 700px de ancho o menos:
+          - El ancho del div pasa a ser 100% del ancho de la pantalla.
+          - La altura del div pasa a ser el 100% de la altura del viewport (pantalla visible).
+          - El color de fondo cambia a verde marino claro (lightseagreen).
+          */
+          @media screen and (max-width: 700px) {
+               div {
+                    width: 100%; /* El div ocupa el 100% del ancho de la pantalla */
+                    height: 100vh; /* El div ocupa toda la altura de la ventana (viewport) */
+                    background: lightseagreen; /* Fondo cambia a verde marino claro */
+               }
+          }
+
+     </style>
+
+</head>
+<body>
+     <!-- Este div será afectado por los estilos definidos arriba y cambiará su tamaño y color de fondo 
+          dependiendo del ancho de la pantalla gracias a los media queries -->
+     <div></div>
+
+</body>
+</html>

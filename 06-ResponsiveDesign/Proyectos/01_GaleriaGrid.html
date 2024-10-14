@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Galeria</title>
+
+     <style>
+          /*
+               Estilos globales:
+               - Eliminan márgenes y rellenos predeterminados en todos los elementos (*).
+               - 'box-sizing: border-box' asegura que el padding y borde se incluyan en el ancho y alto de los elementos.
+          */
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          /*
+               Estilos del body:
+               - Se define un diseño de rejilla ('display: grid') para centrar el contenido con 'place-items: center'.
+               - 'height: 100vh' asegura que el body ocupe toda la altura de la ventana.
+               - Fondo de color negro.
+          */
+          body{
+               display: grid;
+               place-items: center;
+               height: 100vh;
+               background: #000;
+          }
+
+          /*
+               Clase .grid-container:
+               - El contenedor principal de la galería.
+               - Se utiliza 'display: grid' para crear una rejilla flexible.
+               - 'gap: 5px' agrega un espacio entre los elementos de la rejilla.
+               - 'grid-template-columns' usa 'auto-fill' para ajustar las columnas según el espacio disponible.
+               - 'grid-template-rows' y 'grid-auto-rows' definen la altura de las filas en 210px.
+               - 'grid-auto-flow: dense' llena los espacios vacíos de la rejilla de manera eficiente.
+          */
+          .grid-container{
+               width: 100%;
+               padding: 5px;
+               display: grid;
+               gap: 5px;
+               grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+               grid-template-rows: repeat(3, 210px);
+               grid-auto-rows: 210px;
+               grid-auto-flow: dense;
+          }
+
+          /*
+               Clase .item:
+               - Cada ítem de la galería.
+               - Se añade una transición suave de 0.3 segundos para efectos de opacidad al pasar el ratón.
+          */
+          .item{
+               transition: all .3s;
+          }
+
+          /*
+               Efecto de opacidad al hacer hover sobre .grid-container:
+               - Cuando el contenedor recibe el hover, todos los ítems ('.item') se vuelven semitransparentes (0.2).
+          */
+          .grid-container:hover .item{
+               opacity: 0.2;
+          }
+
+          /*
+               Efecto de opacidad en .item:
+               - Cuando un ítem específico recibe hover, su opacidad se establece en 1 (totalmente visible).
+               - '!important' asegura que esta regla sobrescriba la anterior cuando se hace hover sobre el ítem.
+          */
+          .item:hover{
+               opacity: 1 !important;
+          }
+
+          /*
+               Estilos para las imágenes dentro de los ítems:
+               - 'width' y 'height' se ajustan al 100% para que las imágenes llenen completamente los contenedores.
+               - 'object-fit: cover' asegura que las imágenes se recorten y ajusten proporcionalmente.
+          */
+          .item img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+          }
+
+          /*
+               Clase .r-span2:
+               - Hace que un ítem abarque dos filas en la rejilla.
+          */
+          .r-span2{
+               grid-row: span 2;
+          }
+
+          /*
+               Clase .c-span2:
+               - Hace que un ítem abarque dos columnas en la rejilla.
+          */
+          .c-span2{
+               grid-column: span 2;
+          }
+
+          /* Media Queries para ajustar el diseño en diferentes tamaños de pantalla */
+
+          /*
+               Media query para pantallas con un ancho mínimo de 1530px:
+               - Se ajusta la altura de las filas de la rejilla automáticamente.
+               - Los ítems 6 y 7 se restablecen a su comportamiento de columna predeterminado.
+          */
+          @media screen and (min-width: 1530px) {
+               .grid-container{
+                    grid-template-rows: auto;
+               }
+
+               .item:nth-child(6),
+               .item:nth-child(7){
+                    grid-column: auto !important;
+               }
+          }
+
+          /*
+               Media query para pantallas entre 920px y 1224px:
+               - El séptimo ítem (item:nth-child(7)) abarcará dos filas.
+          */
+          @media screen and (max-width: 1224px) and (min-width: 920px) {
+               .item:nth-child(7){
+                    grid-column: auto !important;
+                    grid-row: span 2 !important;
+               }
+          }
+     </style>
+
+</head>
+<body>
+     <!-- Contenedor de la galería -->
+     <div class="grid-container">
+          <!-- Cada div representa un ítem en la galería con una imagen -->
+          <div class="item r-span2">
+               <img src="img/bg1.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg2.jpg" alt="">
+          </div>
+
+          <div class="item r-span2">
+               <img src="img/bg3.jpg" alt="">
+          </div>
+
+          <div class="item">
+               <img src="img/bg4.jpg" alt="">
+          </div>
+
+          <div class="item">
+               <img src="img/bg5.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg6.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg7.jpg" alt="">
+          </div>
+     </div>
+</body>
+</html>

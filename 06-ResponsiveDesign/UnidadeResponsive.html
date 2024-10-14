@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          /* 
+          Regla universal (*) para resetear el margen y padding de todos los elementos 
+          y aplicar un estilo consistente entre navegadores. También utiliza `box-sizing: border-box` 
+          para asegurar que el padding y los bordes se incluyan en el ancho y alto totales del elemento. 
+          */
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fuentes que cubren una variedad de sistemas operativos */
+          }
+
+          /* 
+          Comentario sobre aplicar unidades relativas como porcentaje y vw/vmin para
+          garantizar que el diseño sea adaptable a diferentes pantallas.
+          */
+
+          /* 
+          Estilos para el contenedor principal:
+          - El ancho es 100% de la ventana, pero tiene un `max-width` de 1200px para no estirarse demasiado en pantallas grandes.
+          - Margen automático para centrarlo horizontalmente.
+          - Fondo gris claro (#ccc).
+          - Padding para un pequeño espacio alrededor del contenido.
+          - `height: 100vh` hace que el contenedor ocupe toda la altura de la ventana (viewport height).
+          */
+          .contenedor{
+               width: 100%;
+               max-width: 1200px;
+               margin: auto;
+               background: #ccc;
+               padding: 10px;
+               height: 100vh;
+          }
+
+          /*
+          Estilos para el header y footer:
+          - Ambos ocupan el 100% del ancho del contenedor y el 20% de la altura total.
+          - Fondo negro (#222) y texto blanco (#FFF).
+          - `font-size: 3vmin` asegura que el tamaño de la fuente escale en función del tamaño de la ventana (viewport).
+          - Se usa `display: flex` para centrar el contenido tanto horizontal como verticalmente.
+          */
+          header,
+          footer{
+               width: 100%;
+               height: 20%;
+               background: #222;
+               color: #FFF;
+               font-size: 3vmin;
+               text-transform: uppercase; /* Texto en mayúsculas */
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          /*
+          Estilos para la sección principal:
+          - Ocupa el 60% de la altura del contenedor.
+          - Padding superior e inferior de 10px.
+          - Comentado el `display: flex` que permitiría la alineación espacial entre los elementos hijos.
+          */
+          section{
+               width: 100%;
+               height: 60%;
+               padding: 10px 0;
+               /* display: flex;
+               justify-content: space-between; */
+          }
+
+          /*
+          Estilos para el contenido principal dentro de la sección:
+          - El contenido ocupa el 70% del ancho disponible de la sección y flota a la izquierda.
+          - Se fija una altura de 400px.
+          - Fondo verde claro (lightseagreen).
+          - El texto y otros elementos dentro del contenido se centran vertical y horizontalmente.
+          */
+          .contenido{
+               float: left;
+               padding: 20px;
+               width: 70%;
+               height: 400px;
+               background: lightseagreen;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column; /* Los elementos dentro del contenido se apilan en columna */
+          }
+
+          /*
+          Estilos para el título dentro del contenido:
+          - `font-size: 9vmin` hace que el tamaño de la fuente sea proporcional a la ventana.
+          - Texto en mayúsculas.
+          */
+          .contenido h1{
+               font-size: 9vmin;
+               text-transform: uppercase;
+          }
+
+          /*
+          Estilos para el párrafo dentro del contenido:
+          - El tamaño de fuente es 2.5vmin, escalando con el tamaño del viewport.
+          - Texto centrado.
+          */
+          .contenido p{
+               font-size: 2.5vmin;
+               text-align: center;
+          }
+
+          /*
+          Estilos para el `aside`:
+          - El `aside` ocupa el 30% del ancho y tiene una altura fija de 400px.
+          - Fondo rojo oscuro (crimson).
+          - Tamaño de fuente de 5vmin, escalando con el tamaño del viewport.
+          - Texto en mayúsculas y centrado tanto vertical como horizontalmente.
+          */
+          aside{   
+               width: 30%;
+               height: 400px;
+               background: crimson;
+               font-size: 5vmin;
+               text-transform: uppercase;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+     </style>
+</head>
+<body>
+     <div class="contenedor">
+          <!-- El encabezado contiene un título centrado -->
+          <header>
+               <h1>Header</h1>
+          </header>
+     
+          <section>
+               <!-- El contenido principal a la izquierda -->
+               <div class="contenido">
+                    <h1>Titulo del post</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consequatur sint perferendis vitae inventore facilis aspernatur eveniet, accusamus sit neque molestiae illo rem iusto officiis commodi, iste voluptate eaque non.</p>
+               </div>
+          
+               <!-- Un bloque `aside` flotante a la derecha -->
+               <aside>
+                    <h2>Aside</h2>
+               </aside>
+          </section>
+     
+          <!-- El pie de página con un título centrado -->
+          <footer>
+               <h1>Footer</h1>
+          </footer>
+     </div>
+</body>
+</html>
