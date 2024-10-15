@@ -8,83 +8,47 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
      <style>
-          .d-flex{
-               /* height: 300px; */
-               background: #ccc;
-               border: 2px solid #888;
+          .d-flex {
+               /* Este estilo es para el contenedor flex */
+               background: #ccc; /* Color de fondo gris */
+               border: 2px solid #888; /* Borde gris */
           }
 
-          .d-flex div{
-               text-align: center;
-               color: #FFF;
-               background: #0040ff;
-               padding: 20px;
-               border: 1px solid rgba(255, 255, 255, 0.384);
+          .d-flex div {
+               text-align: center; /* Alinea el texto de los hijos al centro */
+               color: #FFF; /* Color de texto blanco */
+               background: #0040ff; /* Color de fondo azul para los hijos */
+               padding: 20px; /* Relleno interno de 20px */
+               border: 1px solid rgba(255, 255, 255, 0.384); /* Borde blanco semitransparente */
           }
-
-
      </style>
 
 </head>
 <body>
      
-
      <div class="container">
           
-          <!-- Tipos de flexbox -->          
-          <div class="d-flex p-2 bg-primary text-center my-2">Soy un flexbox container!</div>
+          <!-- Tipos de flexbox -->
+          <div class="d-flex p-2 bg-primary text-center my-2">
+               <!-- 'd-flex' convierte este div en un contenedor flex -->
+               <!-- 'p-2' aplica un padding de 0.5rem en todos los lados -->
+               <!-- 'bg-primary' aplica un color de fondo primario de Bootstrap -->
+               <!-- 'text-center' centra el texto dentro del div -->
+               Soy un flexbox container!
+          </div>
 
-          <div class="d-inline-flex p-2 bg-primary text-center my-2">Soy un inline flexbox container!</div>
+          <div class="d-inline-flex p-2 bg-primary text-center my-2">
+               <!-- 'd-inline-flex' convierte este div en un contenedor flex en línea -->
+               Soy un inline flexbox container!
+          </div>
 
-
-
-
-          <hr class="my-5">
-
-
-
+          <hr class="my-5"> <!-- 'my-5' agrega un margen vertical de 3rem -->
 
           <!-- Direcciones en flexbox -->  
           <p>Flex-row</p>        
           <div class="d-flex flex-row mb-5">
+               <!-- 'flex-row' organiza los hijos en una fila -->
+               <!-- 'mb-5' aplica un margen inferior de 3rem -->
                <div>Item 1</div>
                <div>Item 2</div>
                <div>Item 3</div>
-          </div>
-
-
-          <p>Flex-row reverse</p>        
-          <div class="d-flex flex-row-reverse mb-5">
-               <div>Item 1</div>
-               <div>Item 2</div>
-               <div>Item 3</div>
-          </div>
-
-
-          <p>Flex-column</p>        
-          <div class="d-flex flex-column mb-5">
-               <div>Item 1</div>
-               <div>Item 2</div>
-               <div>Item 3</div>
-          </div>
-
-
-          <p>Flex-column reverse</p>        
-          <div class="d-flex flex-column-reverse mb-5">
-               <div>Item 1</div>
-               <div>Item 2</div>
-               <div>Item 3</div>
-          </div>
-
-     </div>
-          
-
-
-
-
-
-
-     <!-- Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
-</html>

@@ -8,59 +8,51 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
      <style>
-          .d-flex{
-               margin-bottom: 80px;
-               /* height: 300px; */
-               background: #ccc;
-               border: 2px solid #888;
+          .d-flex {
+               margin-bottom: 80px; /* Espacio inferior */
+               background: #ccc; /* Fondo gris */
+               border: 2px solid #888; /* Borde gris oscuro */
           }
 
-          .d-flex div{
-               text-align: center;
-               color: #FFF;
-               background: #0040ff;
-               padding: 20px;
-               border: 1px solid rgba(255, 255, 255, 0.384);
+          .d-flex div {
+               text-align: center; /* Centrar texto */
+               color: #FFF; /* Color de texto blanco */
+               background: #0040ff; /* Fondo azul */
+               padding: 20px; /* Espaciado interno */
+               border: 1px solid rgba(255, 255, 255, 0.384); /* Borde blanco con opacidad */
           }
-
-
      </style>
-
 </head>
 <body>
-     
-
-     <div class="container pt-5">
-          <div class="d-flex mb-3">
-               <div class="p-2 me-auto">Flex item</div>
-               <div class="p-2">Flex item</div>
-               <div class="p-2">Flex item</div>
+     <div class="container pt-5"> <!-- Contenedor con un padding superior de 5 -->
+          <!-- Primera fila de elementos flexibles -->
+          <div class="d-flex mb-3"> <!-- Contenedor flex con margen inferior -->
+               <div class="p-2 me-auto">Flex item</div> <!-- Elemento flexible que ocupa espacio automáticamente a la izquierda -->
+               <div class="p-2">Flex item</div> <!-- Elemento flexible normal -->
+               <div class="p-2">Flex item</div> <!-- Elemento flexible normal -->
           </div>
 
-          <div class="d-flex mb-3">
-               <div class="p-2">Flex item</div>
-               <div class="p-2">Flex item</div>
-               <div class="p-2  ms-auto">Flex item</div>
+          <!-- Segunda fila de elementos flexibles -->
+          <div class="d-flex mb-3"> <!-- Contenedor flex con margen inferior -->
+               <div class="p-2">Flex item</div> <!-- Elemento flexible normal -->
+               <div class="p-2">Flex item</div> <!-- Elemento flexible normal -->
+               <div class="p-2 ms-auto">Flex item</div> <!-- Elemento flexible que ocupa espacio automáticamente a la derecha -->
           </div>
 
-
-          <div class="d-flex align-items-start flex-column" style="height: 200px;">
-               <div class="p-2 mb-auto">Flex item</div>
-               <div class="p-2">Flex item</div>
-               <div class="p-2">Flex item</div>
+          <!-- Contenedor flexible vertical alineado al inicio -->
+          <div class="d-flex align-items-start flex-column" style="height: 200px;"> <!-- Contenedor flex en columna con altura de 200px -->
+               <div class="p-2 mb-auto">Flex item</div> <!-- Elemento flexible que se mueve automáticamente hacia abajo -->
+               <div class="p-2">Flex item</div> <!-- Elemento flexible normal -->
+               <div class="p-2">Flex item</div> <!-- Elemento flexible normal -->
           </div>
 
-          <div class="d-flex align-items-end flex-column" style="height: 200px;">
-               <div class="p-2">Flex item</div>
-               <div class="p-2">Flex item</div>
-               <div class="p-2 mt-auto">Flex item</div>
+          <!-- Contenedor flexible vertical alineado al final -->
+          <div class="d-flex align-items-end flex-column" style="height: 200px;"> <!-- Contenedor flex en columna con altura de 200px -->
+               <div class="p-2">Flex item</div> <!-- Elemento flexible normal -->
+               <div class="p-2">Flex item</div> <!-- Elemento flexible normal -->
+               <div class="p-2 mt-auto">Flex item</div> <!-- Elemento flexible que se mueve automáticamente hacia arriba -->
           </div>
-               
-     
-     
-     
      </div>
-
 
      <!-- Bootstrap JS -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

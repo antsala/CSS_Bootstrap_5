@@ -8,74 +8,61 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
      <style>
-          .d-flex{
-               margin-bottom: 80px;
-                height: 300px; 
-               background: #ccc;
-               border: 2px solid #888;
+          .d-flex {
+               margin-bottom: 80px; /* Margen inferior de 80px para separar los contenedores */
+               height: 300px; /* Altura fija de 300px para el contenedor flex */
+               background: #ccc; /* Color de fondo gris */
+               border: 2px solid #888; /* Borde gris */
           }
 
-          .d-flex div{
-               text-align: center;
-               color: #FFF;
-               background: #0040ff;
-               padding: 20px;
-               border: 1px solid rgba(255, 255, 255, 0.384);
+          .d-flex div {
+               text-align: center; /* Alinea el texto de los hijos al centro */
+               color: #FFF; /* Color de texto blanco */
+               background: #0040ff; /* Color de fondo azul para los hijos */
+               padding: 20px; /* Relleno interno de 20px */
+               border: 1px solid rgba(255, 255, 255, 0.384); /* Borde blanco semitransparente */
           }
-
-
      </style>
 
 </head>
 <body>
      
-
      <div class="container pt-5">
+       <!-- Clase 'container' para centrar y espaciar el contenido -->
+       <!-- 'pt-5' aplica un padding superior de 3rem -->
        
           <div class="d-flex justify-content-start align-items-start">
+               <!-- 'justify-content-start' alinea los elementos al inicio del contenedor -->
+               <!-- 'align-items-start' alinea los elementos al principio del eje transversal -->
                <div>Item 1</div>
                <div>Item 2</div>
                <div>Item 3</div>
           </div>
 
-  
           <div class="d-flex justify-content-end align-items-end">
+               <!-- 'justify-content-end' alinea los elementos al final del contenedor -->
+               <!-- 'align-items-end' alinea los elementos al final del eje transversal -->
                <div>Item 1</div>
                <div>Item 2</div>
                <div>Item 3</div>
           </div>
-
 
           <div class="d-flex justify-content-center align-items-center">
+               <!-- 'justify-content-center' alinea los elementos al centro del contenedor -->
+               <!-- 'align-items-center' alinea los elementos al centro del eje transversal -->
                <div>Item 1</div>
                <div>Item 2</div>
                <div>Item 3</div>
           </div>
-
 
           <div class="d-flex justify-content-around align-items-center">
+               <!-- 'justify-content-around' distribuye el espacio entre los elementos -->
+               <!-- 'align-items-center' alinea los elementos al centro del eje transversal -->
                <div>Item 1</div>
                <div>Item 2</div>
                <div>Item 3</div>
           </div>
-
 
           <div class="d-flex justify-content-between align-items-center">
-               <div>Item 1</div>
-               <div>Item 2</div>
-               <div>Item 3</div>
-          </div>
-
-
-          <div class="d-flex justify-content-evenly align-items-center">
-               <div>Item 1</div>
-               <div>Item 2</div>
-               <div>Item 3</div>
-          </div>
-
-
-
-     <!-- Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
-</html>
+               <!-- 'justify-content-between' distribuye los elementos con el primer y último en los extremos -->
+               <!-- 'al

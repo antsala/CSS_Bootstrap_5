@@ -8,58 +8,49 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
      <style>
-          .d-flex{
-               margin-bottom: 80px;
-               /* height: 300px; */
-               background: #ccc;
-               border: 2px solid #888;
+          .d-flex {
+               margin-bottom: 80px; /* Espacio inferior */
+               background: #ccc; /* Fondo gris */
+               border: 2px solid #888; /* Borde gris oscuro */
           }
 
-          .d-flex div{
-               text-align: center;
-               color: #FFF;
-               background: #0040ff;
-               padding: 20px;
-               border: 1px solid rgba(255, 255, 255, 0.384);
+          .d-flex div {
+               text-align: center; /* Centrar texto */
+               color: #FFF; /* Color de texto blanco */
+               background: #0040ff; /* Fondo azul */
+               padding: 20px; /* Espaciado interno */
+               border: 1px solid rgba(255, 255, 255, 0.384); /* Borde blanco con opacidad */
           }
-
-
      </style>
-
 </head>
 <body>
-     
-
-     <div class="container pt-5">
-     
+     <div class="container pt-5"> <!-- Contenedor con un padding superior de 5 -->
           <!-- Fill --> 
           <h1>Fill</h1> 
-          <div class="d-flex align-items-start">
-               <div class="p-2 flex-fill">Flex item with a lot of content</div>
-               <div class="p-2 flex-fill">Flex item</div>
-               <div class="p-2 flex-fill">Flex item</div>
+          <div class="d-flex align-items-start"> <!-- Contenedor flex, alinea elementos al inicio -->
+               <div class="p-2 flex-fill">Flex item with a lot of content</div> <!-- Espaciado de 2 y ocupa espacio flexible -->
+               <div class="p-2 flex-fill">Flex item</div> <!-- Espaciado de 2 y ocupa espacio flexible -->
+               <div class="p-2 flex-fill">Flex item</div> <!-- Espaciado de 2 y ocupa espacio flexible -->
           </div>
 
           <!-- Grow -->
           <h1>Grow</h1>
-          <div class="d-flex align-items-end">
-               <div class="p-2 flex-grow-0">Flex item</div>
-               <div class="p-2">Flex item</div>
-               <div class="p-2 flex-grow-1">Third flex item</div>
+          <div class="d-flex align-items-end"> <!-- Contenedor flex, alinea elementos al final -->
+               <div class="p-2 flex-grow-0">Flex item</div> <!-- Espaciado de 2, no crece -->
+               <div class="p-2">Flex item</div> <!-- Espaciado de 2 -->
+               <div class="p-2 flex-grow-1">Third flex item</div> <!-- Espaciado de 2, crece para llenar el espacio -->
           </div>
 
-          <!-- skrink -->
+          <!-- Shrink -->
           <h1>Shrink</h1>
-          <div class="d-flex align-items-center">
-               <div class="p-2 w-100">Flex item</div>
-               <div class="p-2 flex-shrink-1">Flex item</div>
+          <div class="d-flex align-items-center"> <!-- Contenedor flex, alinea elementos al centro -->
+               <div class="p-2 w-100">Flex item</div> <!-- Espaciado de 2, ocupa el 100% del ancho -->
+               <div class="p-2 flex-shrink-1">Flex item</div> <!-- Espaciado de 2, se puede encoger -->
           </div>
-
-
 
           <!-- Wrap -->
           <h1>Wrap</h1>
-          <div class="d-flex flex-nowrap">
+          <div class="d-flex flex-nowrap"> <!-- Contenedor flex que no permite envolver los elementos -->
                <div>Item 1</div>
                <div>Item 2</div>
                <div>Item 3</div>
@@ -77,8 +68,7 @@
                <div>Item 15</div>
           </div>
 
-
-          <div class="d-flex flex-wrap">
+          <div class="d-flex flex-wrap"> <!-- Contenedor flex que permite envolver los elementos -->
                <div>Item 1</div>
                <div>Item 2</div>
                <div>Item 3</div>
@@ -96,8 +86,7 @@
                <div>Item 15</div>
           </div>
 
-
-          <div class="d-flex flex-wrap-reverse">
+          <div class="d-flex flex-wrap-reverse"> <!-- Contenedor flex que permite envolver y coloca los elementos en orden inverso -->
                <div>Item 1</div>
                <div>Item 2</div>
                <div>Item 3</div>
@@ -114,12 +103,7 @@
                <div>Item 14</div>
                <div>Item 15</div>
           </div>
-
-     
-
-
-
-
+     </div>
 
      <!-- Bootstrap JS -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

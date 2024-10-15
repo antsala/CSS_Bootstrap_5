@@ -8,69 +8,44 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
      <style>
-          .columna{
-               border: 2px solid #000;
+          .columna {
+               border: 2px solid #000; /* Borde negro alrededor de la columna */
           }
      </style>
 </head>
 <body>
      
-     <div class="container">
+     <div class="container"> <!-- Contenedor que alinea el contenido en el centro -->
          
-          <div class="row g-0 mb-5">
-               <h1>Imagen responsive & Thumbnail</h1>
-               <div class="col-4">
-                    <img src="img/image1.jpg" class="img-fluid img-thumbnail">
+          <div class="row g-0 mb-5"> <!-- Fila sin espaciado entre columnas con margen inferior -->
+               <h1>Imagen responsive & Thumbnail</h1> <!-- Título -->
+               <div class="col-4"> <!-- Columna que ocupa 4 de 12 espacios -->
+                    <img src="img/image1.jpg" class="img-fluid img-thumbnail"> <!-- Imagen responsive y con borde de miniatura -->
                </div>
           </div>
 
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical -->
 
-
-
-
-
-          <hr class="my-5">
-
-
-
-
-
-
-          <div class="row g-0 mb-5">
-               <h1>Alinear imagenes</h1>
-               <div class="col-6 columna">
-                    <img class="w-25 float-start" src="img/image2.jpg">
-                    <img class="w-25 float-end" src="img/image3.jpg">
+          <div class="row g-0 mb-5"> <!-- Fila sin espaciado entre columnas con margen inferior -->
+               <h1>Alinear imagenes</h1> <!-- Título -->
+               <div class="col-6 columna"> <!-- Columna que ocupa 6 de 12 espacios, con clase personalizada -->
+                    <img class="w-25 float-start" src="img/image2.jpg"> <!-- Imagen que ocupa el 25% del ancho y se alinea a la izquierda -->
+                    <img class="w-25 float-end" src="img/image3.jpg"> <!-- Imagen que ocupa el 25% del ancho y se alinea a la derecha -->
                </div>
           </div>
 
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical -->
 
-
-
-
-
-
-
-          <hr class="my-5">
-
-
-
-
-
-
-          <div class="row g-0 mb-5">
-               <h1>Figure</h1>
-               <div class="col-4">
-                    <figure class="figure">
-                         <img src="img/image4.jpg" alt="..." class="figure-img img-fluid rounded">
-                         <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+          <div class="row g-0 mb-5"> <!-- Fila sin espaciado entre columnas con margen inferior -->
+               <h1>Figure</h1> <!-- Título -->
+               <div class="col-4"> <!-- Columna que ocupa 4 de 12 espacios -->
+                    <figure class="figure"> <!-- Elemento figura para contener imagen y pie de foto -->
+                         <img src="img/image4.jpg" alt="..." class="figure-img img-fluid rounded"> <!-- Imagen responsive con bordes redondeados -->
+                         <figcaption class="figure-caption text-end">A caption for the above image.</figcaption> <!-- Pie de foto alineado a la derecha -->
                     </figure>
                </div>
           </div>
      </div>
-
-
-
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>

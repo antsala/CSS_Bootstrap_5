@@ -8,28 +8,31 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
      <style>
-          .row{
-               margin: 100px 0;
-               /* height: 300px; */
-               background: #ccc;
-               border: 2px solid #888;
+          /* Estilos personalizados para las filas */
+          .row {
+               margin: 100px 0; /* Margen superior e inferior de 100px */
+               background: #ccc; /* Color de fondo gris */
+               border: 2px solid #888; /* Borde gris */
           }
 
-          .row > [class^="col"]{
-               text-align: center;
-               color: #FFF;
-               background: #0040ff;
-               padding: 20px;
-               border: 1px solid rgba(255, 255, 255, 0.384);
+          /* 
+          Esta regla aplica estilos a todos los elementos hijos directos de 
+          .row que tienen una clase que comienza con "col". El uso de `>` 
+          asegura que solo se apliquen a los hijos directos y `class^="col"` 
+          selecciona elementos con clase como "col", "col-1", "col-2", etc. 
+          */
+          .row > [class^="col"] {
+               text-align: center; /* Alinea el texto de las columnas al centro */
+               color: #FFF; /* Establece el color del texto en blanco */
+               background: #0040ff; /* Establece un fondo azul para las columnas */
+               padding: 20px; /* Aplica un relleno interno de 20px */
+               border: 1px solid rgba(255, 255, 255, 0.384); /* Aplica un borde blanco semitransparente */
           }
-
-
      </style>
 
 </head>
 <body>
      
-
      <div class="container">
           
           <div class="container">
@@ -37,7 +40,8 @@
                     <div class="col-3">Columna</div>
                     <div class="col-3">Columna</div>
 
-                    <div class="w-100"></div>
+                    <!-- La clase w-100 fuerza a que el siguiente contenido empiece en una nueva línea -->
+                    <div class="w-100"></div> 
 
                     <div class="col-3">Columna</div>
                     <div class="col-3">Columna</div>
@@ -45,9 +49,6 @@
           </div>
 
      </div>
-
-
-
 
      <!-- Bootstrap JS -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

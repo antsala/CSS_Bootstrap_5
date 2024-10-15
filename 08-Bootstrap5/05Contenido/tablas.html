@@ -9,112 +9,104 @@
 </head>
 <body>
      <!-- 
-               .table
-               .table-bordered .border-primary
-               .table-borderless
-               .table-striped
-               .table-hover
-               .table-active 
-               .table-sm
-               .table-responsive -sm, md, lg, xl, xxl
-               
-               ESTILOS
-               On tables
-               <table class="table-primary">...</table>
-               <table class="table-secondary">...</table>
-               <table class="table-success">...</table>
-               <table class="table-danger">...</table>
-               <table class="table-warning">...</table>
-               <table class="table-info">...</table>
-               <table class="table-light">...</table>
-               <table class="table-dark">...</table>
+          Comentarios sobre las clases de Bootstrap para tablas:
 
-               On rows
-               <tr class="table-primary">...</tr>
-               <tr class="table-secondary">...</tr>
-               <tr class="table-success">...</tr>
-               <tr class="table-danger">...</tr>
-               <tr class="table-warning">...</tr>
-               <tr class="table-info">...</tr>
-               <tr class="table-light">...</tr>
-               <tr class="table-dark">...</tr>
-               
+          .table                - Clase básica para tablas.
+          .table-bordered       - Aplica un borde a la tabla.
+          .border-primary       - Cambia el color del borde a primario (ejemplo no utilizado en este código).
+          .table-borderless     - Elimina los bordes de la tabla.
+          .table-striped        - Aplica un fondo alternativo a las filas.
+          .table-hover          - Cambia el fondo de las filas al pasar el ratón.
+          .table-active         - Aplica un fondo a la fila activa.
+          .table-sm             - Aplica un tamaño reducido a la tabla.
+          .table-responsive      - Permite que la tabla sea responsive (adaptable) en diferentes tamaños de pantalla.
 
+          Estilos para tablas con colores específicos:
+          <table class="table-primary">...</table>
+          <table class="table-secondary">...</table>
+          <table class="table-success">...</table>
+          <table class="table-danger">...</table>
+          <table class="table-warning">...</table>
+          <table class="table-info">...</table>
+          <table class="table-light">...</table>
+          <table class="table-dark">...</table>
 
-          -->
+          Para filas:
+          <tr class="table-primary">...</tr>
+          <tr class="table-secondary">...</tr>
+          <tr class="table-success">...</tr>
+          <tr class="table-danger">...</tr>
+          <tr class="table-warning">...</tr>
+          <tr class="table-info">...</tr>
+          <tr class="table-light">...</tr>
+          <tr class="table-dark">...</tr>
+     -->
 
-
-
-
-
-     <div class="container py-4 table-responsive">
-
-          <table class="table table-bordered table-sm">
+     <div class="container py-4 table-responsive"> <!-- Contenedor con relleno y tabla responsive -->
+          <table class="table table-bordered table-sm"> <!-- Tabla con borde y tamaño reducido -->
                <thead>
-                    <tr class="table-dark">
-                         <th>#</th>
-                         <th>First</th>
-                         <th>Last</th>
-                         <th>Handle</th>
-                         <th>First</th>
-                         <th>Last</th>
-                         <th>Handle</th>
-                         <th>First</th>
-                         <th>Last</th>
-                         <th>Handle</th>
-                         <th>First</th>
-                         <th>Last</th>
-                         <th>Handle</th>
+                    <tr class="table-dark"> <!-- Fila de encabezado con fondo oscuro -->
+                         <th>#</th> <!-- Encabezado de columna -->
+                         <th>First</th> <!-- Encabezado de columna -->
+                         <th>Last</th> <!-- Encabezado de columna -->
+                         <th>Handle</th> <!-- Encabezado de columna -->
+                         <th>First</th> <!-- Encabezado de columna -->
+                         <th>Last</th> <!-- Encabezado de columna -->
+                         <th>Handle</th> <!-- Encabezado de columna -->
+                         <th>First</th> <!-- Encabezado de columna -->
+                         <th>Last</th> <!-- Encabezado de columna -->
+                         <th>Handle</th> <!-- Encabezado de columna -->
+                         <th>First</th> <!-- Encabezado de columna -->
+                         <th>Last</th> <!-- Encabezado de columna -->
+                         <th>Handle</th> <!-- Encabezado de columna -->
                     </tr>
                </thead>
                <tbody>
-                    <tr class="table-danger">
-                         <th class="table-dark">1</th>
-                         <td>Mark</td>
-                         <td>Otto</td>
-                         <td>@mdo</td>
-                         <td>Mark</td>
-                         <td>Otto</td>
-                         <td>@mdo</td>
-                         <td>Mark</td>
-                         <td>Otto</td>
-                         <td>@mdo</td>
-                         <td>Mark</td>
-                         <td>Otto</td>
-                         <td>@mdo</td>
+                    <tr class="table-danger"> <!-- Fila con fondo peligroso (rojo) -->
+                         <th class="table-dark">1</th> <!-- Encabezado de fila con fondo oscuro -->
+                         <td>Mark</td> <!-- Celda de datos -->
+                         <td>Otto</td> <!-- Celda de datos -->
+                         <td>@mdo</td> <!-- Celda de datos -->
+                         <td>Mark</td> <!-- Celda de datos -->
+                         <td>Otto</td> <!-- Celda de datos -->
+                         <td>@mdo</td> <!-- Celda de datos -->
+                         <td>Mark</td> <!-- Celda de datos -->
+                         <td>Otto</td> <!-- Celda de datos -->
+                         <td>@mdo</td> <!-- Celda de datos -->
+                         <td>Mark</td> <!-- Celda de datos -->
+                         <td>Otto</td> <!-- Celda de datos -->
+                         <td>@mdo</td> <!-- Celda de datos -->
                     </tr>
-                    <tr>
-                         <th class="table-dark">2</th>
-                         <td>Jacob</td>
-                         <td>Thornton</td>
-                         <td>@fat</td>
-                         <td>Jacob</td>
-                         <td>Thornton</td>
-                         <td>@fat</td>
-                         <td>Jacob</td>
-                         <td>Thornton</td>
-                         <td>@fat</td>
-                         <td>Jacob</td>
-                         <td>Thornton</td>
-                         <td>@fat</td>
+                    <tr> <!-- Fila normal sin clase específica -->
+                         <th class="table-dark">2</th> <!-- Encabezado de fila con fondo oscuro -->
+                         <td>Jacob</td> <!-- Celda de datos -->
+                         <td>Thornton</td> <!-- Celda de datos -->
+                         <td>@fat</td> <!-- Celda de datos -->
+                         <td>Jacob</td> <!-- Celda de datos -->
+                         <td>Thornton</td> <!-- Celda de datos -->
+                         <td>@fat</td> <!-- Celda de datos -->
+                         <td>Jacob</td> <!-- Celda de datos -->
+                         <td>Thornton</td> <!-- Celda de datos -->
+                         <td>@fat</td> <!-- Celda de datos -->
+                         <td>Jacob</td> <!-- Celda de datos -->
+                         <td>Thornton</td> <!-- Celda de datos -->
+                         <td>@fat</td> <!-- Celda de datos -->
                     </tr>
-                    <tr>
-                         <th class="table-dark">3</th>
-                         <td colspan="2" class="table-info">Larry the Bird</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
-                         <td>@twitter</td>
+                    <tr> <!-- Fila normal sin clase específica -->
+                         <th class="table-dark">3</th> <!-- Encabezado de fila con fondo oscuro -->
+                         <td colspan="2" class="table-info">Larry the Bird</td> <!-- Celda de datos que ocupa dos columnas y con fondo claro -->
+                         <td>@twitter</td> <!-- Celda de datos -->
+                         <td>@twitter</td> <!-- Celda de datos -->
+                         <td>@twitter</td> <!-- Celda de datos -->
+                         <td>@twitter</td> <!-- Celda de datos -->
+                         <td>@twitter</td> <!-- Celda de datos -->
+                         <td>@twitter</td> <!-- Celda de datos -->
+                         <td>@twitter</td> <!-- Celda de datos -->
+                         <td>@twitter</td> <!-- Celda de datos -->
+                         <td>@twitter</td> <!-- Celda de datos -->
                     </tr>
                </tbody>
           </table>
-
      </div>
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
