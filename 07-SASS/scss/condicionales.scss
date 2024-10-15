@@ -1,80 +1,76 @@
-// Condicionales
+// Condicionales básicos con Sass.
+
 // TEORIA
 $color: purpura;
 
 h1{
-     @if ($color == azul) {
+     @if ($color == azul) {          // Si la variable $color es igual a "azul", se aplicará el color azul.
           color: blue;
      }
-     @else if ($color == verde){
+     @else if ($color == verde) {    // Si $color es igual a "verde", se aplicará el color verde.
           color: green;
      }
-     @else{
+     @else {                         // Si $color no es azul ni verde, se aplicará el color rojo por defecto.
           color: red;
      }
 }
 
 
-
-// EJEMPLO
+// EJEMPLO DE CONDICIONALES DENTRO DE UN MIXIN
 @mixin  condicional($color) {
-     background: $color;
+     background: $color;             // Aplica el color de fondo basado en el argumento pasado al mixin.
 
-     @if ($color == red){
+     @if ($color == red) {           // Si el color es rojo, aplica un borde específico.
           border: 5px solid #740000;
      }
-     @else if ($color == blue){
-          border:  5px solid #000874;
+     @else if ($color == blue) {     // Si el color es azul, aplica un borde diferente.
+          border: 5px solid #000874;
      }
-     @else if ($color == orange){
+     @else if ($color == orange) {   // Si el color es naranja, aplica otro borde.
           border: 5px solid #743400;
      }
-     @else if ($color == green){
+     @else if ($color == green) {    // Si el color es verde, aplica un borde verde.
           border: 5px solid #3af700;
      }
-
-     @else{
+     @else {                         // Para cualquier otro color, aplica un borde negro por defecto.
           border: 5px solid #000;
      }
-
 }
 
 
-
-
-
+// APLICACIÓN DE ESTILOS A CAJAS (BOXES)
 .box{
-     width: 200px;
-     height: 200px;
-     display: inline-block;
+     width: 200px;                   // Define el ancho de la caja.
+     height: 200px;                  // Define la altura de la caja.
+     display: inline-block;          // Coloca las cajas en línea sin afectar las demás.
 }
 
 .box1{
-     @extend .box;
-     @include condicional(red);
+     @extend .box;                   // Hereda las propiedades de .box.
+     @include condicional(red);      // Llama al mixin con el color rojo.
 }
 
 .box2{
-     @extend .box;
-     @include condicional(blue);
+     @extend .box;                   // Hereda las propiedades de .box.
+     @include condicional(blue);     // Llama al mixin con el color azul.
 }
 
 .box3{
-     @extend .box;
-     @include condicional(green);
+     @extend .box;                   // Hereda las propiedades de .box.
+     @include condicional(green);    // Llama al mixin con el color verde.
 }
 
 .box4{
-     @extend .box;
-     @include condicional(orange);
+     @extend .box;                   // Hereda las propiedades de .box.
+     @include condicional(orange);   // Llama al mixin con el color naranja.
 }
 
 .box5{
-     @extend .box;
-     @include condicional(pink);
+     @extend .box;                   // Hereda las propiedades de .box.
+     @include condicional(pink);     // Llama al mixin con el color rosa (se aplicará el borde negro por defecto).
 }
 
 .box6{
-     @extend .box;
-     @include condicional(indigo);
+     @extend .box;                   // Hereda las propiedades de .box.
+     @include condicional(indigo);   // Llama al mixin con el color índigo (se aplicará el borde negro por defecto).
 }

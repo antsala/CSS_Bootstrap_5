@@ -1,17 +1,16 @@
-/* Error: Undefined operation "#222 * 2".
- *    ,
- * 13 |           background: #222 * 2;
- *    |                       ^^^^^^^^
- *    '
- *   scss\operaciones.scss 13:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Undefined operation "#222 * 2".\a    \2577 \a 13 \2502            background: #222 * 2;\d\a    \2502                        ^^^^^^^^\a    \2575 \a   scss\\operaciones.scss 13:23  root stylesheet';
+.container {
+  width: 600px;
+  margin: 0 auto;
 }
+.container section {
+  float: left;
+  width: 33.3333333333%;
+  height: 400px;
+  background: #222;
+}
+.container aside {
+  float: left;
+  width: 66.6666666667%;
+  height: 400px;
+  background: orangered;
+}/*# sourceMappingURL=operaciones.css.map */

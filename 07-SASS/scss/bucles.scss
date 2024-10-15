@@ -1,50 +1,15 @@
-// BUCLES TEORIA
+// Definimos un array de colores
+$colores: #00061A, #003366, #0066CC, #0099FF, #33CCFF, #66CCFF, #99CCFF, #CCFFFF, #CCCCFF, #9999FF, #6666FF, #3333FF, #0000FF, #3300CC, #660099, #990066, #CC0033, #FF0033, #FF3300, #FF6600, #FF9900;
 
-// FOR
-@for $i from 1 through 6 {
-     
-     // interpolacion #{$i}
-     h#{$i}{
-          font-size: $i * 20em;
+.box {
+     width: 200px;                  // Define el ancho de la caja.
+     height: 200px;                 // Define la altura de la caja.
+     display: inline-block;         // Hace que las cajas se alineen en línea.
+     border: 1px solid #ccc;        // Aplica un borde gris claro.
+}
+
+@for $i from 1 through 20 {         // Bucle para iterar sobre los primeros 20 elementos hijos.
+     .box:nth-child(#{$i}) {        // Selecciona el enésimo hijo (nth-child) dinámicamente.
+          background: nth($colores, $i); // Cambia el fondo de cada caja usando el color del array.
      }
-}
-
-
-// WHILE
-$i: 6;
-
-@while $i > 0 {
-     h#{$i}{
-          font-size: $i * 2em;
-     }
-
-     $i: $i - 1;
-}
-
-
-
-// EACH
-$colores: (#0000ff, azul), (#ff1100, rojo), (#09ff00, verde), (#000, negro), (#ea00ff, rosa);
-
-@each $color, $nombre in $colores {
-     .text-#{$nombre}{
-        color: $color;
-     }  
-}
-
-
-
-// EJEMPLO DE BUCLES
-.box{
-     width: 200px;
-     height: 200px;
-     display: inline-block;
-     border: 1px solid #ccc;
-}
-
-@for $i from 1 through 20{
-     .box:nth-child(#{$i}){
-          background: #00061A * $i;
-     }
-
 }

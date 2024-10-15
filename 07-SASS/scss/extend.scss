@@ -1,22 +1,22 @@
-.contenedor{
-     display: inline-block;
-     width: 300px;
-     border: 1px solid #000;
-     padding: 40px;
-     margin: 10px;
+.contenedor {
+     display: inline-block;   // El contenedor se muestra en línea con otros elementos pero se comporta como un bloque.
+     width: 300px;            // Define el ancho fijo de 300px.
+     border: 1px solid #000;  // Aplica un borde negro de 1px.
+     padding: 40px;           // Añade 40px de relleno en todos los lados del contenedor.
+     margin: 10px;            // Aplica un margen de 10px alrededor del contenedor.
 }
 
-.contenedor-red{
-     @extend .contenedor;
-     background: crimson;
+.contenedor-red {
+     @extend .contenedor;     // Hereda las propiedades de la clase .contenedor.
+     background: crimson;     // Establece el color de fondo en crimson (rojo oscuro).
 }
 
-.contenedor-blue{
-     @extend .contenedor;
-     background: lightblue;
+.contenedor-blue {
+     @extend .contenedor;     // Hereda las propiedades de la clase .contenedor.
+     background: lightblue;   // Establece el color de fondo en lightblue (azul claro).
 }
 
-.contenedor-green{
-     @extend .contenedor;
-     background: lightgreen;
+.contenedor-green {
+     @extend .contenedor;     // Hereda las propiedades de la clase .contenedor.
+     background: lightgreen;  // Establece el color de fondo en lightgreen (verde claro).
 }

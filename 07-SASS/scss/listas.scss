@@ -1,27 +1,32 @@
 // Listas es un arreglo
+// Definición de una lista de colores separados por comas.
 $colores: blue, red, green, yellow, orange, pink;
+
+// Definición de una segunda lista de colores.
 $colores2: indigo, black, white;
 
 // Acceder a un elemento de una lista
-h1{
-     color: nth($colores, 4);
+// Usamos `nth()` para acceder al 4to elemento de la lista $colores, que es `yellow`.
+h1 {
+     color: nth($colores, 4);  // El color aplicado será `yellow`.
 }
-
 
 // Combinar listas
+// Combina las listas $colores y $colores2 utilizando `join()`.
+// El resultado es una nueva lista: blue, red, green, yellow, orange, pink, indigo, black, white.
 $coloresTotales: join($colores, $colores2, comma);
-// blue, red, green, yellow, orange, pink, indigo, black, white
 
-
-h1{
-     color: nth($coloresTotales, 7);
+h1 {
+     // Accedemos al 7mo elemento de la lista combinada, que es `indigo`.
+     color: nth($coloresTotales, 7);  // El color aplicado será `indigo`.
 }
 
-
 // Agregar elementos a mis arreglos o listas
+// Agrega el color `black` al final de la lista $colores usando `append()`.
 $agregarElemento: append($colores, black, comma);
-// blue, red, green, yellow, orange, pink, black
+// El resultado es: blue, red, green, yellow, orange, pink, black.
 
-h1{
-     color: nth($agregarElemento,  7);
+h1 {
+     // Accedemos al 7mo elemento de la lista extendida, que es `black`.
+     color: nth($agregarElemento, 7);  // El color aplicado será `black`.
 }

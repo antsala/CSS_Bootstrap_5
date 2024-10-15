@@ -1,4 +1,5 @@
 // Mapas son objetos
+// Definición de un mapa llamado $titulos con pares clave-valor, donde las claves son etiquetas de encabezados (h1, h2, etc.) y los valores son tamaños de fuente.
 $titulos: (
      h1: 40px,
      h2: 30px, 
@@ -8,22 +9,27 @@ $titulos: (
      h6: 8px
 );
 
+// Definición de un segundo mapa llamado $colores que asigna nombres de colores a sus valores correspondientes.
 $colores: (
      azul: blue,
      rojo: red, 
      verde: green
 );
 
-
 // ACCEDER A ELEMENTOS DEL MAPA
-h1{
+h1 {
+     // Utiliza `map-get()` para obtener el valor asociado a la clave `h1` dentro del mapa $titulos. Aquí se asigna 40px al tamaño de fuente del h1.
      font-size: map-get($titulos, h1);
+     
+     // Utiliza `map-get()` para obtener el valor asociado a la clave `rojo` dentro del mapa $colores. Aquí se asigna `red` como color.
      color: map-get($colores, rojo);
 }
 
-
 // MEZCLAR ELEMENTOS DEL MAPA
+// Combina los mapas $titulos y $colores en uno solo usando `map-merge()`.
+// El mapa resultante contiene todas las claves y valores de ambos mapas.
 $titulosColores: map-merge($titulos, $colores);
+     // Resultado:
      // h1: 40px,
      // h2: 30px, 
      // h3: 20px,
@@ -34,20 +40,24 @@ $titulosColores: map-merge($titulos, $colores);
      // rojo: red, 
      // verde: green
 
-
-h1{
+h1 {
+     // Obtiene el valor de `h1` (40px) del mapa combinado $titulosColores.
      font-size: map-get($titulosColores, h1);
+     
+     // Obtiene el valor de `verde` (green) del mapa combinado $titulosColores.
      color: map-get($titulosColores, verde);
 }
 
-
-
 // ELIMINAR ELEMENTOS DEL MAPA
+// Elimina las claves `h1`, `h2` y `h3` del mapa $titulos usando `map-remove()`.
+// El nuevo mapa contiene solo las claves `h4`, `h5`, y `h6` con sus respectivos valores.
 $nuevoTitulo: map-remove($titulos, h1, h2, h3);
+     // Resultado:
      // h4: 15px, 
      // h5: 10px, 
      // h6: 8px
 
-h1{
+h1 {
+     // Obtiene el valor de `h4` (15px) del mapa $nuevoTitulo.
      font-size: map-get($nuevoTitulo, h4);
 }
