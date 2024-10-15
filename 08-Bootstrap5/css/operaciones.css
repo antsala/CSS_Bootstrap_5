@@ -1,0 +1,16 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+.container section {
+  float: left;
+  width: 33.3333333333%;
+  height: 400px;
+  background: #222;
+}
+.container aside {
+  float: left;
+  width: 66.6666666667%;
+  height: 400px;
+  background: orangered;
+}/*# sourceMappingURL=operaciones.css.map */
