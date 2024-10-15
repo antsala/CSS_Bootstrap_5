@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Para que IE use el motor de renderizado más reciente -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para dispositivos móviles -->
      <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> <!-- Enlace al CSS de Bootstrap -->
 </head>
 <body>
 
@@ -19,106 +19,96 @@
      .col-xxl-      Tamaños ≥1400px
      -->
 
-
      <!-- 
-          GUTTERS 
-          gx-#
-          gy-#
-          g-#
-      -->
+          GUTTERS: Son los espacios (márgenes) entre las columnas en una fila. Ayudan a mantener la separación visual.
+          gx-#: Margen horizontal entre columnas.
+          gy-#: Margen vertical entre filas.
+          g-#: Margen tanto horizontal como vertical.
+     -->
 
-
-      <!-- GRID LAYOUT -->
-     <div class="container py-4">
-          <div class="row gx-3 gx-lg-5 gy-2 gy-md-5">
-               <div class="col-lg-4 col-md-6 col-12">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+     <!-- GRID LAYOUT -->
+     <div class="container py-4"> <!-- Contenedor con un relleno vertical de 4 unidades -->
+          <div class="row gx-3 gx-lg-5 gy-2 gy-md-5"> <!-- Fila con márgenes horizontales y verticales -->
+               <div class="col-lg-4 col-md-6 col-12"> <!-- Columna que ocupa 4/12 en pantallas grandes, 6/12 en pantallas medianas y 12/12 en pantallas pequeñas -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding de 4 unidades y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
 
-               <div class="col-lg-4 col-md-6 col-12">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+               <div class="col-lg-4 col-md-6 col-12"> <!-- Otra columna con las mismas configuraciones -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
 
-
-               <div class="col-lg-4 col-md-12 col-12">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+               <div class="col-lg-4 col-md-12 col-12"> <!-- Columna que ocupa 4/12 en pantallas grandes y 12/12 en pantallas medianas y pequeñas -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
           </div>
-
-
      </div>
-
 
      <!-- GRID ROW-COLS -->
-     <div class="container py-4">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-               <div class="col">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+     <div class="container py-4"> <!-- Otro contenedor con un relleno vertical de 4 unidades -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3"> <!-- Fila con columnas que se adaptan según el tamaño de la pantalla -->
+               <div class="col"> <!-- Columna que ocupa todo el ancho disponible -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
 
-               <div class="col">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+               <div class="col"> <!-- Otra columna -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
 
-
-               <div class="col">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+               <div class="col"> <!-- Otra columna -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
 
-               <div class="col">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+               <div class="col"> <!-- Otra columna -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
 
-               <div class="col">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+               <div class="col"> <!-- Otra columna -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
 
-               <div class="col">
-                    <div class="bg-light p-4 border">
-                         <h1>Hola mundo</h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p>
-                         <button class="btn btn-primary">Click aquí</button>
+               <div class="col"> <!-- Otra columna -->
+                    <div class="bg-light p-4 border"> <!-- Div con fondo claro, padding y borde -->
+                         <h1>Hola mundo</h1> <!-- Título -->
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eaque. Consequuntur corporis culpa, sit deserunt laborum animi dolore eos blanditiis soluta optio quia, quibusdam perspiciatis architecto excepturi eaque ipsam reiciendis.</p> <!-- Contenido de texto -->
+                         <button class="btn btn-primary">Click aquí</button> <!-- Botón de Bootstrap -->
                     </div>
                </div>
           </div>
-
      </div>
 
-
-
      <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> <!-- Enlace al JS de Bootstrap -->
 </body>
 </html>

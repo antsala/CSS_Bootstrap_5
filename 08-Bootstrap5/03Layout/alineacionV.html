@@ -7,57 +7,54 @@
      <title>Document</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-
      <style>
-          .row{
-               margin: 100px 0;
-                height: 300px; 
-               background: #ccc;
-               border: 2px solid #888;
+          /* Estilos personalizados para las filas */
+          .row {
+               margin: 100px 0; /* Margen superior e inferior de 100px */
+               height: 300px; /* Altura fija de 300px */
+               background: #ccc; /* Color de fondo gris */
+               border: 2px solid #888; /* Borde gris */
           }
 
-          .row > [class^="col"]{
-               text-align: center;
-               color: #FFF;
-               background: #0040ff;
-               padding: 20px;
-               border: 1px solid rgba(255, 255, 255, 0.384);
+          .row > [class^="col"] {
+               text-align: center; /* Alineación de texto centrada */
+               color: #FFF; /* Color de texto blanco */
+               background: #0040ff; /* Color de fondo azul */
+               padding: 20px; /* Relleno interno de 20px */
+               border: 1px solid rgba(255, 255, 255, 0.384); /* Borde blanco semitransparente */
           }
-
-
      </style>
 
 </head>
 <body>
 
-     <div class="container">
+     <div class="container"> <!-- Contenedor para el contenido -->
           
-          <!-- Alineacion vertical -->          
-          <div class="row align-items-start">
-               <div class="col">Columna 1</div>
+          <!-- Alineación vertical de las columnas -->
+          <div class="row align-items-start"> <!-- Alineación de columnas al inicio -->
+               <div class="col">Columna 1</div> <!-- Columna 1 -->
+               <div class="col">Columna 2</div> <!-- Columna 2 -->
+               <div class="col">Columna 3</div> <!-- Columna 3 -->
+          </div>
+
+          <div class="row align-items-center"> <!-- Alineación de columnas al centro -->
+               <div class="col">Columna 1</div> 
                <div class="col">Columna 2</div>
                <div class="col">Columna 3</div>
           </div>
 
-          <div class="row align-items-center">
-               <div class="col">Columna 1</div>
+          <div class="row align-items-end"> <!-- Alineación de columnas al final -->
+               <div class="col">Columna 1</div> 
                <div class="col">Columna 2</div>
                <div class="col">Columna 3</div>
           </div>
 
-          <div class="row align-items-end">
-               <div class="col">Columna 1</div>
-               <div class="col">Columna 2</div>
-               <div class="col">Columna 3</div>
-          </div>
-
-          <div class="row">
-               <div class="col align-self-start">Columna 1</div>
-               <div class="col align-self-center">Columna 2</div>
-               <div class="col align-self-end">Columna 3</div>
+          <div class="row"> <!-- Fila sin alineación general -->
+               <div class="col align-self-start">Columna 1</div> <!-- Alineación individual de la columna al inicio -->
+               <div class="col align-self-center">Columna 2</div> <!-- Alineación individual de la columna al centro -->
+               <div class="col align-self-end">Columna 3</div> <!-- Alineación individual de la columna al final -->
           </div>
      </div>
-
 
      <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
