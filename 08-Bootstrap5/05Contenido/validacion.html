@@ -9,42 +9,38 @@
 </head>
 <body>
      
-     <div class="container pt-5">
+     <div class="container pt-5"> <!-- 'container' para centrar el contenido y 'pt-5' añade padding top de 3rem -->
           
-          <div class="mb-5 position-relative">
-               <label for="">Nombre</label>
-               <input type="text" class="form-control is-valid">
+          <div class="mb-5 position-relative"> <!-- 'mb-5' añade margen inferior de 3rem y 'position-relative' posiciona los tooltips -->
+               <label for="">Nombre</label> <!-- Etiqueta para el input -->
+               <input type="text" class="form-control is-valid"> <!-- 'form-control' estiliza el input y 'is-valid' indica validación exitosa -->
 
                <!-- <div class="valid-feedback">
                     Bien hecho!
                </div> -->
+               <!-- 'valid-feedback' muestra un mensaje de validación estándar debajo del input -->
 
-               <div class="valid-tooltip">
+               <div class="valid-tooltip"> <!-- 'valid-tooltip' muestra un mensaje de validación flotante (tooltip) -->
                     Bien hecho!
                </div>
           </div>
 
-          <div class="mb-5 position-relative">
+          <div class="mb-5 position-relative"> <!-- Contenedor para el segundo input con las mismas clases que el anterior -->
                <label for="">Nombre</label>
-               <input type="text" class="form-control is-invalid">
+               <input type="text" class="form-control is-invalid"> <!-- 'is-invalid' indica que el campo no pasó la validación -->
 
                <!-- <div class="invalid-feedback">
                     Algo está mal!
                </div> -->
+               <!-- 'invalid-feedback' muestra un mensaje de error estándar debajo del input -->
 
-               <div class="invalid-tooltip">
+               <div class="invalid-tooltip"> <!-- 'invalid-tooltip' muestra un mensaje de error como tooltip -->
                     Algo está mal!
                </div>
           </div>
 
      </div>
 
-
-
-
-
-
-
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> <!-- Script de Bootstrap -->
 </body>
 </html>

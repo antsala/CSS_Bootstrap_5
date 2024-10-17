@@ -10,26 +10,23 @@
 <body>
      <!--  
           CLASES A UTILIZAR
-          .offcanvas                                   - Clase que especifica un offcanvas
-          .offcanvas-{start-end-top-bottom}            - Clase que indica desde donde abrirá el offcanvas
+          .offcanvas                                   - Clase que especifica un offcanvas (panel lateral).
+          .offcanvas-{start-end-top-bottom}            - Clase que indica desde dónde se abrirá el offcanvas (inicio, fin, arriba, abajo).
 
-               .offcanvas-header                       - Define un encabezado de offcanvas
-                    .offcanvas-title                   - Define un titulo
+               .offcanvas-header                       - Define un encabezado para el offcanvas.
+                    .offcanvas-title                   - Define un título para el encabezado del offcanvas.
 
-               .offcanvas-body                         - Define el cuerpo del offcanvas
+               .offcanvas-body                         - Define el cuerpo del offcanvas.
 
           ATRIBUTOS IMPORTANTES
-          data-bs-scroll                               - Define scroll mientras offcanvas este abierto
-          data-bs-backdrop                             - Define fondo oscuro o claro
+          data-bs-scroll                               - Permite el desplazamiento en el offcanvas mientras está abierto.
+          data-bs-backdrop                             - Define un fondo oscuro o claro detrás del offcanvas.
      -->
 
-
-     
-     <div class="container p-5">
+     <div class="container p-5"> <!-- Contenedor con relleno de 5 (48px) -->
           
-
           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-               Con un buton
+               Con un botón <!-- Botón que abre el offcanvas -->
           </button>
 
           <!-- Offcanvas -->
@@ -37,107 +34,92 @@
                
                <!-- Header -->
                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> <!-- Título del offcanvas -->
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> <!-- Botón para cerrar el offcanvas -->
                </div>
 
                <!-- Cuerpo -->
                <div class="offcanvas-body">
                     <div>
-                         Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                         Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc. <!-- Texto de ejemplo en el cuerpo del offcanvas -->
                     </div>
-                    <div class="dropdown mt-3">
+                    <div class="dropdown mt-3"> <!-- Dropdown dentro del offcanvas -->
                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                         Dropdown button
+                         Dropdown button <!-- Botón para activar el menú desplegable -->
                          </button>
-                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                   <li><a class="dropdown-item" href="#">Action</a></li>
-                                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                                   <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <!-- Contenedor del menú desplegable -->
+                                   <li><a class="dropdown-item" href="#">Action</a></li> <!-- Elemento del menú desplegable -->
+                                   <li><a class="dropdown-item" href="#">Another action</a></li> <!-- Elemento del menú desplegable -->
+                                   <li><a class="dropdown-item" href="#">Something else here</a></li> <!-- Elemento del menú desplegable -->
                               </ul>
                     </div>
                </div>
           </div>
 
-
-
-
-
-          <!-- Aplicando offcanvas a menu -->
+          <!-- Aplicando offcanvas a menú -->
           <div class="row">
-               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+               <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- Barra de navegación con fondo oscuro -->
                     <div class="container-fluid">
 
-                         <!-- Icono o titulo -->
+                         <!-- Icono o título -->
                          <a class="navbar-brand" href="#">Navbar</a>
                          
                          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
+                              <span class="navbar-toggler-icon"></span> <!-- Icono del botón para abrir el offcanvas -->
                          </button>
 
-
-                         <div class="offcanvas offcanvas-end bg-dark text-white" id="offcanvasExample2">
+                         <div class="offcanvas offcanvas-end bg-dark text-white" id="offcanvasExample2"> <!-- Offcanvas que se abre desde el lado derecho con fondo oscuro y texto blanco -->
                               
                               <!-- Header -->
                               <div class="offcanvas-header">
-                                   <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                   <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> <!-- Título del offcanvas -->
+                                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> <!-- Botón para cerrar el offcanvas -->
                               </div>
 
                               <!-- Cuerpo -->
                               <div class="offcanvas-body">
                                    
                                    <!-- Enlaces -->
-                                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                   <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Lista de enlaces de navegación alineada a la izquierda -->
                                         <li class="nav-item">
-                                             <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                             <a class="nav-link active" aria-current="page" href="#">Home</a> <!-- Enlace activo -->
                                         </li>
 
                                         <li class="nav-item">
-                                             <a class="nav-link" href="#">Link</a>
+                                             <a class="nav-link" href="#">Link</a> <!-- Enlace normal -->
                                         </li>
 
-                                        <li class="nav-item dropdown">
+                                        <li class="nav-item dropdown"> <!-- Elemento de la lista de navegación con menú desplegable -->
                                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                             Dropdown
+                                             Dropdown <!-- Enlace que activa el menú desplegable -->
                                              </a>
 
-                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                  <li><a class="dropdown-item" href="#">Action</a></li>
-                                                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                  <li><hr class="dropdown-divider"></li>
-                                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Contenedor del menú desplegable -->
+                                                  <li><a class="dropdown-item" href="#">Action</a></li> <!-- Elemento del menú desplegable -->
+                                                  <li><a class="dropdown-item" href="#">Another action</a></li> <!-- Elemento del menú desplegable -->
+                                                  <li><hr class="dropdown-divider"></li> <!-- Línea divisoria en el menú desplegable -->
+                                                  <li><a class="dropdown-item" href="#">Something else here</a></li> <!-- Elemento del menú desplegable -->
                                              </ul>
                                         </li>
 
-                                        <li class="nav-item">
-                                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                        <li class="nav-item"> <!-- Elemento de la lista de navegación -->
+                                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> <!-- Enlace deshabilitado -->
                                         </li>
                                    </ul>
 
                                    <!-- Formulario -->
-                                   <form class="d-flex">
-                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                   <form class="d-flex"> <!-- Formulario en disposición flexible -->
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <!-- Campo de búsqueda con margen a la derecha -->
+                                        <button class="btn btn-outline-success" type="submit">Search</button> <!-- Botón de búsqueda -->
                                    </form>
                               </div>
                          </div>
                     </div>
                </nav>
 
-
-
           </div>
 
-
-
-
-
      </div>
-
-
-
-
 
      <!-- JS Bootstrap -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

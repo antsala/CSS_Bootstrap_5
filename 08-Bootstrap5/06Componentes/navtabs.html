@@ -9,110 +9,86 @@
 </head>
 <body>
 
-     
-     <div class="container p-5">
+     <div class="container p-5"> <!-- Contenedor con relleno de 5 (48px) -->
           <h1>Nav</h1>
-          <ul class="nav border nav-pills nav-justified">
+          <ul class="nav border nav-pills nav-justified"> <!-- Barra de navegación con borde, estilo de pastilla y justificada -->
                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    <a class="nav-link active" aria-current="page" href="#">Active</a> <!-- Enlace activo -->
                </li>
                
                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a> <!-- Enlace normal -->
                </li>
                
                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a> <!-- Enlace normal -->
                </li>
                
                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> <!-- Enlace deshabilitado -->
                </li>
           </ul>
-
-
-
 
           <!-- TABS -->
-          <h1 class="mt-5">Tabs</h1>
-          <ul class="nav nav-tabs">
+          <h1 class="mt-5">Tabs</h1> <!-- Margen superior de 5 (48px) -->
+          <ul class="nav nav-tabs"> <!-- Barra de navegación con estilo de pestañas -->
                <li class="nav-item">
-                    <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#content1">Tab #1</a>
+                    <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#content1">Tab #1</a> <!-- Pestaña activa -->
                </li>
                <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#content2">Tab #2</a>
+                    <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#content2">Tab #2</a> <!-- Pestaña normal -->
                </li>
                <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#content3">Tab #3</a>
+                    <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#content3">Tab #3</a> <!-- Pestaña normal -->
                </li>
           </ul>
 
-
-          <div class="tab-content p-4 mb-5" id="myTabContent">
-               <div class="tab-pane fade active show" id="content1" role="tabpanel">
-                    <h4>Content 1 </h4>
+          <div class="tab-content p-4 mb-5" id="myTabContent"> <!-- Contenedor para el contenido de las pestañas con relleno de 4 (16px) y margen inferior de 5 (48px) -->
+               <div class="tab-pane fade active show" id="content1" role="tabpanel"> <!-- Panel de contenido de la pestaña 1, activo y visible -->
+                    <h4>Content 1</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, magnam cum perferendis sit fugit repudiandae tenetur, voluptas fugiat accusamus neque hic quibusdam sunt maxime corrupti itaque, aspernatur assumenda? Magnam, ad?</p>
                </div>
-               <div class="tab-pane fade" id="content2" role="tabpanel">
-                    <h4>Content 2 </h4>
+               <div class="tab-pane fade" id="content2" role="tabpanel"> <!-- Panel de contenido de la pestaña 2, oculto -->
+                    <h4>Content 2</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, magnam cum perferendis sit fugit repudiandae tenetur, voluptas fugiat accusamus neque hic quibusdam sunt maxime corrupti itaque, aspernatur assumenda? Magnam, ad?</p>
                </div>
-               <div class="tab-pane fade" id="content3" role="tabpanel">
+               <div class="tab-pane fade" id="content3" role="tabpanel"> <!-- Panel de contenido de la pestaña 3, oculto -->
                     <h4>Content 3</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, magnam cum perferendis sit fugit repudiandae tenetur, voluptas fugiat accusamus neque hic quibusdam sunt maxime corrupti itaque, aspernatur assumenda? Magnam, ad?</p>
                </div>
           </div>
 
-
-
-
-
-
-
           <!-- Nav horizontal -->
-          <div class="d-flex align-items-start mt-5">
+          <div class="d-flex align-items-start mt-5"> <!-- Contenedor flex con alineación al inicio y margen superior de 5 (48px) -->
                
-               <ul class="nav nav-pills flex-column me-3">
+               <ul class="nav nav-pills flex-column me-3"> <!-- Lista de navegación en columna con estilo de pastilla y margen a la derecha de 3 (16px) -->
                     <li class="nav-item">
-                         <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#article1">Home</a>
+                         <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#article1">Home</a> <!-- Enlace activo -->
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#article2">Menu</a>
+                         <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#article2">Menu</a> <!-- Enlace normal -->
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#article3">Productos</a>
+                         <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#article3">Productos</a> <!-- Enlace normal -->
                     </li>
                </ul>
 
-
-               <div class="tab-content p-4 mb-5" id="myTabContent">
-                    <div class="tab-pane fade active show" id="article1" role="tabpanel">
-                         <h4>Content 1 </h4>
+               <div class="tab-content p-4 mb-5" id="myTabContent"> <!-- Contenedor para el contenido de las pestañas con relleno de 4 (16px) y margen inferior de 5 (48px) -->
+                    <div class="tab-pane fade active show" id="article1" role="tabpanel"> <!-- Panel de contenido de la pestaña 1, activo y visible -->
+                         <h4>Content 1</h4>
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, magnam cum perferendis sit fugit repudiandae tenetur, voluptas fugiat accusamus neque hic quibusdam sunt maxime corrupti itaque, aspernatur assumenda? Magnam, ad?</p>
                     </div>
-                    <div class="tab-pane fade" id="article2" role="tabpanel">
-                         <h4>Content 2 </h4>
+                    <div class="tab-pane fade" id="article2" role="tabpanel"> <!-- Panel de contenido de la pestaña 2, oculto -->
+                         <h4>Content 2</h4>
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, magnam cum perferendis sit fugit repudiandae tenetur, voluptas fugiat accusamus neque hic quibusdam sunt maxime corrupti itaque, aspernatur assumenda? Magnam, ad?</p>
                     </div>
-                    <div class="tab-pane fade" id="article3" role="tabpanel">
+                    <div class="tab-pane fade" id="article3" role="tabpanel"> <!-- Panel de contenido de la pestaña 3, oculto -->
                          <h4>Content 3</h4>
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, magnam cum perferendis sit fugit repudiandae tenetur, voluptas fugiat accusamus neque hic quibusdam sunt maxime corrupti itaque, aspernatur assumenda? Magnam, ad?</p>
                     </div>
                </div>
-
-
-
-
-
           </div>
-
-
-
      </div>
-
-
-
-
 
      <!-- JS Bootstrap -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

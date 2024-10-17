@@ -9,39 +9,36 @@
 </head>
 <body>
 
-     
-     <div class="container p-5">
+     <div class="container p-5"> <!-- Contenedor con un relleno de 5 (48px) -->
+          <!-- Botón que activa un popover en la parte superior -->
           <button type="button" class="btn btn-secondary m-5" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover" data-bs-trigger="focus">
                Popover on top
           </button>
           
+          <!-- Botón que activa un popover a la derecha -->
           <button type="button" class="btn btn-secondary m-5" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover" data-bs-trigger="focus">
                Popover on right
           </button>
           
+          <!-- Botón que activa un popover en la parte inferior -->
           <button type="button" class="btn btn-secondary m-5" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" data-bs-trigger="focus">
                Popover on bottom
           </button>
           
+          <!-- Botón que activa un popover a la izquierda -->
           <button type="button" class="btn btn-secondary m-5" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
                Popover on left
           </button>
-
-
-
      </div>
-
-
-
-
 
      <!-- JS Bootstrap -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
      <script>
-          var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-          var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
+          // Inicialización de los popovers para todos los elementos que tienen el atributo data-bs-toggle="popover"
+          var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]')) // Selecciona todos los elementos que activan el popover
+          var popoverList = popoverTriggerList.map(function (popoverTriggerEl) { // Crea una lista de instancias de popover
+               return new bootstrap.Popover(popoverTriggerEl) // Inicializa cada popover
           })
      </script>
 </body>

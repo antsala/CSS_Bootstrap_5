@@ -11,84 +11,74 @@
 
      <!--  
           CLASES PARA NAVBAR
-          .navbar                                      - Clase especifica para menu principal de navegacion
-          .navbar-expand{-sm|-md|-lg|-xl|-xxl}         - Clase especifica cuando el menu estara expandido 
-          .navbar-dark                                 - Clase para dar estilos dark o light
-          .bg-dark                                     - Clase para dar color de fondo 
-          .fixed-{top-botom} / sticky-top              - Clase asigna menu fijo o sitcky
+          .navbar                                      - Clase específica para el menú principal de navegación
+          .navbar-expand{-sm|-md|-lg|-xl|-xxl}         - Clase que permite que el menú se expanda en diferentes tamaños de pantalla
+          .navbar-dark                                 - Clase para aplicar estilos oscuros a la barra de navegación
+          .bg-dark                                     - Clase para establecer el color de fondo oscuro
+          .fixed-top                                   - Clase para fijar la barra de navegación en la parte superior de la pantalla
 
-               .navbar-brand                           - Clase para el icono o nombre de compañia
-               .navbar-toggler                         - Clase para usar el collapso y el menu sea responsive
-               .collapse .navbar-collapse              - Clase para agrupar y ocultar contenido al responsive
-               .navbar-nav                             - Clase para los enlaces de navegacion
-               .navbar-text                            - Clase para agregar texto 
-               .avbar-nav-scroll                       - Clase para agregar scroll a menu responsive
+               .navbar-brand                           - Clase para el icono o nombre de la compañía en la barra de navegación
+               .navbar-toggler                         - Clase para usar el botón que colapsa el menú en pantallas pequeñas
+               .collapse .navbar-collapse              - Clase para agrupar y ocultar el contenido en la vista de menú colapsado
+               .navbar-nav                             - Clase para los enlaces de navegación
+               .navbar-text                            - Clase para agregar texto adicional a la barra de navegación
+               .navbar-nav-scroll                      - Clase para permitir el desplazamiento en el menú de navegación cuando es necesario
      -->
 
-     
-     <div class="container p-5">
+     <div class="container p-5"> <!-- Contenedor con relleno de 5 (48px) -->
           
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-               <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Barra de navegación que se expande en pantallas grandes, con estilos oscuros y fondo oscuro, fijada en la parte superior -->
+               <div class="container-fluid"> <!-- Contenedor fluido para ajustar el contenido al ancho disponible -->
                     
-                    <!-- Icono o titulo -->
+                    <!-- Icono o título de la barra de navegación -->
                     <a class="navbar-brand" href="#">Navbar</a>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                         <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <!-- Botón para colapsar el menú -->
+                         <span class="navbar-toggler-icon"></span> <!-- Icono de colapso -->
                     </button>
                
-                    
-                    <!-- Cuerpo del menu -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Cuerpo del menú que se colapsa -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Contenedor que se colapsa en pantallas pequeñas -->
                          
-                         <!-- Enlaces -->
-                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll">
-                              <li class="nav-item">
-                                   <a class="nav-link active" aria-current="page" href="#">Home</a>
+                         <!-- Enlaces de navegación -->
+                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll"> <!-- Lista de enlaces de navegación, alineada a la izquierda y con desplazamiento si es necesario -->
+                              <li class="nav-item"> <!-- Elemento de la lista de navegación -->
+                                   <a class="nav-link active" aria-current="page" href="#">Home</a> <!-- Enlace activo -->
                               </li>
 
-                              <li class="nav-item">
-                                   <a class="nav-link" href="#">Link</a>
+                              <li class="nav-item"> <!-- Elemento de la lista de navegación -->
+                                   <a class="nav-link" href="#">Link</a> <!-- Enlace normal -->
                               </li>
 
-                              <li class="nav-item dropdown">
-                                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <li class="nav-item dropdown"> <!-- Elemento de la lista de navegación con menú desplegable -->
+                                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <!-- Enlace que activa el menú desplegable -->
                                    Dropdown
                                    </a>
 
-                                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Contenedor del menú desplegable -->
+                                        <li><a class="dropdown-item" href="#">Action</a></li> <!-- Elemento del menú desplegable -->
+                                        <li><a class="dropdown-item" href="#">Another action</a></li> <!-- Elemento del menú desplegable -->
+                                        <li><hr class="dropdown-divider"></li> <!-- Línea divisoria en el menú desplegable -->
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li> <!-- Elemento del menú desplegable -->
                                    </ul>
                               </li>
 
-                              <li class="nav-item">
-                                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                              <li class="nav-item"> <!-- Elemento de la lista de navegación -->
+                                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> <!-- Enlace deshabilitado -->
                               </li>
                          </ul>
 
-                         <!-- Formulario -->
-                         <form class="d-flex">
-                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                              <button class="btn btn-outline-success" type="submit">Search</button>
+                         <!-- Formulario de búsqueda -->
+                         <form class="d-flex"> <!-- Formulario en disposición flexible -->
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <!-- Campo de búsqueda con margen a la derecha -->
+                              <button class="btn btn-outline-success" type="submit">Search</button> <!-- Botón de búsqueda -->
                          </form>
                     </div>
 
                </div>
           </nav>
 
-
-
-
-
      </div>
-
-
-
-
 
      <!-- JS Bootstrap -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

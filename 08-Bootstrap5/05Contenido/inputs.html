@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Meta etiquetas -->
+     <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatible con motores de IE más modernos -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea responsive -->
      <title>Document</title>
+     
+     <!-- Carga de la hoja de estilos de Bootstrap desde un CDN -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
      <style>
-          input, select{
-               margin: 15px 0;
+          input, select {
+               margin: 15px 0;  /* Estilo personalizado que aplica margen vertical a los inputs y selects */
           }
-
      </style>
-
 </head>
 <body>
      
-     <div class="container py-4">
+     <div class="container py-4"> <!-- Contenedor Bootstrap con padding vertical (py-4) de 1.5rem -->
           <h1>Inputs</h1>
-          <input type="text">
-          <input class="form-control" type="text" placeholder="Input default">
-          <input class="form-control form-control-sm" type="text" placeholder="Input sm">
-          <input class="form-control form-control-lg" type="text" placeholder="Input lg">
 
+          <input type="text"> <!-- Input de texto sin clases Bootstrap -->
 
-          <hr class="my-5">
+          <input class="form-control" type="text" placeholder="Input default"> <!-- 'form-control' hace que el input sea ancho completo y con bordes redondeados -->
+
+          <input class="form-control form-control-sm" type="text" placeholder="Input sm"> <!-- 'form-control-sm' ajusta el tamaño del input a pequeño -->
+
+          <input class="form-control form-control-lg" type="text" placeholder="Input lg"> <!-- 'form-control-lg' ajusta el tamaño del input a grande -->
+
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical de 3rem (48px) arriba y abajo -->
+          
           <h1>Input Deshabilitados</h1>
-          <input type="text" disabled>
-          <input class="form-control" type="text" placeholder="Disabled input" disabled>
-          <input class="form-control" type="text" placeholder="Readonly input" readonly>
-          <input type="text" class="form-control-plaintext" value="email@example.com" readonly>
 
+          <input type="text" disabled> <!-- Input de texto deshabilitado sin clases Bootstrap -->
 
-          <hr class="my-5">
+          <input class="form-control" type="text" placeholder="Disabled input" disabled> <!-- Input de texto deshabilitado con clase 'form-control' -->
+
+          <input class="form-control" type="text" placeholder="Readonly input" readonly> <!-- Input de solo lectura con clase 'form-control' -->
+
+          <input type="text" class="form-control-plaintext" value="email@example.com" readonly> <!-- Input de solo lectura con clase 'form-control-plaintext' que se ve como texto plano -->
+
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical de 3rem arriba y abajo -->
+
           <h1>Input File</h1>
-          <input type="file" name="" id="">
-          <input class="form-control" type="file" id="formFile">
-          <input class="form-control" type="file" id="formFileMultiple" multiple>
-          <input class="form-control form-control-sm" id="formFileSm" type="file">
-          <input class="form-control form-control-lg" id="formFileLg" type="file">
 
+          <input type="file" name="" id=""> <!-- Input de archivo estándar sin clases Bootstrap -->
 
+          <input class="form-control" type="file" id="formFile"> <!-- Input de archivo con clase 'form-control' -->
 
-          <hr class="my-5">
+          <input class="form-control" type="file" id="formFileMultiple" multiple> <!-- Input de archivo que permite selección múltiple -->
+
+          <input class="form-control form-control-sm" id="formFileSm" type="file"> <!-- Input de archivo pequeño con clase 'form-control-sm' -->
+
+          <input class="form-control form-control-lg" id="formFileLg" type="file"> <!-- Input de archivo grande con clase 'form-control-lg' -->
+
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical de 3rem arriba y abajo -->
+
           <h1>Input Color picker</h1>
-          <input type="color" name="" id="">
-          <input type="color" class="form-control form-control-color" value="#563d7c" title="Elije color">
 
+          <input type="color" name="" id=""> <!-- Input de selector de color estándar sin clases Bootstrap -->
 
+          <input type="color" class="form-control form-control-color" value="#563d7c" title="Elije color"> <!-- Input de selector de color con clase 'form-control-color' que ajusta el estilo al de Bootstrap -->
 
-          <hr class="my-5">
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical de 3rem arriba y abajo -->
+
           <h1>Datalist</h1>
-          <input list="datalistOptions" id="exampleDataList" placeholder="Buscar...">
-          <datalist id="datalistOptions">
+
+          <input list="datalistOptions" id="exampleDataList" placeholder="Buscar..."> <!-- Input con lista de opciones (datalist) sin clases Bootstrap -->
+
+          <datalist id="datalistOptions"> <!-- Lista de opciones para el datalist -->
                <option value="San Francisco">
                <option value="New York">
                <option value="Seattle">
@@ -61,10 +77,9 @@
                <option value="Chicago">
           </datalist>
 
+          <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Buscar..."> <!-- Input con lista de opciones (datalist) y clase 'form-control' de Bootstrap -->
 
-
-          <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Buscar...">
-          <datalist id="datalistOptions">
+          <datalist id="datalistOptions"> <!-- Mismo datalist usado arriba -->
                <option value="San Francisco">
                <option value="New York">
                <option value="Seattle">
@@ -72,51 +87,50 @@
                <option value="Chicago">
           </datalist>
 
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical de 3rem arriba y abajo -->
 
-
-
-          <hr class="my-5">
           <h1>Select</h1>
-          <select>
+
+          <select> <!-- Select estándar sin clases Bootstrap -->
                <option selected>Abrir menú</option>
                <option value="1">Uno</option>
                <option value="2">Dos</option>
                <option value="3">Tres</option>
           </select>
 
-          <select class="form-select">
+          <select class="form-select"> <!-- Select con clase 'form-select' de Bootstrap -->
                <option selected>Abrir menú</option>
                <option value="1">Uno</option>
                <option value="2">Dos</option>
                <option value="3">Tres</option>
           </select>
 
-          <select multiple>
+          <select multiple> <!-- Select múltiple sin clases Bootstrap -->
                <option selected>Seleccione</option>
                <option value="1">Uno</option>
                <option value="2">Dos</option>
                <option value="3">Tres</option>
           </select>
 
-          <select class="form-select" multiple>
+          <select class="form-select" multiple> <!-- Select múltiple con clase 'form-select' -->
                <option selected>Seleccione</option>
                <option value="1">Uno</option>
                <option value="2">Dos</option>
                <option value="3">Tres</option>
           </select>
 
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical de 3rem arriba y abajo -->
 
-          <hr class="my-5">
           <h1>Input de rango</h1>
-          <input type="range" id="range">
-          <input type="range" class="form-range" id="range">
 
+          <input type="range" id="range"> <!-- Input de rango estándar sin clases Bootstrap -->
 
+          <input type="range" class="form-range" id="range"> <!-- Input de rango con clase 'form-range' de Bootstrap -->
 
-          <hr class="my-5">
+          <hr class="my-5"> <!-- Línea horizontal con margen vertical de 3rem arriba y abajo -->
      </div>
 
-
+     <!-- Script para cargar los componentes JavaScript de Bootstrap desde un CDN -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
