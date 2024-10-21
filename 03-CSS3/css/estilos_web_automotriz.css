@@ -7,7 +7,7 @@
 /** CONTENEDOR  */
 section{
      height: calc(100vh - 50px);
-     background: url(wallpaper.jpg);
+     background: url(../img/wallpaper.jpg);
      background-size: cover;
      background-position: center;
 }
